@@ -1,0 +1,20 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main (int argc, char* argv[]) {
+  if (argc == 2) {
+    filep = fopen(argv[1], "r");
+    if (filep == NULL) {
+      printf("File not Found\n");
+      return EXIT_FAILURE;
+    } else {
+      while(!feof(filep)) {
+        if (fgetc(filep) == 'A') {
+          printf("There are As here!");
+          break;
+        }
+        printf("No As here!");
+      }
+    }
+  }
+}

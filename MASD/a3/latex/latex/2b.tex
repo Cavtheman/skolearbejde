@@ -1,0 +1,21 @@
+Here, we have to show that the following is true:
+$$||I\odot(M-AB)||^2 = \sum_{i=1}^6\sum_{j=1}^{10} I_{ij}(M_{ij}-(a_{i1}b_{1j}+a_{i2}b_{2j}))^2$$
+First we start off by showing that each element in the matrix can be written as follows:
+$$AB_{ij} =(a_{i1}b_{1j}+a_{i2}b_{2j})$$
+First, we have to remember the rules for matrix multiplication, and recall that any element in the resulting square matrix with length $m$ can be described as thus, when the matrices being multiplied have the forms $m\times n$ and $n \times m$.
+$$a_{i1}b_{1j} + a_{i2}b_{2j} + ... + a_{in}b_{nj}$$
+This can also be applied to AB, in which case we find that any element in the resulting matrix can be described as $(a_{i1}b_{1j}+a_{i2}b_{2j})$, which is exactly what we want to show.\\
+\\
+If we recall the rules for matrix subtraction, we can also figure out that each element in the new matrix will be defined as thus, where $X$ and $Y$ are the matrices being subtracted from one another, with the resulting matrix $Z$:
+$$Z_{ij} = X_{ij} - Y_{ij}$$
+This must also be true for $M-AB$:
+$$M_{ij}-(a_{i1}b_{1j}+a_{i2}b_{2j})$$
+Since our previous operations have all been element-wise, multiplying the matrix $I$ on element-wise is simple:
+$$I_{ij}(M_{ij}-(a_{i1}b_{1j}+a_{i2}b_{2j}))$$
+Now, the matrix norm is defined as being the same as one long vector $V$ with all the same elements as the matrix:
+$$||V||^2 = \sum_{i=1}^{n}(V_i^2)$$
+Since a matrix can be described as a vector of vectors, the following must be true for the matrix norm, of a matrix $N$, with the form $n\times m$:
+$$||N||^2 = \sum_{i=1}^n\sum_{j=1}^mN_{ij}$$
+With this knowledge we can conclude that the matrix norm squared of $I_{ij}(M_{ij}-(a_{i1}b_{1j}+a_{i2}b_{2j}))$ must be equal to:
+$$\sum_{i=1}^6\sum_{j=1}^{10} I_{ij}(M_{ij}-(a_{i1}b_{1j}+a_{i2}b_{2j}))^2$$
+Thus, we have shown that: $$||I\odot(M-AB)||^2 = \sum_{i=1}^6\sum_{j=1}^{10} I_{ij}(M_{ij}-(a_{i1}b_{1j}+a_{i2}b_{2j}))^2$$	

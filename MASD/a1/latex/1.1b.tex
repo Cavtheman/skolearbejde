@@ -1,0 +1,35 @@
+First we want to prove this one way; thus, we want to show that:
+$$
+|(a_n)_i -a_i| \leq ||a_n-a|| < \epsilon
+$$
+We assume that: $a_n \to a$ is true, and thus, the definition of convergence must also be true for it, hence $|a_n-a| \leq \epsilon$ must be true.
+Since we know that the square root of the sum of all squared numbers in the vector is equal to the length of the vector, we can say the following:
+$$
+\sqrt{\sum_{i=1}^{d}(a_n)_i^2} \leq ||a_n||
+$$
+\begin{center}
+and
+\end{center}
+$$
+\sqrt{\sum_{i=1}^{d}a_i^2} \leq ||a||
+$$
+Thus, we can show that:
+$$
+\sqrt{\sum_{i=1}^{d}(a_n)_i^2} -\sqrt{\sum_{i=1}^{d}a_i^2} \leq ||a_n-a|| < \epsilon
+$$
+With this, we have shown that:
+$$
+a_n \to a \implies (a_n)_i \to a_i
+$$
+Now we have to show the opposite:
+$$
+(a_n)_i \to a_i \implies a_n \to a
+$$
+This means that
+$$
+|(a_n)_i \to a_i| < \epsilon
+$$
+Following the same rules as before, we can see that we have to prove the following:
+$$
+|a_n - a| \leq |(a_n)_i - a_i| < \epsilon
+$$

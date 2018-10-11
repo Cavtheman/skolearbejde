@@ -1,0 +1,32 @@
+In this proof, we have to show that
+$$
+\sum_{n=1}^\infty \frac{1}{2^n}= 1
+$$
+To do this, we have to make the following assumption:
+$$
+lim_{n \to \infty} \frac{1}{2^n} = 0
+$$
+First, I'll define what this sequence looks like:
+$$
+\sum_{n=1}^\infty \frac{1}{2^n} = \frac{1}{2}+ \frac{1}{4}+ ... + \frac{1}{2^n}
+$$
+Then, we have to look at the following, different sequence:
+$$
+\sum_{n=1}^\infty 2(\frac{1}{2^n}) = 1+ \frac{1}{2}+ \frac{1}{4}+ ... + \frac{1}{2^n}
+$$
+We can then observe that the following is true:
+$$
+\sum_{n=1}^\infty 2(\frac{1}{2^n}) =1+ \sum_{n=1}^\infty \frac{1}{2^{n-1}}
+$$
+Now we just reduce this to the following:
+$$
+\sum_{n=1}^\infty 2(\frac{1}{2^n})-\sum_{n=1}^\infty \frac{1}{2^n} = 1 + \sum_{n=1}^\infty \frac{1}{2^{n-1}} - \sum_{n=1}^\infty \frac{1}{2^n}
+$$
+$$\iff$$
+$$
+\sum_{n=1}^\infty \frac{1}{2^n} = 1 - \frac{1}{2^n}
+$$
+Now we use the assumption that $lim_{n \to \infty} \frac{1}{2^n} = 0$, and can thus write that the following is true as $n$ approaches infinity.
+$$
+\sum_{n=1}^\infty \frac{1}{2^n} = 1
+$$

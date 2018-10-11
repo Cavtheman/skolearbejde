@@ -1,0 +1,65 @@
+For this exercise we have to compute the derivatives both with respect to $x_1$ and $x_2$.
+$$f(x_1,x_2) = x_1^2+2x_1x_2+3x_2^2$$
+$$\frac{\partial y}{\partial x_1} = 2x_1+2x_2$$
+$$\frac{\partial y}{\partial x_2} = 2x_1+6x_2$$
+Then we solve for $x_1$ and $x_2$, using matrices.
+$$
+\left[
+\begin{array}{rr|r}
+2 & 2 & 0\\
+2 & 6 & 0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{rr|r}
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array}
+\right]
+$$
+Thus, we can see that $f(x)$ intersects the x-axis when $x_1=x_2=0$
+Now, to find whether it is a local maximum or minimum, we use the eigenvalues of the Hessian matrix.
+$$\frac{\partial^2 y}{\partial x_1 \partial x_2} = 2$$
+$$\frac{\partial^2 y}{\partial^2 x_1} = 2$$
+$$\frac{\partial^2 y}{\partial x_2 \partial x_1} = 2$$
+$$\frac{\partial^2 y}{\partial^2 x_2} = 6$$
+Thus, we can see that the Hessian matrix looks as follows:
+$$
+\left[
+\begin{array}{rr}
+2 & 2\\
+2 & 6
+\end{array}
+\right]
+$$
+$$
+\left[
+\begin{array}{rr}
+2 & 2\\
+2 & 6
+\end{array}
+\right]
+-\lambda I
+=
+\left[
+\begin{array}{rr}
+2-\lambda & 2\\
+2 & 6-\lambda
+\end{array}
+\right]
+$$
+Then we find the determinants of the matrix:
+$$
+D
+\left[
+\begin{array}{rr}
+2-\lambda & 2\\
+2 & 6-\lambda
+\end{array}
+\right]
+= \lambda^2 -8\lambda+8
+$$
+Solving this with Wolfram Alpha, $\lambda^2 -8\lambda+8 = 0$ gives us the following:
+$$\lambda_1 = 4-2\sqrt{2}, \lambda_2 = 2(2+2\sqrt{2})$$
+Since both of these values are positive, we can determine that the point is a local minimum.

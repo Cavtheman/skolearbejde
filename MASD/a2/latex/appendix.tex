@@ -1,0 +1,105 @@
+\newpage
+\textbf{Appendix}\\
+
+\textbf{Loading Packages}
+\begin{verbatim}
+%matplotlib inline
+# Allows viewing figures inline in the notebook
+import numpy as np
+# Numpy is a library for numerical computation
+import matplotlib.pyplot as plt
+# Matplotlib is a plotting library
+from skimage import io
+# skimage is an image processing library; its io module allows loading and saving images (among other things)
+from matplotlib import cm
+# import colormaps
+import matplotlib
+matplotlib.rcParams['figure.figsize'] = (20,8)
+# Sets larger size for viewed figures
+\end{verbatim}
+
+\textbf{Exercise 4 a-b}
+\begin{verbatim}
+IRet = io.imread('data/retinal.png').astype(float)
+smartGirl = io.imread('data/smartgirl.jpg').astype(float)
+
+lecPic = io.imread('lecture/flower.jpeg').astype(float)
+Igray = np.mean(lecPic, axis=2) 
+
+#print("Original size:", IretGray.shape)
+#print("Original size:", smartgirl.shape)
+
+# Calculating the partial derivative with respect to x of the image
+def xDiff(image, h, M):
+    temp = (image[:,np.arange(2*h,M)] - image[:,np.arange(0,M-2*h)])
+    
+    # Padding with zeroes to make image the right shape
+    xReduced = np.zeros(image.shape)
+    xReduced[:temp.shape[0],:temp.shape[1]] = temp
+    return xReduced
+
+# Calculating the partial derivative with respect to y of the image
+def yDiff(image, h, N):
+    temp = (image[np.arange(0,N-2*h),:] - image[np.arange(2*h,N),:])
+    
+    # Padding with zeroes to make image the right shape
+    yReduced = np.zeros(image.shape)
+    yReduced[:temp.shape[0],:temp.shape[1]] = temp
+    return yReduced
+
+# Function for plotting and showing everything nicely
+def partDiff(image, h):
+    N, M = image.shape 
+    
+    fig, ax = plt.subplots(1,2)
+    
+    ax[0].set_title('Partial wrt x, at step size %d' %h)
+    ax[0].imshow(xDiff(image, h, M), cmap=cm.Greys_r)
+    
+    ax[1].set_title('Partial wrt y, at step size %d' %h)
+    ax[1].imshow(yDiff(image, h, N), cmap=cm.Greys_r)
+    
+# Running everything with different step sizes
+#partDiff(Igray,1)     # Testing with the picture from lectures
+#partDiff(Igray,10)
+#partDiff(Igray,25)
+partDiff(IRet,1)
+partDiff(IRet,50)
+partDiff(smartGirl,1)
+partDiff(smartGirl,4)
+\end{verbatim}
+
+\textbf{Exercise 4-d}
+\begin{verbatim}
+def gradeMag(image, h):
+    N, M = image.shape
+
+    tempXDiff = xDiff(image, h, M)
+    tempYDiff = yDiff(image, h, N)
+    
+    newImage = np.sqrt(tempXDiff**2 + tempYDiff**2)
+
+    # Showing that the original image and result are the same size
+    print("Original image size:\t", image.shape)
+    print("New image size:\t\t", newImage.shape)
+    
+    fig, ax = plt.subplots(1,3)
+    
+    ax[0].set_title('Partial wrt x, at step size %d' %h)
+    ax[0].imshow(tempXDiff, cmap=cm.Greys_r)
+    
+    ax[1].set_title('Partial wrt y, at step size %d' %h)
+    ax[1].imshow(tempYDiff, cmap=cm.Greys_r)
+    
+    ax[2].set_title('The gradient magnitude, at step size %d' %h)
+    ax[2].imshow(newImage, cmap=cm.Greys_r)
+    #plt.title('The gradient magnitude')
+
+gradeMag(IRet, 1)
+gradeMag(smartGirl, 1)
+#gradeMag(smartgirl, 100)
+#gradeMag(smartgirl, 3)
+#gradeMag(smartgirl, 4)
+\end{verbatim}
+
+\includegraphics[width=\linewidth]{masd1409184b.png}

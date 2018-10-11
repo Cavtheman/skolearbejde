@@ -1,0 +1,16 @@
+We know trivially that the functions $f(x) = x^2$, $f(x) = x$ and $f(x) = c$ are continuous. Thus, we have to prove that the function is continuous in $x= 0$, which is the place the two different functions meet, and discontinuous in $x=2$. \\
+First we want to prove continuity in $x=0$. We do this by proving the following:\\
+$lim_{x \to a}f(x)$ exists for all $a \in \mathbb{R}$.\\
+To do this, we will show the following:\\
+If $a<0$, then $lim_{x \to a} f(x) =  lim_{x \to a} x^2 = a^2	$\\
+If $a\in [0,2]$, then $lim_{x \to a} f(x) = lim_{x \to a}x = a$\\
+If $a>2$, then $lim_{x \to a} f(x) = lim_{x \to a} 5 = 5$\\
+If $a=0$, then $lim_{x \to a} f(x) =  lim_{x \to a}x = a$ and $lim_{x \to a} f(x) =  lim_{x \to a}x^2 = a^2$\\
+If $a=2$, then $lim_{x \to a} f(x) = lim_{x \to a}x = a$ and $lim_{x \to a} f(x) = lim_{x \to a}5 \not = a = 2$\\\\
+Now we have shown that the limit exists everywhere except in $x=2$. Thus we only have to prove the continuity in $x \neq 2$. We do this by proving the following:\\
+$lim_{x \to a} f(x) = f(a)$ for all $a \in \mathbb{R}$.\\
+We do this for all cases except $x=2$, since we already know it is discontinuous at that point.\\
+If $a < 0$, then $lim_{x \to a} f(x) = a^2 = f(a)$\\
+If $a \in [0,2]$, then $lim_{x \to a} f(x) = a = f(a)$\\
+If $a > 2$, then $lim_{x \to a} f(x) = 5 = f(a)$\\
+If $a = 0$, then $lim_{x \to a} f(x) = a^2 = f(a)$ and $lim_{x \to a} f(x) = a = f(a)$

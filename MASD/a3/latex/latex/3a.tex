@@ -1,0 +1,29 @@
+To derive the function given with respect to $a_{km}$ first, we have to make a few important realisations:
+$$\sum_{i=1}^6\sum_{j=1}^{10}I_{kj}(M_{kj}-(a_{k1}b_{1j}+a_{k2}b_{2j}))^2$$
+Since we are deriving with $a_{km}$, we can describe it as relating to one row, where $i=k$. This means that if $i \neq k$ the following is true:
+$$\frac{\partial E}{\partial a_{km}} I_{kj}(M_{kj}-(a_{k1}b_{1j}+a_{k2}b_{2j}))^2 = 0$$
+Now we can rewrite the function to the following:
+$$\frac{\partial E}{\partial a_{km}} = \sum_{j=1}^{10}I_{kj}(M_{kj}-(a_{k1}b_{1j}+a_{k2}b_{2j}))^2$$
+Using the product rule, we can simply ignore the sum symbol when deriving. For this, we will derive with respect to $m \in \{1,2\}$, instead of one at a time. We will use the chain rule in this step.
+$$\frac{\partial E}{\partial a_{km}} = \sum_{j=1}^{10}I_{kj}2(M_{kj}-(a_{k1}b_{1j}+a_{k2}b_{2j}))*-(b_{1j}+b_{2j})$$
+Now, since we derived with $m \in \{1,2\}$, we can see that if we had derived it with either $1$ or $2$, $-(b_{1j}+b_{2j})$ would have become the following:
+$$-(b_{mj})$$
+We can insert this into the expression instead:
+$$\frac{\partial E}{\partial a_{km}} = \sum_{j=1}^{10}I_{kj}2(M_{kj}-(a_{k1}b_{1j}+a_{k2}b_{2j}))*-(b_{mj})$$
+The expression has been derived now, and we can reduce it to the following:
+$$2\sum_{j=1}^{10}I_{kj}(-M_{kj}b_{mj}+a_{k1}b_{1j}b_{mj}+a_{k2}b_{2j}b_{mj})$$
+This is what we wanted to show.\\
+\\
+To derive the function given with respect to $b_{ml}$, we have to make the same realisation as in the first part: Since we are deriving with $b_{ml}$, we can describe it as relating to one row, where $j=m$. This means that if $j \neq m$ the following is true:
+$$\frac{\partial E}{\partial b_{ml}} I_{il}(M_{il}-(a_{i1}b_{1l}+a_{i2}b_{2l}))^2 = 0$$
+We can use this to rewrite the expression as follows:
+$$\frac{\partial E}{\partial b_{ml}} = \sum_{i=1}^{6}I_{il}(M_{il}-(a_{i1}b_{1l}+a_{i2}b_{2l}))^2$$
+Now we derive it, and can again use the product rule to derive each element of the sum, and the chain rule.
+$$\frac{\partial E}{\partial b_{ml}} = 2\sum_{i=1}^{6}I_{il}(M_{il}-(a_{i1}b_{1l}+a_{i2}b_{2l}))*-(a_{i1}+a_{i2})$$
+We can make the same realisation as before, that since we derived with $m \in \{1,2\}$, we can see that if we had derived it with either $1$ or $2$, $-(a_{i1}+a_{i2})$ would have become the following:
+$$-(a_{im})$$
+We can again put this in the function instead of $-(a_{i1}+a_{i2})$:
+$$\frac{\partial E}{\partial b_{ml}} = 2\sum_{i=1}^{6}I_{il}(M_{il}-(a_{i1}b_{1l}+a_{i2}b_{2l}))*-(a_{im})$$
+The expression has now been derived, and we will reduce it to the following:
+$$\frac{\partial E}{\partial b_{ml}} = 2\sum_{i=1}^6I_{il}(-M_{il}a_{im}+a_{i1}b_{1l}a_{im} + a_{i2}b_{2l}a_{im})$$
+This is also what we wanted to show.

@@ -1,0 +1,3 @@
+[submodule "CompSys/compsys"]
+	path = CompSys/compsys
+	url = https://github.com/Cavtheman/compsys.git

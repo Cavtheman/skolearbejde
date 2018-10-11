@@ -1,0 +1,32 @@
+To prove this, we need to state a few things:\\
+We know that it is possible to convert the basis a vector is shown in, by multiplying the vector onto the new basis $B =\{b_1,b_2\}$. We will do the following:\\\\
+First we will show that $(x-y) = (x_b-y_b)$. We do this by making a combined vector of $(x-y)$:
+$$
+(x-y) = 
+\begin{pmatrix}
+x_1-y_1\\
+x_2-y_2
+\end{pmatrix}
+$$
+Now we can show the vector $(x-y)$ by showing $B(x-y)$:\\
+$$
+B(x-y) =
+\begin{bmatrix}
+(b_1)_1 & (b_2)_1\\
+(b_1)_2 & (b_2)_2
+\end{bmatrix}
+\begin{bmatrix}
+x_1-y_1\\
+x_2-y_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+(b_1)_1(x_1-y_1) + (b_2)_1(x_2-y_2)\\
+(b_1)_2(x_1-y_1) + (b_2)_2(x_2-y_2)
+\end{bmatrix}
+= (x_b-y_b)
+$$
+Since we have shown that $(x-y)=(x_b-y_b)$ we can say the following:
+$$
+||x-y|| = \sqrt{x^2}-\sqrt{y^2} = \sqrt{x^2_b}-\sqrt{y^2_b} = ||x_b-y_b||
+$$

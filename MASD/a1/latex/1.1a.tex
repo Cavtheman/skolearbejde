@@ -1,0 +1,19 @@
+For this proof we can assume the following:
+$$
+\{a_n\} \text{ with } lim_{n \rightarrow \infty}a_n = a
+$$
+And we need to prove that the following is true:
+$$
+\{-a_n\} \text{ with } lim_{n \rightarrow \infty}-a_n = -a
+$$
+To do this, we need to prove the following:
+$$
+|-a_n+a| \leq |a_n-a| < \epsilon
+$$
+From the definition of limits, we know that the following is true for $a$:\\
+For every $\epsilon > 0$ there exists an integer $N \in \mathbb{N}$ such that $|a_n-a| < \epsilon$ for all $n > N$.\\
+We know, using the rule that $|a|=|-a|$, that the following must be true:
+$$
+|a_n-a| = |-(a_n-a)| = |-a_n+a| < \epsilon \implies |-(a_n-a)| < \epsilon
+$$
+Now that we know this is true, our claim must also be true.

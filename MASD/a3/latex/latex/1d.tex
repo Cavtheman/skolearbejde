@@ -1,0 +1,63 @@
+For this exercise we have to compute the derivatives both with respect to $x_1$ and $x_2$.
+$$f(x_1,x_2) = (x_1-x_2)^2$$
+$$\frac{\partial y}{\partial x_1} = 2x_1-2x_2$$
+$$\frac{\partial y}{\partial x_2} = -2x_1+2x_2$$
+Then we solve for $x_1$ and $x_2$, using matrices.
+$$
+\left[
+\begin{array}{rr|r}
+2 & -2 & 0\\
+-2 & 2 & 0
+\end{array}
+\right]
+=
+\left[
+\begin{array}{rr|r}
+1 & -1 & 0\\
+0 & 0 & 0
+\end{array}
+\right]
+$$
+With this we can see that $x_1-x_2=0$, in other words, $f(x_1,x_2) = 0$ when $x_1 = x_2$. This means that $f(x_1,x_2)$ intersects the x-axis at all points where $x_1 = x_2$.\\
+Now, to find whether it is a local maximum or minimum, we use the eigenvalues of the Hessian matrix.
+$$\frac{\partial^2 y}{\partial x_1 \partial x_2} = -2$$
+$$\frac{\partial^2 y}{\partial^2 x_1} = 2$$
+$$\frac{\partial^2 y}{\partial x_2 \partial x_1} = -2$$
+$$\frac{\partial^2 y}{\partial^2 x_2} = 2$$
+Thus, we can see that the Hessian matrix looks as follows:
+$$
+\left[
+\begin{array}{rr}
+2 & -2\\
+-2 & 2
+\end{array}
+\right]
+$$
+$$
+\left[
+\begin{array}{rr}
+2 & -2\\
+-2 & 2
+\end{array}
+\right]
+-\lambda I
+=
+\left[
+\begin{array}{rr}
+2-\lambda & -2\\
+-2 & 2-\lambda
+\end{array}
+\right]
+$$
+Then we find the determinants of the matrix:
+$$
+D
+\left[
+\begin{array}{rr}
+2-\lambda & -2\\
+-2 & 2-\lambda
+\end{array}
+\right]
+= \lambda^2-4\lambda
+$$
+Solving $\lambda^2-4\lambda = 0$ with Wolfram Alpha shows us that $\lambda_1 = 0, \lambda_2 = 4$. Since both values aren't nonzero, the test is inconclusive, and we can't tell whether it is a local maximum or minimum.

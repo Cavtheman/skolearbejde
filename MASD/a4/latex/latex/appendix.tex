@@ -1,0 +1,159 @@
+\subsection{}
+\begin{verbatim}
+# Importing packages -- feel free to add more, but recall that you should not use built-in 
+# functions for the task at hand. If in doubt, ask us by email.
+from scipy import signal as sg
+import numpy as np
+import matplotlib.pyplot as plt
+import skimage
+from skimage import io
+from skimage import color
+from matplotlib import cm 
+import matplotlib
+%pylab inline
+pylab.rcParams['figure.figsize'] = (12, 6)
+matplotlib.rcParams['figure.dpi']=150
+\end{verbatim}
+
+\subsection{}
+\begin{verbatim}
+data = np.loadtxt('data/precipitation.txt')
+#print(data)
+def evenIntegral(inArr):
+    return sum(inArr)
+
+print("Integral up to 182:\t\t", evenIntegral(data[:182]))
+print("Integral of entire set:\t\t",evenIntegral(data))
+\end{verbatim}
+
+\subsection{}
+\begin{verbatim}
+# Read and view the coins.png image
+coin = color.rgb2gray(io.imread('data/coins.png'))
+
+# Uncomment if, alternatively, you want to test with the cameraman.png image
+f = io.imread('data/cameraman.png')
+
+# Uncomment if you want to view the image:
+io.imshow(f, cmap=cm.Greys_r) 
+def convolve(image):
+    sigma = 1.4
+    X, Y = np.mgrid[-2:3, -2:3]
+    g = np.exp(-(X**2 + Y**2)/(2*sigma**2))
+    g /= g.sum()
+    return sg.convolve2d(image, g, mode='same')
+    
+plt.imshow(convolve(f), cmap=cm.Greys_r)
+plt.title('Cameraman.png convolved with a Gaussian filter')
+plt.show()
+
+plt.imshow(convolve(coin), cmap=cm.Greys_r)
+plt.title('Coins.png convolved with a Gaussian filter')
+\end{verbatim}
+
+\subsection{}
+\begin{verbatim}
+gx = np.matrix([[1, 0, -1],
+                [2, 0, -2],
+                [1, 0, -1]])
+gy = np.matrix([[-1,-2,-1,],
+                [ 0, 0, 0],
+                [ 1, 2, 1]])
+
+def sobelD(image, matrix):
+    return sg.convolve2d(image, matrix, mode='same')
+
+def gradeMag(image):
+    N, M = image.shape
+
+    tempXDiff = sobelD(image, gx)
+    tempYDiff = sobelD(image, gy)
+    newImage = np.sqrt(tempXDiff**2 + tempYDiff**2)
+
+    return newImage
+
+
+plt.title("Gradient Magnitude")
+plt.imshow(gradeMag(convolve(f)), cmap=cm.Greys_r)
+
+plt.show()
+plt.title("Gradient Magnitude")
+plt.imshow(gradeMag(convolve(coin)), cmap=cm.Greys_r)
+\end{verbatim}
+
+\subsection{}
+\begin{verbatim}
+def nMSuppr(image):
+    X,Y = image.shape
+    #print(X)
+    xImg = sobelD(image, gx)
+    yImg = sobelD(image, gy)
+    magImg = gradeMag(convolve(image))
+    
+    for i in range(X-1):
+        for j in range(Y-1):
+            if (j > 0 and i > 0):
+                
+                if (xImg[i,j] == 0):
+                    angle = 0
+                else:
+                    angle = np.degrees(arctan(yImg[i,j]/xImg[i,j]))
+                    angle = round(angle/45)*45
+                    
+                if (angle == 45 and (magImg[i,j] <= magImg[i+1,j-1] or magImg[i,j] <= magImg[i-1,j+1])):
+                    magImg[i,j] = 0
+                elif(angle == -45 and (magImg[i,j] <= magImg[i+1,j+1] or magImg[i,j] <= magImg[i-1,j-1])):
+                    magImg[i,j] = 0
+                elif ((angle == 0 or angle == -0) and (magImg[i,j] <= magImg[i,j+1] or magImg[i,j] <= magImg[i,j-1])):
+                    magImg[i,j] = 0
+                elif ((angle == 90 or angle == -90) and (magImg[i,j] <= magImg[i+1,j] or magImg[i,j] <= magImg[i-1,j])):
+                    magImg[i,j] = 0
+    return magImg
+
+f = io.imread('data/cameraman.png')
+
+plt.title("Non-maximum Suppression")
+plt.imshow(nMSuppr(f), cmap=cm.Greys_r)
+
+plt.show()
+coin = color.rgb2gray(io.imread('data/coins.png'))
+
+plt.title("Non-maximum Suppression")
+plt.imshow(nMSuppr(coin), cmap=cm.Greys_r)
+\end{verbatim}
+
+\subsection{}
+\begin{verbatim}
+def dbThr(image, min_t, max_t):
+    
+    X,Y = convolve(image).shape
+    supprImg = nMSuppr(image)
+    maxVal = 0
+    
+    for i in range(X):
+        for j in range(Y):
+            if supprImg[i,j] > maxVal:
+                maxVal = supprImg[i,j]
+    
+    for i in range(X):
+        for j in range(Y):
+            supprImg[i,j] = supprImg[i,j]/maxVal
+            if (supprImg[i,j] > max_t):
+                image[i,j] = 255
+            elif (supprImg[i,j] < min_t):
+                image[i,j] = 0
+            else:
+                image[i,j] = 100
+    return image
+
+f = io.imread('data/cameraman.png')
+
+plt.title('Double Threshholding with cameraman.png')
+plt.imshow(dbThr(f, 0.05, 0.3), cmap=cm.Greys_r)
+plt.show()
+
+coin = io.imread('data/coins.png')
+
+plt.title('Double Threshholding with coin.png')
+plt.imshow(dbThr(coin, 0.1, 0.25), cmap=cm.Greys_r)
+\end{verbatim}

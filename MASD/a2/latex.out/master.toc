@@ -1,0 +1,24 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {Exercise 1}}{3}{section.1}
+\contentsline {subsection}{\numberline {(a)}}{3}{subsection.1.1}
+\contentsline {section}{\numberline {Exercise 2}}{3}{section.2}
+\contentsline {subsection}{\numberline {(a)}}{3}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {(a).1}}{3}{subsubsection.2.1.1}
+\contentsline {subsubsection}{\numberline {(a).2}}{3}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {(a).3}}{3}{subsubsection.2.1.3}
+\contentsline {subsection}{\numberline {(b)}}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {(c)}}{4}{subsection.2.3}
+\contentsline {section}{\numberline {Exercise 3}}{5}{section.3}
+\contentsline {subsection}{\numberline {(a)}}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {(b)}}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {(c)}}{5}{subsection.3.3}
+\contentsline {subsection}{\numberline {(d)}}{6}{subsection.3.4}
+\contentsline {subsection}{\numberline {(e)}}{6}{subsection.3.5}
+\contentsline {subsection}{\numberline {(f)}}{6}{subsection.3.6}
+\contentsline {subsection}{\numberline {(g)}}{6}{subsection.3.7}
+\contentsline {section}{\numberline {Exercise 4}}{6}{section.4}
+\contentsline {subsection}{\numberline {(a)}}{6}{subsection.4.1}
+\contentsline {subsection}{\numberline {(b)}}{6}{subsection.4.2}
+\contentsline {subsection}{\numberline {(c)}}{6}{subsection.4.3}
+\contentsline {subsection}{\numberline {(d)}}{6}{subsection.4.4}
+\contentsline {subsection}{\numberline {(e)}}{7}{subsection.4.5}

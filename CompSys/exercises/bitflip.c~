@@ -1,0 +1,17 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+int main (int argc, char* argv[]) {
+  int value = atoi(argv[1]);
+  int index = atoi(argv[2]);
+  int powind = 2;
+  
+  if (argc == 3) {
+    
+    for (int i = 1; index; i++) {
+        powind = powind*2;
+    }
+    return (value^powind);
+  }
+}

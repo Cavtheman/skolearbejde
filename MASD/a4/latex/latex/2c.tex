@@ -1,0 +1,4 @@
+There would need to be a few changes to the function for it to work with variable lengths:\\
+\\
+First, we would have to find a way to calculate the length between the different inputs. $(x_i-x_{i-1})$. This would require a different type of input, perhaps an array of tuples, each with the value of the function, and the distance from the previous element.\\\\
+Second, we would also have to multiply the value of each element by this length, to find the approximation of the area. Only then would we sum everything together as before.

@@ -1,0 +1,13 @@
+MASD is, among other things:
+      Netflix problem: generating assumptions from dataset with missing data
+      image analysis, multidimensional derivatives
+      proofs that what you're doing is true
+first couple of weeks is calculus, writing proofs
+
+Writing proofs:
+        What does it take to be a proof:
+             correct assumptions
+             claim
+             logical steps from assumption to claim
+             needs to be clear for human reader
+Convergence:
