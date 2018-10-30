@@ -1,0 +1,27 @@
+To compute $\mathbb{E}(X+Y)$ we have to make the following observation:
+$$
+\mathbb{E}(X+Y) = \mathbb{E}X + \mathbb{E}Y
+$$
+This means that we simply have to compute:
+$$
+\mathbb{E}X + \mathbb{E}Y = \sum_x xp_X(x) + \sum_y yp_Y(y)
+$$
+To find the marginal pmfs $p_X(x)$ and $p_Y(y)$ we use the following calculations:
+$$
+p_X(x) = \sum_y p_{X,Y}(x,y)
+$$
+$$
+p_Y(y) = \sum_x p_{X,Y}(x,y)
+$$
+First we will find $\mathbb{E}X$, then $\mathbb{E}Y$:
+$$
+\mathbb{E}X = -1(0.1+0.1+0.4) + 1(0.3+0.05+0.05) = -0.2
+$$
+$$
+\mathbb{E}Y = -1(0.1+0.3) + 1(0.1+0.05) + 3(0.4+0.05) = 1.1
+$$
+Then we simply write:
+$$
+\mathbb{E}(X+Y) = -0.2 + 1.1 = 0.9
+$$
+This should be interpreted as expecting to make back $90\%$ of the money put in.

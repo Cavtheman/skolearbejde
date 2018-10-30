@@ -1,0 +1,16 @@
+The expectation of $Y$, $\mathbb{E}Y$ can be written as follows, as per definition 1.8 in the "MASD\_essentials\_ch1-updated.pdf" on Absalon:
+$$
+\mathbb{E}Y = \sum_y y p(y)
+$$
+The variance of $Y$, $var(Y)$, can be written as follows, as per definition 1.10 in the "MASD\_essentials\_ch1-updated.pdf" on Absalon:
+$$
+var(Y) = \mathbb{E}(Y-\mathbb{E}Y)^2 = \sum_y y^2p(y) - (\sum_y y p(y))^2
+$$
+To find $\mathbb{P}(a<V\leq b)$ we first have to make the observation that the cdf $F_V(x)$ is defined as being the probability that the variable $V$ will be \textit{less than or equal to} $x$, thus we can say that:
+$$
+F_V(x) = \mathbb{P}(V \leq x)
+$$
+This means that to calculate the probability of it being inside the interval ${a<V\leq b}$, we calculate $\mathbb{P}(V\leq b)$, and subtract $\mathbb{P}(V \leq a)$.
+$$
+\mathbb{P}(a<V\leq b) = F_V(a)-F_V(b)
+$$

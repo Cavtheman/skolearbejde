@@ -1,0 +1,38 @@
+First we will compute the pmf $p_Z$ of $Z = X*Y$.\\
+To do this, first we will define what $p_Z$ looks like:
+$$
+p_Z(z) = \mathbb{P}(Z = z)
+$$
+We can see from the table from Exercise 4a that there are six possible values for $Z$, since there are 2 values for $X$ and 3 for $Y$. These values are the following:
+\\
+\begin{tabular}{l||l|l|l}
+$X*Y$   & $y=-1$ & $y=1$ & $y=3$ \\ \hline
+$x=-1$  & $1$    & $-1$  & $-3$  \\ \hline
+$x = 1$ & $-1$   & $1$   & $3$
+\end{tabular}\\
+Now we simply compute $\mathbb{P}(X*Y)$ for each value of $x$ and $y$, and get the following table:
+\\
+\begin{tabular}{l|l}
+$p_Z(z)$ & $\mathbb{P}(X*Y = z)$  \\ \hline
+$z = -3$ & $0.4$  \\ \hline
+$z = -1$ & $0.4$  \\ \hline
+$z = 1$  & $0.15$ \\ \hline
+$z = 3$  & $0.05$ \\ \hline
+\end{tabular}\\
+To figure out if $X$ and $Y$ are independent, we have to look at their covariance, which is defined as thus:
+$$
+cov(X,Y) = \mathbb{E}XY - \mathbb{E}X\mathbb{E}Y
+$$
+We start off by finding $\mathbb{E}XY$:
+$$
+\mathbb{E}XY = \sum_{x,y} xyp(x,y)
+$$
+I have done this calculation in the attached Jupyter Notebook named: "Calculations" since it would be tedious to do by hand. It has given me the following:
+$$
+\mathbb{E}XY = -1.3
+$$
+We have already calculated $\mathbb{E}X$ and $\mathbb{E}Y$ further up, in exercise 4b. So we can write the following:
+$$
+cov(X,Y) = (-1.3) - (-0.2)*1.1 = -1.08
+$$
+Since we now know that the covariance $cov(X,Y) \neq 0$, we also know that $X$ and $Y$ are dependant on each other.
