@@ -1,0 +1,99 @@
+\subsubsection{i)}
+$$
+\int_1^4 x^3-4x^2+\sqrt{x}dx
+$$
+First we use the sum rule:
+$$
+\int x^3dx-\int 4x^2dx+\int\sqrt{x}dx
+$$
+These are trivial, so we calculate them separately and get the following:
+$$
+\frac{x^4}{4}-\frac{4x^3}{3}+\frac{2}{3}x^{\frac{3}{2}}
+$$
+Now we calculate these at the boundaries and subtract the result of the lower from the upper:
+$$
+\bigg(\frac{4^4}{4}-\frac{4*4^3}{3}+\frac{2}{3}*4^\frac{3}{2}\bigg)-\bigg(\frac{1}{4}-\frac{4}{3}+\frac{2}{3}*1^\frac{3}{2}\bigg) = -16-\bigg(\frac{-5}{12}\bigg)
+$$
+Thus, we have found that the definite integral equals:
+$$
+-16-\bigg(\frac{-5}{12}\bigg)
+$$
+\subsubsection{ii)}
+$$
+\int ln(\sqrt{x})dx
+$$
+First we rewrite this to the following:
+$$
+\int \frac{ln(x)}{2}dx
+$$
+We now take the constant out:
+$$
+\frac{1}{2} \int ln(x)
+$$
+We now do integration by parts:
+$$
+\frac{1}{2}\bigg(xln(x)-\int 1dx\bigg)
+$$
+The integral of a constant is $\int c = x$:
+$$
+\frac{1}{2}\bigg(xln(x)-x\bigg)
+$$
+Now we have to add a constant $C$, and we're done:
+$$
+\frac{1}{2}\bigg(xln(x)-x\bigg)+C
+$$
+\subsubsection{iii)}
+$$
+\int x^2e^{x^3}dx
+$$
+Here, we have to do u-substitution:
+$$
+\int x^2e^udx
+$$
+We now have:
+$$
+du = 3x^2dx 
+$$
+$$
+du*\frac{1}{3x^2} = dx
+$$
+With this we can substitute dx:
+$$
+\int e^ux^2\frac{1}{3x^2}du
+$$
+This can be rewritten;
+$$
+\int \frac{1}{3} e^udu
+$$
+We take the constant out, and know that $\int e^x = e^x$, so we now have the result:
+$$
+\frac{1}{3}\int e^{x^3}dx
+$$
+We end up with:
+$$
+\frac{1}{3}e^{x^3}
+$$
+\subsubsection{iv)}
+$$
+\int e^{-5r}dr
+$$
+Here, we have to do substitution again:
+$$
+\int e^udx
+$$
+We know that:
+$$
+du = -5dx
+$$
+We can then replace $dx$:
+$$
+\int \frac{e^u}{-5}du
+$$
+Now we have to take the constant out:
+$$
+\frac{-1}{5}\int e^udu
+$$
+And following the same rule as before $\int e^x = e^x$:
+$$
+\frac{-1}{5}e^{-5r}
+$$

@@ -1,0 +1,6 @@
+First we will explain the function $E(f) = \sum_{n=1}^N(y_n-f(x_n))^2$, then $f^* = argmin_{f\in \mathcal{F}}E(f)$\\
+The function $E(f)$ goes through each coordinate of the dataset through the x-axis and compares the y-value of the given approximated function $f$ to the y-value of the dataset. The difference of these is squared. The sum of this is taken for all coordinates. The result is then a measure of how close the function is to the dataset, where values closer to 0 mean it is more accurate
+
+The way this is set up means that any difference between the given function and the dataset are exaggerated, meaning that even small deviations from the dataset result in large values of $E(f)$.
+
+The second part $f^* = argmin_{f\in \mathcal{F}}E(f)$ chooses the function the matches the best, aka which function that returns the smallest value $E(f)$, in a given family of functions. The choice of $\mathcal{F}$ is a very important one in this function, since choosing one that does not fit the general curve of the dataset results in a function that is simply wrong. For example if we were to choose the family of linear functions, it is easy to see in the dataset given that past x-values of $-3$ and $3$, it would be wildly inaccurate. At the same time, choosing an $n$th degree function would not work either, since there is too much noise.
