@@ -438,6 +438,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/palatino/pplr8t.tfm
 INPUT latex/1b.tex
 INPUT latex/1b.tex
+INPUT latex/1d.tex
+INPUT latex/1d.tex
 INPUT latex/2a.tex
 INPUT latex/2a.tex
 INPUT latex/3a.tex

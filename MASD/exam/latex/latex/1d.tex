@@ -1,0 +1,89 @@
+\subsubsection{i)}
+To show that $E(f_W)=(Xw-y)^T(Xw-y)$, we will first write this out according to the error function given, part by part. First of all, we will define $D$ as the highest value of $d$, to avoid confusion. Now, $f_w(x)$ can be written in a more useful way:
+$$
+f_w(x_n) = w_1x_n+w_2x_n^2+...+w_Dx_n^D = \sum_{d=1}^D w_d x_n^d
+$$
+This can be set into the error function:
+$$
+E(f_w) = \sum_{n=1}^N (y_n-f(x_n))^2 = \sum_{n=1}^N \Big(y_n-\Big(\sum_{d=1}^D w_d x_n^d\Big)\Big)^2
+$$
+Now, we will show this backwards, by rewriting $(Xw-y)^T(Xw-y)$ to $E(f_w)$. First we will write the mathematical expression for each element in the resulting vector $Xw$:
+$$
+Xw_n =
+\left[
+\begin{array}{llll}
+x_1    & x_1^2  & \dots  & x_1^d  \\
+x_2    & x_2^2  & \dots  & x_2^d  \\
+\vdots & \vdots & \ddots & \vdots \\
+x_N    & x_N^2  & \dots  & x_N^d  \\
+\end{array}
+\right]
+\left[
+\begin{array}{l}
+w_1\\
+w_2\\
+\vdots\\
+w_d
+\end{array}
+\right]
+=
+w_1x_n+w_2x_n^2+...+w_Dx_n^D = \sum_{d=1}^D w_d x_n^d
+$$
+We can see that this is the same as $f_w(x_n)$, and will substitute that following. Since $\sum_{d=1}^D w_d x_n^d$ is only the expression for a single element in $Xw$, we can write the vector as thus:
+$$
+Xw = 
+\left(
+\begin{array}{l}
+f_w(x_1) \\
+f_w(x_2) \\
+\vdots \\
+f_w(x_n)
+\end{array}
+\right)
+$$
+Then, $Xw-y$ must look like this:
+$$
+(Xw-y)= 
+\left(
+\begin{array}{l}
+f_w(x_1)-y_1 \\
+f_w(x_2)-y_2 \\
+\vdots \\
+f_w(x_n)-y_n
+\end{array}
+\right)
+$$
+Now, to write $(Xw-y)^T(Xw-y)$, we can see the following:
+$$
+\left(
+\begin{array}{l}
+f_w(x_1)-y_1 \\
+f_w(x_2)-y_2 \\
+\vdots \\
+f_w(x_n)-y_n
+\end{array}
+\right)^T
+\left(
+\begin{array}{l}
+f_w(x_n)-y_1 \\
+f_w(x_n)-y_2 \\
+\vdots \\
+f_w(x_n)-y_n
+\end{array}
+\right)
+= \sum_{n=1}^N\Big(f_w(x_n)-y_n\Big)^2
+$$
+We know that $a^n = (-a)^n$, so we can rewrite it as thus:
+$$
+\sum_{n=1}^N\Big(-f_w(x_n)+y_n\Big)^2 = \sum_{n=1}^N\Big(y_n-f_w(x_n)\Big)^2
+$$
+Which is exactly what we wanted to show:
+$$
+E(f_w) = (Xw-y)^T(Xw-y) = \sum_{n=1}^N\Big(y_n-f_w(x_n)\Big)^2
+$$
+
+
+
+
+
+
