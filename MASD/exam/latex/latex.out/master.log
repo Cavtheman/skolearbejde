@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.5)  3 NOV 2018 00:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.9.5)  3 NOV 2018 21:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1498,7 +1498,12 @@ S/zplm/m/n/10 ^^@ \OML/zplm/m/it/10 f\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT
 /n/10 )$ 
  []
 
-) [5] (./latex/1d.tex
+) [5] (./latex/1c.tex
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 1.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+))
+(./latex/1d.tex [6]
 Overfull \hbox (8.57336pt too wide) detected at line 31
 \OML/zplm/m/it/10 Xw[] \OT1/zplm/m/n/10 = [] [] = \OML/zplm/m/it/10 w[]x[] \OT1
 /zplm/m/n/10 + \OML/zplm/m/it/10 w[]x[] \OT1/zplm/m/n/10 + \OT1/ppl/m/n/10 ... 
@@ -1506,41 +1511,38 @@ Overfull \hbox (8.57336pt too wide) detected at line 31
 t/10 w[]x[]
  []
 
-[6]) (./latex/2a.tex [7] [8]) (./latex/3a.tex) (./latex/3b.tex
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 1.
-
-(/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
-File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
-) [9]
+[7]) (./latex/1e.tex) (./latex/2a.tex [8] [9]) (./latex/3a.tex) (./latex/3b.tex
+[10]
 Overfull \hbox (17.3661pt too wide) in paragraph at lines 12--14
 \T1/ppl/m/n/10 This means that to cal-cu-late the prob-a-bil-ity of it be-ing i
 n-side the in-ter-val $[]$,
  []
 
-) (./latex/4a.tex) (./latex/4b.tex) [10] (./latex/4c.tex) (./latex/4d.tex
+) (./latex/3c.tex [11]) (./latex/4a.tex) (./latex/4b.tex) [12] (./latex/4c.tex)
+(./latex/4d.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-[11]) 
+[13]) 
 AED: lastpage setting LastPage
-[12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
+[14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (latex.out/master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34192 strings out of 492642
- 636597 string characters out of 6135567
- 778729 words of memory out of 5000000
- 37452 multiletter control sequences out of 15000+600000
+ 34211 strings out of 492642
+ 636835 string characters out of 6135567
+ 779731 words of memory out of 5000000
+ 37456 multiletter control sequences out of 15000+600000
  565620 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,86p,848b,346s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,86p,848b,354s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -1550,10 +1552,10 @@ t/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/mathpazo/fplmri.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
 fb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf
 -dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on latex.out/master.pdf (12 pages, 129627 bytes).
+Output written on latex.out/master.pdf (14 pages, 135758 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 38 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 290 PDF objects out of 1000 (max. 8388607)
+ 245 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

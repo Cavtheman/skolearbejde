@@ -1,0 +1,42 @@
+To prove that $\mathbb{E}Z = argmin_\alpha\mathbb{E}((Z-\alpha)^2)$, we will first write out what that means:
+$$
+\mathbb{E}Z=\sum_zzp(z)
+$$
+$$
+argmin_\alpha\mathbb{E}((Z-\alpha)^2) = \left(\frac{\partial}{\partial\alpha} \mathbb{E}((Z-\alpha)^2)=0\right)
+$$
+We will start by expanding the second expression:
+$$
+\frac{\partial}{\partial\alpha}\mathbb{E}(Z^2-2Z\alpha+a^2) = 0
+$$
+$$
+\frac{\partial}{\partial\alpha}\mathbb{E}(Z^2)-\mathbb{E}(2Z\alpha)+\mathbb{E}(a^2) = 0
+$$
+Now we will write out the expressions in full:
+$$
+\frac{\partial}{\partial\alpha}\Big(\sum_zz^2p_z(z)\Big)-\frac{\partial}{\partial\alpha}2\alpha\sum_zzp_z(z)+\frac{\partial}{\partial\alpha}\alpha^2 = 0
+$$
+Now we will derive it with respect to $\alpha$. $\frac{\partial}{\partial\alpha}\Big(\sum_zz^2p_z(z)\Big) = 0$ because $\frac{\partial}{\partial x}c = 0$ 
+$$
+0-\frac{\partial}{\partial\alpha}2\alpha\sum_zzp_z(z)+\frac{\partial}{\partial\alpha}\alpha^2 = 0
+$$
+Now we derive the second part of the expression, using the rule $\frac{\partial}{\partial\alpha}c\alpha = c$
+$$
+\frac{\partial}{\partial\alpha}2\alpha\sum_zzp_z(z) = 2\sum_zzp_z(z)
+$$
+To derive the the third part, we use the rule that $\frac{\partial}{\partial\alpha}\alpha^n = n\alpha^{n-1}$
+$$
+\frac{\partial}{\partial\alpha}\alpha^2 = 2\alpha
+$$
+Now we can add all this into the expression, and end with this:
+$$
+-2\sum_zzp_z(z)+2\alpha = 0
+$$
+We can rewrite this to the following:
+$$
+\sum_zzp_z(z)= \alpha
+$$
+This is what we wanted to show, now we have:
+$$
+argmin_\alpha\mathbb{E}((Z-\alpha)^2) = \sum_zzp_z(z) = \mathbb{E}Z
+$$

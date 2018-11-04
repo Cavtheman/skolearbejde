@@ -11,15 +11,38 @@ $$
 \mathbb{E}V = \sum_v vp(v) = \mathbb{P}(V=0)*0+\mathbb{P}(V=1)*1 = \theta*1+(1-\theta)*0 = \theta
 $$
 The same of course holds for $\mathbb{E}W = \phi$\\
-We can do the same for $\mathbb{E}VW$:
+We can see that $p(v)p(w) = p(v,w)$ in the following tables:
 $$
-\mathbb{E}VW = \sum_{v,w} vwp(v,w)
+p(v) =
+\left\{
+\begin{array}{ll}
+1 - \theta & \text{if } v=0\\
+\theta     & \text{if } v=1
+\end{array}
+\right.
 $$
-Since this expression always will be zero except in $(V=1,W=1)$, we can simplify the equation:
 $$
-\mathbb{E}VW = \theta \phi
+p(w) =
+\left\{
+\begin{array}{ll}
+1 - \phi & \text{if } w=0\\
+\phi     & \text{if } w=1
+\end{array}
+\right.
 $$
-Now we can insert these values into $p(v),p(w)$ and $p(v,w)$:
+$$
+p(v,w) =
+\left\{
+\begin{array}{ll}
+(1 - \theta)*(1-\phi) & \text{if } v=0,w=0\\
+\theta*(1-\phi)       & \text{if } v=1,w=0\\
+(1-\theta)*\phi       & \text{if } v=0,w=1\\
+\theta \phi           & \text{if } v=1,w=1\\
+\end{array}
+\right\}
+= p(v)p(w)
+$$
+Now we can insert the values of $\mathbb{E}V$ and $\mathbb{E}W$ into $p(v),p(w)$ and $p(v,w)$:
 $$
 p(v) =
 \left\{

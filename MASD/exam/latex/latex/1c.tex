@@ -1,0 +1,33 @@
+To show that $argmin_a\mathbb{E}(f_a) = f^*$, we have to solve $\frac{\partial}{\partial a}\sum_{n=1}^N(y_n-x_na)^2)=0$ for $a$, when $f_a(x_n) = ax_n$. We start off by expanding the expression:
+$$
+\frac{\partial}{\partial a}\sum_{n=1}^N(y_n^2-2x_nay_n+(x_na)^2)=0
+$$
+We can then use the sum rule to rewrite it to the following:
+$$
+\sum_{n=1}^N\Big(\frac{\partial}{\partial a}y_n^2\Big) - \frac{\partial}{\partial a}\Big(2x_nay_n\Big)+\frac{\partial}{\partial a}\Big((x_na)^2\Big)=0
+$$
+Now we derive the functions:
+$$
+\sum_{n=1}^N0-2x_ny_n+2ax_n^2=0
+$$
+We can rewrite this into two separate sums:
+$$
+\sum_{n=1}^N (2ax_n^2) - \sum_{n=1}^N (2x_ny_n) = 0
+$$
+Rewrite it again, to try isolating $a$:
+$$
+\sum_{n=1}^N2ax_n^2 = \sum_{n=1}^N 2x_ny_n
+$$
+We can put constant multiples outside of the sums:
+$$
+2a\sum_{n=1}^Nx_n^2 = 2\sum_{n=1}^Nx_ny_n
+$$
+We reduce this:
+$$
+a\sum_{n=1}^Nx_n^2 = \sum_{n=1}^Nx_ny_n
+$$
+And isolate $a$:
+$$
+a=\frac{\sum_{n=1}^Nx_ny_n}{\sum_{n=1}^Nx_n^2}
+$$
+This is exactly what we wanted to show.
