@@ -81,8 +81,40 @@ Which is exactly what we wanted to show:
 $$
 E(f_w) = (Xw-y)^T(Xw-y) = \sum_{n=1}^N\Big(y_n-f_w(x_n)\Big)^2
 $$
+\subsubsection{ii)}
+For this part of the exercise, the proof has not been finished, but here is as far as I got:\\
+We will use $d$ and $D$ the same way here as in the previous exercise, and will define $c = D$:
+$$
+E(f_w) = \sum_{n=1}^N\bigg(y_n-\Big(\sum_{d=1}^Dw_dx_n^d\Big)\bigg)^2
+$$
+$$
+2X^TXw-2x^Ty =
+2
+\left(
+\begin{array}{l}
+\sum_{n=1}^N\sum_{d=1}^Dw_dx_n^dx_n^1 \\
+\sum_{n=1}^N\sum_{d=1}^Dw_dx_n^dx_n^2 \\
+\vdots \\
+\sum_{n=1}^N\sum_{d=1}^Dw_dx_n^dx_n^c 
+\end{array}
+\right)
+-2
+\left(
+\begin{array}{l}
+\sum_{n=1}^Nx_n^1y_n \\
+\sum_{n=1}^Nx_n^2y_n \\
+\vdots \\
+\sum_{n=1}^Nx_n^cy_n \\
+\end{array}
+\right)
+$$
+$$
+2X^TXw-2x^Ty = 2\Big(\sum_{n=1}^N\sum_{d=1}^Dw_dx_n^dx_n^c\Big)-2\Big(\sum_{n=1}^Nx_n^cy_n\Big)
+$$
 
-
+$$
+\nabla E(f_w) = \frac{\partial}{\partial w_d} \sum_{n=1}^N\bigg(y_n-\Big(\sum_{d=1}^Dw_dx_n^d\Big)\bigg)^2 = 2\Big(\sum_{n=1}^N\sum_{d=1}^Dw_dx_n^dx_n^c\Big)-2\Big(\sum_{n=1}^Nx_n^cy_n\Big)
+$$
 
 
 
