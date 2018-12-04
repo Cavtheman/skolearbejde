@@ -1,0 +1,27 @@
+This part of the exercise has been completed in the attached Jupyter Notebook named "\textit{A1.ipynb}".\\
+The relevant code can be seen here:
+\begin{verbatim}
+def estimator(samples):
+    # Input is an series of vectors
+    successes = 0
+    for i in range (len(samples[0])):
+        # Calculating the value for all given vectors,
+        # and checking whether they meet the given criteria
+        if ((samples[0][i])**2 + (samples[1][i])**2 <= 1):
+            successes+=1
+    # Normalising the end result to get an estimate of how
+    # likely it is for the statement to be true
+    return successes/len(samples[0])
+\end{verbatim}
+The estimator is given a range of samples and calculates the average value from it, with the criteria:
+$$
+\mathbb{P}(X^2+Y^2 \leq 1)
+$$
+The resulting values look as follows:
+\begin{itemize}
+\item estimator at sample size 1000: 0.766
+\item estimator at sample size 10000: 0.7893
+\item estimator at sample size 100000: 0.78474
+\item estimator at sample size 1000000: 0.785553
+\end{itemize}
+We can see that this approaches the value $\pi/4 = 0.78539$ as the samples sizes grow larger.

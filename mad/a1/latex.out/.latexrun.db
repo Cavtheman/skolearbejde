@@ -1,0 +1,132 @@
+{
+  "version": "latexrun-db-v2",
+  "tasks": {
+    "latex::latex/master.tex": {
+      "deps": [
+        [
+          "args",
+          [],
+          [
+            "pdflatex",
+            "-shell-escape",
+            "-interaction",
+            "nonstopmode",
+            "-recorder",
+            "-output-directory",
+            "latex.out",
+            "latex/master.tex"
+          ]
+        ],
+        [
+          "env",
+          [
+            "TEXMFOUTPUT"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXINPUTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXFORMATS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXPOOL"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TFMFONTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "PATH"
+          ],
+          "/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/tex/latex/base/article.cls"
+          ],
+          "e16519aa28f7354ff115826ba18deb352a78788dbc7972b3189ccc009380a527"
+        ],
+        [
+          "file",
+          [
+            "/var/lib/texmf/web2c/pdftex/pdflatex.fmt"
+          ],
+          "8e5f863b4cabbd7db1242e5f1aa9dec5403fb8842759eb88df012e744baf4eb5"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/tex/latex/base/size10.clo"
+          ],
+          "d97abb23a39ba314fe96d18c80fbd42fccf385f401a8c8a4edb157dc3b54724a"
+        ],
+        [
+          "file",
+          [
+            "latex/master.tex"
+          ],
+          "088445eedb420e5164c2abb19f7100f6ffc3268ebe1206d4c9dd54a4665d4692"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/web2c/texmf.cnf"
+          ],
+          "65ffceec62ccb6e1b01f58ff8e7ec6123f6385139d45bec7f8332f6f3c717912"
+        ],
+        [
+          "unknown_input",
+          [],
+          1543835180.470347
+        ],
+        [
+          "file",
+          [
+            "latex.out/master.log"
+          ],
+          "38bb22a60897c3e5348f956efff78374d3f52e5250d830465e902c7738c86772"
+        ],
+        [
+          "file",
+          [
+            "latex.out/master.fls"
+          ],
+          "ef3770105f0c067374d1988d570fab58e41074edda4196062b92f0d2fb881ca2"
+        ]
+      ],
+      "output_files": {
+        "latex.out/master.log": "38bb22a60897c3e5348f956efff78374d3f52e5250d830465e902c7738c86772",
+        "latex.out/master.fls": "ef3770105f0c067374d1988d570fab58e41074edda4196062b92f0d2fb881ca2"
+      },
+      "extra": {
+        "jobname": "latex.out/master",
+        "outname": null,
+        "status": 1
+      }
+    }
+  },
+  "clean": {
+    "latex.out/master.fls": "ef3770105f0c067374d1988d570fab58e41074edda4196062b92f0d2fb881ca2",
+    "latex.out/master.log": "38bb22a60897c3e5348f956efff78374d3f52e5250d830465e902c7738c86772"
+  }
+}

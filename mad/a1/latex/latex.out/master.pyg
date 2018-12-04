@@ -1,0 +1,33 @@
+# Gaussian sample
+def coinFlip(n):
+    results = [None] * 5
+    for i in range(n):
+        results[i] = np.random.normal()
+    return results
+
+# Theta^hat_stupid
+def stuEst(samples):
+    tempSum = 0
+    for i in range(3):
+        tempSum += samples[i]
+    return 1/3 * tempSum
+
+# Sample Mean
+def sampleMean(samples):
+    return 1/len(samples) * np.sum(samples)
+
+# Variance Estimator
+def varEst(samples):
+    return 1/len(samples) * np.sum((samples-sampleMean(samples))**2)
+
+# Calculating and plotting everything n times
+def plotAll(flips, n):
+    retVal = np.zeros((3,n))
+    for i in range(n):
+        temp = coinFlip(flips)
+        retVal[0,i] = stuEst(temp)
+        retVal[1,i] = sampleMean(temp)
+        retVal[2,i] = varEst(temp)
+
+    # Lots of irrelevant plotting here, can be seen in the notebook
+    return retVal

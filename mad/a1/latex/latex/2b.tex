@@ -1,0 +1,15 @@
+To compute $\mathbb{P}(X^2+Y^2 \leq 1)$ we first have to realise that the expression can be visualised as a circle with radius 1. We can then realise that since the two-dimensional integral is equal to the volume under the graph. This means that we simply calculate the volume of a cylinder with a height defined by the pdf given, $\frac{1}{4}$, since the result always stays within the first part of the function:
+$$
+f_{X,Y}(x,y) =
+\left\{
+\begin{array}{ll}
+1/4 &if -1 \leq x,y \leq 1 \\
+0 &otherwise
+\end{array}
+\right.
+$$
+We calculate the volume of the cylinder $\pi * r^2 * h$:
+$$
+\pi * 1^2 * \frac{1}{4} = \frac{\pi}{4}
+$$
+And find that $\mathbb{P}(X^2+Y^2 \leq 1) = \frac{\pi}{4}$
