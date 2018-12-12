@@ -1,11 +1,8 @@
 There is quite a bit of code here, but it has been divided into smaller, more readable functions:
 \begin{verbatim}
 # Gaussian sample
-def coinFlip(n):
-    results = [None] * 5
-    for i in range(n):
-        results[i] = np.random.normal()
-    return results
+def gauss(n):
+    return np.random.normal(0,1,n)
 
 # Theta^hat_stupid
 def stuEst(samples):
@@ -23,10 +20,10 @@ def varEst(samples):
     return 1/len(samples) * np.sum((samples-sampleMean(samples))**2)
 
 # Calculating and plotting everything n times
-def plotAll(flips, n):
+def plotAll(distribution, n):
     retVal = np.zeros((3,n))
     for i in range(n):
-        temp = coinFlip(flips)
+        temp = gauss(distribution)
         retVal[0,i] = stuEst(temp)
         retVal[1,i] = sampleMean(temp)
         retVal[2,i] = varEst(temp)

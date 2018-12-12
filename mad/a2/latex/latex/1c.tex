@@ -1,0 +1,8 @@
+To find the maximum likelihood estimator, $MLE\hat\theta^{ML} = (\hat x_{max}, \hat x_{min}, \hat y_{min},\hat y_{max})$, we have to look at the given values, $((0,0),(0,1),(1,1),(2,2))$. Our best estimate is then the extremes of the given values:
+$$
+MLE\hat\theta^{ML} = \Big( min(x_1,\dotsc,x_n), max(x_1,\dotsc,x_n), min(y_1,\dotsc,y_n), max(y_1,\dotsc,y_n) \Big)
+$$
+$$
+MLE\hat\theta^{ML} = (0,2,0,2)
+$$
+We can see that this estimate has a bias for all values, since the chance that the stars in the most extreme positions are not necessarily likely to appear at the very edges of the window. We can thus say that the $min$ values have a bias where estimate is likely to be larger than the actual value, and the $max$ values are likely to be smaller than the actual values, but we don't know by how much and because of this can't correct for it.

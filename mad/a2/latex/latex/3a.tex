@@ -1,0 +1,25 @@
+To complete this, we have to rewrite the given random variables into a convergence of probability:
+$$
+\mathbb{P}(|X_n-X| > \varepsilon) \rightarrow 0 \text{ for } n \rightarrow \infty \text{, and } \varepsilon > 0
+$$
+To show that adding a constant $c$ doesn't change this convergence, we show the following:
+$$
+\mathbb{P}(|(X_n+c)-(X+c)| > \varepsilon) \rightarrow 0
+$$
+In this case we can simply remove the parentheses and see that $c-c = 0$, and thus still converges to $0$:
+$$
+\mathbb{P}(|X_n-X +c-c| > \varepsilon) \rightarrow 0
+$$
+Now we have to show that the same holds for multiplying by a constant $a$:
+$$
+\mathbb{P}(|aX_n-aX| > \varepsilon) \rightarrow 0
+$$
+We rewrite this a bit for clarity:
+$$
+\mathbb{P}(|a(X_n-X)| > \varepsilon) \rightarrow 0
+$$
+We can then divide both sides of the quality by $a$:
+$$
+\mathbb{P}(|X_n-X| > \frac{\varepsilon}{a}) \rightarrow 0
+$$
+Now, even though the $\varepsilon$ is smaller we can see that it still converges to $0$, but at $\frac{1}{a}$ the rate as when there is no constant multiplier. We can intuitively understand this, by looking at the absolute values of $|X_n-X|$, which would be $a$ times larger at any given point in the series, up to $\infty$.

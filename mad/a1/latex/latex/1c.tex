@@ -1,0 +1,24 @@
+To find the median, we have to look at the definition:
+$$
+median := F(m) = \frac{1}{2}
+$$
+We can write this out, and try to solve for $m$:
+$$
+F(m) = 1 - e^{-(\beta m)^{\alpha}} = \frac{1}{2}
+$$
+$$
+1 = \frac{1}{2} + e^{-(\beta m)^{\alpha}}
+$$
+$$
+ln(1) = ln\left(\frac{1}{2}\right) + ln(e^{-(\beta m)^\alpha})
+$$
+$$
+0 - ln\left(\frac{1}{2}\right)= ln(e^{-(\beta m)^\alpha})
+$$
+$$
+ln(2) = -(\beta m)^\alpha
+$$
+Since $\alpha, \beta > 0$ we can do the following:
+$$
+\frac{\sqrt[\alpha]{ln(2)}}{\beta} = m
+$$

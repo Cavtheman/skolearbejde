@@ -1,0 +1,11 @@
+To find $\mathbb{P}(min(X, Y ) \leq 4)$ we have to realise that we can calculate the complement simply, as the product of the two definite integrals $\int_0^4f(x)dx * \int_0^4f(y)dy$:
+$$
+\int_0^4f(x)dx = (1 - e^{-(\frac{4}{4})^{2}}) - (1 - e^{-(\frac{0}{4})^{2}}) \approx 0.632
+$$
+$$
+\int_0^4f(y)dy = (1 - e^{-(\frac{4}{6})^{3}}) - (1 - e^{-(\frac{0}{6})^{3}}) \approx 0.256
+$$
+$$
+\mathbb{P}(min(X, Y ) \leq 4) = 1 - \left(\int_0^4f(x)dx *\int_0^4f(y)dy\right) \approx 1 - 0.632*0.256 \approx 0.838
+$$
+This means that there is an $83.8\%$ chance that $\mathbb{P}(min(X, Y ) \leq 4)$

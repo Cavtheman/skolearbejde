@@ -1,0 +1,24 @@
+To find the probability that it stops functioning within the given time interval, we calculate the definite integral between $[0,4]$, since we know that:
+$$
+F(x \leq 0) = 0
+$$
+We compute the following with Wolfram Alpha:
+$$
+\int_0^{4}f(x) = \int_0^{4} \frac{\alpha e^{-(\beta x)^\alpha} (\beta x)^\alpha}{x}dx = F(4) - F(0)
+$$
+$$
+(1 - e^{-(\frac{4}{4})^{2}}) - (1 - e^{-(\frac{0}{4})^{2}}) = 0.632
+$$
+We then subtract this from $1$ because that is the reverse case:
+$$
+1- 0.632 = 0.368
+$$
+For the second part we have to compute the definite integral with boundaries $[5,10]$:
+$$
+\int_5^{10} f(x) = \int_5^{10}\frac{\alpha e^{-(\beta x)^\alpha} (\beta x)^\alpha}{x}dx = F(10) - F(5)
+$$
+We compute this with Wolfram Alpha:
+$$
+(1 - e^{-(\frac{10}{4})^{2}}) - (1 - e^{-(\frac{5}{4})^{2}}) = 0.208
+$$
+This means that there is a 20.8\% chance of the chip breaking in this interval

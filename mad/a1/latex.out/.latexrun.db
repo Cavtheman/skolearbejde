@@ -123,10 +123,114 @@
         "outname": null,
         "status": 1
       }
+    },
+    "latex::master.tex": {
+      "deps": [
+        [
+          "args",
+          [],
+          [
+            "pdflatex",
+            "-shell-escape",
+            "-interaction",
+            "nonstopmode",
+            "-recorder",
+            "-output-directory",
+            "latex.out",
+            "master.tex"
+          ]
+        ],
+        [
+          "env",
+          [
+            "TEXMFOUTPUT"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXINPUTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXFORMATS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXPOOL"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TFMFONTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "PATH"
+          ],
+          "/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/web2c/texmf.cnf"
+          ],
+          "65ffceec62ccb6e1b01f58ff8e7ec6123f6385139d45bec7f8332f6f3c717912"
+        ],
+        [
+          "file",
+          [
+            "/var/lib/texmf/web2c/pdftex/pdflatex.fmt"
+          ],
+          "8e5f863b4cabbd7db1242e5f1aa9dec5403fb8842759eb88df012e744baf4eb5"
+        ],
+        [
+          "unknown_input",
+          [],
+          1543929611.2675061
+        ],
+        [
+          "file",
+          [
+            "latex.out/texput.fls"
+          ],
+          "829d5ebc6dea34335a5c76001f146a64ae9e527977f89e9f4929684f6bf70ad1"
+        ],
+        [
+          "file",
+          [
+            "latex.out/texput.log"
+          ],
+          "cd2b402a8d0149a3d5eef018ee4372dae6cf57f8e27c9ff1a3c038737b08328d"
+        ]
+      ],
+      "output_files": {
+        "latex.out/texput.fls": "829d5ebc6dea34335a5c76001f146a64ae9e527977f89e9f4929684f6bf70ad1",
+        "latex.out/texput.log": "cd2b402a8d0149a3d5eef018ee4372dae6cf57f8e27c9ff1a3c038737b08328d"
+      },
+      "extra": {
+        "jobname": "latex.out/texput",
+        "outname": null,
+        "status": 1
+      }
     }
   },
   "clean": {
     "latex.out/master.fls": "ef3770105f0c067374d1988d570fab58e41074edda4196062b92f0d2fb881ca2",
-    "latex.out/master.log": "38bb22a60897c3e5348f956efff78374d3f52e5250d830465e902c7738c86772"
+    "latex.out/master.log": "38bb22a60897c3e5348f956efff78374d3f52e5250d830465e902c7738c86772",
+    "latex.out/texput.fls": "829d5ebc6dea34335a5c76001f146a64ae9e527977f89e9f4929684f6bf70ad1",
+    "latex.out/texput.log": "cd2b402a8d0149a3d5eef018ee4372dae6cf57f8e27c9ff1a3c038737b08328d"
   }
 }

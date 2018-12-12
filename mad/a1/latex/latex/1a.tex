@@ -8,7 +8,7 @@ F(x) =
 \left\{
 \begin{array}{ll}
 0, & x \leq 0 \\
-1 - exp(- (\beta x)^\alpha), & x > 0
+1 - e^{- (\beta x)^\alpha}, & x > 0
 \end{array}
 \right.
 $$
@@ -18,7 +18,16 @@ f(x) =
 \left\{
 \begin{array}{ll}
 \frac{d}{dx} 0, & x \leq 0 \\
-\frac{d}{dx} 1 - exp(- (\beta x)^\alpha), & x > 0
+\frac{d}{dx} 1 - e^{- (\beta x)^\alpha}, & x > 0
+\end{array}
+\right.
+$$
+$$
+f(x) =
+\left\{
+\begin{array}{ll}
+0, & x \leq 0 \\
+\frac{\alpha e^{-(\beta x)^\alpha} (\beta x)^\alpha}{x}, & x > 0
 \end{array}
 \right.
 $$

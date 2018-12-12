@@ -1,0 +1,20 @@
+To perform the t-test, we have to follow the six steps. For this we will define the sequence $((X_1 - Y_1), \dotsc , (X_n - Y_n))$\\
+First, we write the model. This is given as a normal distribution:
+$$
+T  \sim \mathcal{N} (\mu,\sigma^2)
+$$
+Then we write down the hypothesis. This hypothesis must be the case since if there is no difference between the distributions, they will have the same mean.
+$$
+H_0 : \mu = 0, H_1 : \mu \neq 0
+$$
+Now we write down the test:
+$$
+T = \sqrt{n}\frac{\bar X - \mu}{\sigma}
+$$
+We are given the significance level $\alpha = 0.05$
+We calculate the rejection region to be $\mathcal{R} = (-\infty,z_{0.05}]\cup [z_{0.95}, \infty) = (-\infty,-2.776]\cup [2.776, \infty)$
+Finally we compute the test statistic with the data, using python. We have done this using python in the attached Jupyter Notebook:
+$$
+T = \sqrt{n}\frac{\bar X - \mu}{\sigma} = 1.809
+$$
+This is not $\in \mathcal{R}$, which means the test passes.

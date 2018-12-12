@@ -1,0 +1,13 @@
+To find the $argmax$ of the function we first have to find the local extrema, by taking the first derivative, the derivation will be done using Wolfram Alpha. It should be noted that the exercise has not been completed, but the procedure has been explained:
+$$
+\frac{\partial}{\partial\theta}f(x) = \frac{\partial}{\partial\theta} \sum_{i=1}^n log(\theta(1-\theta)^{x_i-1}) =\sum_{i=1}^n  \frac{\theta x_i - 1}{(\theta-1)\theta}
+$$
+We should the solve for $\frac{\partial}{\partial\theta}f(\theta) = 0$ to find critical points.
+Then, to figure out whether the critical points are the local maximum, we have to find the second-order derivative and solve for the critical points. The derivation will be done using Wolfram Alpha:
+$$
+\frac{\partial^2}{\partial^2\theta}f(\theta) = \frac{\partial^2}{\partial^2\theta} \sum_{i=1}^n log(\theta(1-\theta)^{x_i-1}) = \sum_{i=1}^n \frac{\theta^2(-x_i)+2\theta-1}{(\theta-1)^2\theta^2}
+$$
+If the result is the $<0$ we know that we have found a local maximum. If it is positive we have found a local minimum. If it is $=0$ we have found a saddle.
+$$
+\sum_{i=1}^n \frac{\theta^2(-x_i)+2\theta-1}{(\theta-1)^2\theta^2}, \theta = \text{critical points}
+$$

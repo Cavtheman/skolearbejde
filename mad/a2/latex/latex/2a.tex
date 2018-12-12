@@ -1,0 +1,22 @@
+To find the confidence interval we have to solve the following for $\hat\mu$:
+We define the following:
+$$
+z_a = \frac{\alpha}{2}
+$$
+$$
+z_b = 1-\frac{\alpha}{2}
+$$
+Then, we solve the following for $\hat\mu$:
+$$
+z_a \leq \sqrt{n}\frac{\hat\mu - \mu}{\hat\sigma} \leq z_b
+$$
+$$
+\frac{\hat\sigma z_a}{\sqrt{n}} \leq \hat\mu - \mu \leq \frac{\hat\sigma z_b}{\sqrt{n}}
+$$
+$$
+\frac{\hat\sigma z_a}{\sqrt{n}} + \mu \leq \hat\mu \leq \frac{\hat\sigma z_b}{\sqrt{n}} + \mu
+$$
+And thus, we have found the confidence interval:
+$$
+\left[[\frac{\hat\sigma z_a}{\sqrt{n}} + \mu,\frac{\hat\sigma z_b}{\sqrt{n}} + \mu\right]
+$$
