@@ -1,0 +1,34 @@
+To do the derivation, we will first simplify the expression, by rewriting it to an expression using only matrices and vectors:
+$$
+\nabla \mathcal{L}(w) = \nabla \sum_{n=1}^N (f(x_n;w)-t_n)^2 = \nabla \sum_{n=1}^N (w^Tx_n-t_n)^2
+$$
+$$
+\nabla (Xw-t)^T(Xw-t)
+$$
+We simplify this further, which enables us to use simpler rules of derivation:
+$$
+\nabla ((Xw)^T-t^T)(Xw-t)
+$$
+$$
+\nabla (Xw)^TXw-(Xw)^Tt-t^TXw + t^Tt
+$$
+Since $(Xw)^Tt$ and $t^TXw$ both result in single numbers, we can say that they are equivalent since they eventually result in the same calculations:
+$$
+\nabla w^TX^TXw-2(w^tX^Tt)+t^Tt
+$$
+This cannot be simplified further, and is now simple to derive, using the following: $\nabla w^TCw = 2Cw$, $\nabla w^Tx = x$
+$$
+2(X^TXw)-2(X^Tt)
+$$
+Now we have to set this $= 0$, so we can find the minimum:
+$$
+2(X^TXw)-2(X^Tt) = 0
+$$
+$$
+X^TXw = X^Tt
+$$
+We now have to multiply both sides with $(X^TX)^{-1}$:
+$$
+w = (X^TX)^{-1}X^Tt
+$$
+We can now see that this is the optimal least squares parameter for $\hat w$
