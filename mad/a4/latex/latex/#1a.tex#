@@ -1,0 +1,2 @@
+Most of this has been completed in the "madA4" Jupyter Notebook. There are a few things that should be noted though:\\
+Since the model has to pass through $(0,0)$, and our result is a function with a nonzero value for $c$, we have to disregard it. This makes the model less precise. \inclu          
