@@ -1,0 +1,42 @@
+Calculating the posterior:\\
+First we have to look at the function $p(r|y_N)$:
+$$
+p(r|y_N) = \frac{p(y_N|r)p(r)}{p(y_N)}
+$$
+We are already given the prior, $p(r)$:
+$$
+p(r) = 1
+$$
+We will then find that the value of $p(y_N|r)$ looks as follows:
+$$
+p(y_N|r) = \begin{pmatrix} N\\ y_N \end{pmatrix} r^{y_N} (1-r)^{N-y_N}
+$$
+And the final component of the function, $p(y_n)$:
+$$
+p(y_N) = \int^{r=1}_{r=0} p(y_N|r)p(r)dr = \int^{r=1}_{r=0} 1 \cdot \begin{pmatrix} N\\ y_N \end{pmatrix} r^{y_N} (1-r)^{N-y_N}dr
+$$
+We know that for beta distributions the following is true, as per pg 110 in the Machine Learning textbook:
+$$
+\int^{r=1}_{r=0}r^{\alpha-1}(1-r)^{\beta-1}dr = \frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha + \beta)}
+$$
+Therefore, if we rewrite the previous expression to something resembling that, we can rewrite is as gamma functions:\\
+We first rewrite it by substituting in $k=y_N+1$ and $t = N-y_N+1$, and moving $\begin{pmatrix} N\\ y_N \end{pmatrix}$ out of the integral:
+$$
+p(y_N)=\int^{r=1}_{r=0} 1 \cdot \begin{pmatrix} N\\ y_N \end{pmatrix} r^{y_N} (1-r)^{N-y_N}dr = \begin{pmatrix} N\\ y_N \end{pmatrix} \int^{r=1}_{r=0}r^{k-1}(1-r)^{t-1}dr
+$$
+We can now solve the integral:
+$$
+p(y_N) = \begin{pmatrix} N\\ y_N \end{pmatrix} \frac{\Gamma(k)\Gamma(t)}{\Gamma(k + t)}
+$$
+$$
+p(y_N) = \begin{pmatrix} N\\ y_N \end{pmatrix} \frac{\Gamma(y_N+1)\Gamma(N-y_N+1)}{\Gamma(y_N+1 + N-y_N+1)} = \begin{pmatrix} N\\ y_N \end{pmatrix} \frac{\Gamma(y_N+1)\Gamma(N-y_N+1)}{\Gamma(N+2)}
+$$
+We can now put all of this into the first function:
+$$
+p(r|y_N) = \frac{p(y_N|r)p(r)}{p(y_N)} = \frac{\begin{pmatrix} N\\ y_N \end{pmatrix} r^{y_N} (1-r)^{N-y_N}}{\begin{pmatrix} N\\ y_N \end{pmatrix} \frac{\Gamma(y_N+1)\Gamma(N-y_N+1)}{\Gamma(N+2)}} = \frac{r^{y_N} (1-r)^{N-y_N}}{\Big(\frac{\Gamma(y_N+1)\Gamma(N-y_N+1)}{\Gamma(N+2)}\Big)}
+$$
+We rewrite the denominator so that we instead multiply by the inverse:
+$$
+p(r|y_N) = \frac{\Gamma(N+2)}{\Gamma(y_N+1)\Gamma(N-y_N+1)}r^{y_N} (1-r)^{N-y_N}
+$$
+We can now see that this is a beta density distribution.

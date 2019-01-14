@@ -1,0 +1,12 @@
+We know that with $p(t|w,X,\sigma^2)$, $t$ is defined as follows, with $\sigma^2 = 10$:
+$$
+t = Xw + \epsilon
+$$
+Where $\epsilon \sim \mathcal{N}(Xw, \sigma^2I)$. This is a Gaussian random variable with the constant added to the mean. This means our likelihood looks as follows:
+$$
+p(t|w,X,\sigma^2) = \mathcal{N}(Xw,10 \cdot I_N)
+$$
+We know that our model has zero mean, so we can write the following:
+$$
+p(t|w,X,\sigma^2) = \mathcal{N}(0,10)
+$$

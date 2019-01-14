@@ -1,0 +1,7 @@
+The code for this exercise has been written in the attached Jupyter Notebook named "CLFA5.ipynb", but the relevant code can be seen here as well:
+\begin{verbatim}
+def myposterior(X, y, mu0, Sigma0, sigmaSquared):
+    sigmaw = np.linalg.inv(1/sigmaSquared*np.dot(X.T,X)+np.linalg.inv(Sigma0))
+    muw = np.dot(sigmaw, np.dot(X.t,y) + np.linalg.inv(Sigma0)*mu0)
+    return muw, sigmaw
+\end{verbatim}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.18)  27 DEC 2018 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2018.12.18)  2 JAN 2019 22:09
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1341,7 +1341,7 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 17.
  (./latex/1a.tex)
 (./latex/1b.tex) (./latex/1c.tex) (./latex/2a.tex
-<2a.png, id=79, 829.0975pt x 311.1625pt>
+<2a.png, id=114, 829.0975pt x 311.1625pt>
 File: 2a.png Graphic file (type png)
 <use 2a.png>
 Package pdftex.def Info: 2a.png  used on input line 2.
@@ -1352,7 +1352,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--27
  []
 
 (./latex/2b.tex
-<2b.png, id=81, 841.1425pt x 311.1625pt>
+<2b.png, id=116, 841.1425pt x 311.1625pt>
 File: 2b.png Graphic file (type png)
 <use 2b.png>
 Package pdftex.def Info: 2b.png  used on input line 2.
@@ -1362,25 +1362,178 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--29
 
  []
 
-[3 <./2a.png>] 
+[3 <./2a.png>] (./latex/3a.tex) (./latex/3b.tex
+<3b1.png, id=125, 823.075pt x 307.1475pt>
+File: 3b1.png Graphic file (type png)
+<use 3b1.png>
+Package pdftex.def Info: 3b1.png  used on input line 2.
+(pdftex.def)             Requested size: 345.0pt x 128.7433pt.
+<3b2.png, id=126, 823.075pt x 307.1475pt>
+File: 3b2.png Graphic file (type png)
+<use 3b2.png>
+Package pdftex.def Info: 3b2.png  used on input line 3.
+(pdftex.def)             Requested size: 345.0pt x 128.7433pt.
+<3b3.png, id=127, 823.075pt x 307.1475pt>
+File: 3b3.png Graphic file (type png)
+<use 3b3.png>
+Package pdftex.def Info: 3b3.png  used on input line 4.
+(pdftex.def)             Requested size: 345.0pt x 128.7433pt.
+ [4 <./2b.png> <./3b1.png>])
+(./latex/3c.tex) (./latex/4a.tex
+<orig0.png, id=134, 310.15875pt x 320.19624pt>
+File: orig0.png Graphic file (type png)
+<use orig0.png>
+Package pdftex.def Info: orig0.png  used on input line 2.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec01.png, id=135, 310.15875pt x 320.19624pt>
+File: rec01.png Graphic file (type png)
+<use rec01.png>
+Package pdftex.def Info: rec01.png  used on input line 3.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec05.png, id=136, 310.15875pt x 320.19624pt>
+File: rec05.png Graphic file (type png)
+<use rec05.png>
+Package pdftex.def Info: rec05.png  used on input line 4.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec020.png, id=137, 310.15875pt x 320.19624pt>
+File: rec020.png Graphic file (type png)
+<use rec020.png>
+Package pdftex.def Info: rec020.png  used on input line 5.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec0114.png, id=138, 310.15875pt x 320.19624pt>
+File: rec0114.png Graphic file (type png)
+<use rec0114.png>
+Package pdftex.def Info: rec0114.png  used on input line 6.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<orig9.png, id=139, 310.15875pt x 320.19624pt>
+File: orig9.png Graphic file (type png)
+<use orig9.png>
+Package pdftex.def Info: orig9.png  used on input line 7.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec91.png, id=140, 310.15875pt x 320.19624pt>
+File: rec91.png Graphic file (type png)
+<use rec91.png>
+Package pdftex.def Info: rec91.png  used on input line 8.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec95.png, id=141, 310.15875pt x 320.19624pt>
+File: rec95.png Graphic file (type png)
+<use rec95.png>
+Package pdftex.def Info: rec95.png  used on input line 9.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec920.png, id=142, 310.15875pt x 320.19624pt>
+File: rec920.png Graphic file (type png)
+<use rec920.png>
+Package pdftex.def Info: rec920.png  used on input line 10.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<rec9114.png, id=143, 310.15875pt x 320.19624pt>
+File: rec9114.png Graphic file (type png)
+<use rec9114.png>
+Package pdftex.def Info: rec9114.png  used on input line 11.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+)
+Overfull \hbox (5.70007pt too wide) in paragraph at lines 1--41
+[] [] [] [] 
+ []
+
+
+Overfull \hbox (5.70007pt too wide) in paragraph at lines 1--41
+[] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--41
+
+ []
+
+[5 <./3b2.png> <./3b3.png>] (./latex/4b.tex
+<1orig0.png, id=150, 310.15875pt x 320.19624pt>
+File: 1orig0.png Graphic file (type png)
+<use 1orig0.png>
+Package pdftex.def Info: 1orig0.png  used on input line 2.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec01.png, id=151, 310.15875pt x 320.19624pt>
+File: 1rec01.png Graphic file (type png)
+<use 1rec01.png>
+Package pdftex.def Info: 1rec01.png  used on input line 3.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec05.png, id=152, 310.15875pt x 320.19624pt>
+File: 1rec05.png Graphic file (type png)
+<use 1rec05.png>
+Package pdftex.def Info: 1rec05.png  used on input line 4.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec020.png, id=153, 310.15875pt x 320.19624pt>
+File: 1rec020.png Graphic file (type png)
+<use 1rec020.png>
+Package pdftex.def Info: 1rec020.png  used on input line 5.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec0114.png, id=154, 310.15875pt x 320.19624pt>
+File: 1rec0114.png Graphic file (type png)
+<use 1rec0114.png>
+Package pdftex.def Info: 1rec0114.png  used on input line 6.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1orig9.png, id=155, 310.15875pt x 320.19624pt>
+File: 1orig9.png Graphic file (type png)
+<use 1orig9.png>
+Package pdftex.def Info: 1orig9.png  used on input line 7.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec91.png, id=156, 310.15875pt x 320.19624pt>
+File: 1rec91.png Graphic file (type png)
+<use 1rec91.png>
+Package pdftex.def Info: 1rec91.png  used on input line 8.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec95.png, id=157, 310.15875pt x 320.19624pt>
+File: 1rec95.png Graphic file (type png)
+<use 1rec95.png>
+Package pdftex.def Info: 1rec95.png  used on input line 9.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec920.png, id=158, 310.15875pt x 320.19624pt>
+File: 1rec920.png Graphic file (type png)
+<use 1rec920.png>
+Package pdftex.def Info: 1rec920.png  used on input line 10.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+<1rec9114.png, id=159, 310.15875pt x 320.19624pt>
+File: 1rec9114.png Graphic file (type png)
+<use 1rec9114.png>
+Package pdftex.def Info: 1rec9114.png  used on input line 11.
+(pdftex.def)             Requested size: 86.25pt x 89.03871pt.
+) 
 AED: lastpage setting LastPage
-[4 <./2b.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 30.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 30.
- (latex.out/master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 30.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 30.
+
+Overfull \hbox (5.70007pt too wide) in paragraph at lines 1--43
+[] [] [] [] 
+ []
+
+
+Overfull \hbox (5.70007pt too wide) in paragraph at lines 1--43
+[] [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1--43
+
+ []
+
+[6 <./orig0.png> <./rec01.png> <./rec05.png> <./rec020.png> <./rec0114.png> <./
+orig9.png> <./rec91.png> <./rec95.png> <./rec920.png> <./rec9114.png> <./1orig0
+.png>] [7 <./1rec01.png> <./1rec05.png> <./1rec020.png> <./1rec0114.png> <./1or
+ig9.png> <./1rec91.png> <./1rec95.png> <./1rec920.png> <./1rec9114.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 43.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 43.
+
+(latex.out/master.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 43.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 43.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34311 strings out of 492639
- 638994 string characters out of 6135496
- 775691 words of memory out of 5000000
- 37627 multiletter control sequences out of 15000+600000
- 557582 words of font info for 74 fonts, out of 8000000 for 9000
+ 34460 strings out of 492639
+ 640915 string characters out of 6135496
+ 776691 words of memory out of 5000000
+ 37727 multiletter control sequences out of 15000+600000
+ 558479 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,86p,848b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,11n,86p,848b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fon
 ts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
@@ -1388,10 +1541,10 @@ sy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/
 share/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fon
 ts/type1/urw/palatino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatin
 o/uplri8a.pfb>
-Output written on latex.out/master.pdf (4 pages, 103543 bytes).
+Output written on latex.out/master.pdf (7 pages, 419347 bytes).
 PDF statistics:
- 123 PDF objects out of 1000 (max. 8388607)
- 90 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 175 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 PDF objects out of 1000 (max. 8388607)
+ 137 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 346 words of extra memory for PDF output out of 10000 (max. 10000000)
 

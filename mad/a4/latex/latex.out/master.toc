@@ -6,3 +6,10 @@
 \contentsline {section}{\numberline {2.}Exercise}{3}{section.2}
 \contentsline {subsection}{\numberline {(a)}}{3}{subsection.2.1}
 \contentsline {subsection}{\numberline {(b)}}{4}{subsection.2.2}
+\contentsline {section}{\numberline {3.}Exercise}{4}{section.3}
+\contentsline {subsection}{\numberline {(a)}}{4}{subsection.3.1}
+\contentsline {subsection}{\numberline {(b)}}{4}{subsection.3.2}
+\contentsline {subsection}{\numberline {(c)}}{5}{subsection.3.3}
+\contentsline {section}{\numberline {4.}Exercise}{5}{section.4}
+\contentsline {subsection}{\numberline {(a)}}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {(b)}}{6}{subsection.4.2}
