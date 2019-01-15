@@ -1,0 +1,49 @@
+To prove this, we first have to set an $\epsilon \varepsilon > 0$. We know the following:
+$$
+\mathbb{P}(|Y_n-Y| \geq \varepsilon) \longrightarrow 0
+$$
+$$
+\mathbb{P}(|Z_n-Z| \geq \varepsilon) \longrightarrow 0
+$$
+And we want to prove that:
+$$
+\mathbb{P}(|(Y_n-Y) + (Z_n-Z)| \geq \varepsilon) \longrightarrow 0
+$$
+We start off by writing the following, which we know is true, since the value of $\varepsilon$ is arbitrarily small:
+$$
+\mathbb{P}\Big(|Y_n-Y| \geq \frac{\varepsilon}{2}\Big) \longrightarrow 0
+$$
+$$
+\mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2}\Big) \longrightarrow 0
+$$
+We can now write the following:
+$$
+\mathbb{P}\Big(|Y_n-Y| \geq \frac{\varepsilon}{2}\Big) + \mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2}\Big) \longrightarrow 0
+$$
+We can then write the following, and also see that it still approaches 0:
+$$
+\mathbb{P}\Big(|Y_n-Y| \geq \frac{\varepsilon}{2}\Big) + \mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2}\Big) \geq \mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2} \lor |Y_n-Y| \geq \frac{\varepsilon}{2} \Big)
+$$
+$$
+\mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2} \lor |Y_n-Y| \geq \frac{\varepsilon}{2} \Big) \longrightarrow 0
+$$
+We can see that this probability \textit{must} be greater than $\mathbb{P}(|(Y_n-Y) + (Z_n-Z)| \geq \varepsilon)$, since for this to be true at least one of the events in the previous probability have to happen. Because of this, we can write the following:
+$$
+\mathbb{P}(|(Y_n-Y) + (Z_n-Z)| \geq \varepsilon) \leq \mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2} \lor |Y_n-Y| \geq \frac{\varepsilon}{2} \Big)
+$$
+We can now say that since
+$$
+\mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2} \lor |Y_n-Y| \geq \frac{\varepsilon}{2} \Big) \longrightarrow 0
+$$
+and
+$$
+\mathbb{P}(|(Y_n-Y) + (Z_n-Z)| \geq \varepsilon) \leq \mathbb{P}\Big(|Z_n-Z| \geq \frac{\varepsilon}{2} \lor |Y_n-Y| \geq \frac{\varepsilon}{2} \Big)
+$$
+The following must be true:
+$$
+\mathbb{P}(|(Y_n-Y) + (Z_n-Z)| \geq \varepsilon) \longrightarrow 0
+$$
+This is exactly what we wanted to prove, since:
+$$
+Y_n+Z_n \overset{\mathbb{P}}{\longrightarrow} Y + Z = \mathbb{P}(|(Y_n-Y) + (Z_n-Z)| \geq \varepsilon) \longrightarrow 0
+$$

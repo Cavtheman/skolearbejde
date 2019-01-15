@@ -1,0 +1,40 @@
+This exercise has been completed in the attached \textit{K\_Means.ipynb} Jupyter Notebook. The most relevant bits of source code can be seen here as well, though all comments are left out. It should be noted that the code for this is the exact same as in the previous subexercise, except the "model.fit(image)" line has been exchanged for the following. The full source code is in the notebook:
+\begin{verbatim}
+if (imgx*imgy > 50000):
+    modLen = 5000
+
+    temp = np.arange(0,(imgx*imgy),1).reshape((imgx*imgy))
+    smallImgInd = np.random.choice(temp, modLen, False)
+    smallImg = np.zeros((modLen,imgRGB))
+    
+    for i in range(modLen):
+        smallImg[i] = image[smallImgInd[i]]
+
+    model.fit(smallImg)
+    model.cluster_assignments = model.assign_to_clusters(image, model.cluster_means)
+else:
+    model.fit(image)
+\end{verbatim}
+The 16 cluster means, calculated using the Jupyter Notebook, look as follows. It should be noted that the cluster means have been calculated by choosing 5000 random pixels in the image, and fitting the model to those instead of the entire image:
+$$
+\begin{matrix}
+(0.04933315, 0.03762928, 0.03806449) \\[3pt]
+(0.57470588, 0.63714795, 0.57853832) \\[3pt]
+(0.23040784, 0.24485490, 0.24700392) \\[3pt]
+(0.55316917, 0.34053808, 0.13857729) \\[3pt]
+(0.43970764, 0.43151311, 0.37939419) \\[3pt]
+(0.99238280, 0.99199548, 0.98666989) \\[3pt]
+(0.94344192, 0.97583001, 0.98309507) \\[3pt]
+(0.41931736, 0.49164851, 0.55027838) \\[3pt]
+(0.82408510, 0.91116933, 0.93808050) \\[3pt]
+(0.73465750, 0.58706392, 0.38375350) \\[3pt]
+(0.71545709, 0.84472456, 0.88979713) \\[3pt]
+(0.55624748, 0.79929274, 0.88076591) \\[3pt]
+(0.33491397, 0.73982593, 0.90696279) \\[3pt]
+(0.73745915, 0.72773693, 0.68999183) \\[3pt]
+(0.93933934, 0.81688748, 0.27836071) \\[3pt]
+(0.91616099, 0.88028896, 0.78158927)
+\end{matrix}
+$$
+The assigned cluster for each pixel has been calculated, and the new image has been plotted:\\
+\includegraphics[width=\linewidth]{3c1.png}\\

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.13)  14 JAN 2019 10:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.13)  15 JAN 2019 22:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1280,11 +1280,6 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 10.
-
-(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 10.
  [1
@@ -1292,40 +1287,174 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
- (latex.out/master.toc)
+ (latex.out/master.toc
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 3.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ot1ppl.fd
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 3.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omlzplm.fd
+File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 3.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omszplm.fd
+File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
+)
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 3.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omxzplm.fd
+File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
+)
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 3.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 3.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 3.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 3.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 3.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.91925pt on input line 3.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 6.25204pt on input line 3.
+)
 \tf@toc=\write8
 \openout8 = `master.toc'.
 
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <8> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 14.
- [2] (./latex/1a.tex)
+ [2]
+LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 17.
+ (./latex/1a.tex)
+(./latex/1b.tex
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 20.
 
+ (/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
+File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
+) [3])
+(./latex/1c.tex [4]) (./latex/2a.tex
+Overfull \hbox (9.45882pt too wide) detected at line 21
+\OML/zplm/m/it/10 f[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/ppl/m/n/10 , .
+.., \OML/zplm/m/it/10 x[]\OT1/zplm/m/n/10 ) = [] = []
+ []
+
+[5]) (./latex/2b.tex
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 3.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 7--8
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+) (./latex/3a.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 2.
+ (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 13.
+
+
+(/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [6]
+<3a1.png, id=122, 835.12pt x 442.65375pt>
+File: 3a1.png Graphic file (type png)
+<use 3a1.png>
+Package pdftex.def Info: 3a1.png  used on input line 22.
+(pdftex.def)             Requested size: 345.0pt x 182.86708pt.
+<3a2.png, id=124, 835.12pt x 442.65375pt>
+File: 3a2.png Graphic file (type png)
+<use 3a2.png>
+Package pdftex.def Info: 3a2.png  used on input line 23.
+(pdftex.def)             Requested size: 345.0pt x 182.86708pt.
+) [7 <./3a1.png> <./3a2.png>] (./latex/3b.tex
+Overfull \hbox (6.66412pt too wide) in paragraph at lines 22--22
+[]            \T1/cmtt/m/n/10 model.cluster_means[i,j] = model.cluster_means[i,
+j]/255[] 
+ []
+
+
+Overfull \hbox (17.16156pt too wide) in paragraph at lines 22--22
+[]        \T1/cmtt/m/n/10 retval[i] = model.cluster_means[model.cluster_assignm
+ents[i]][] 
+ []
+
+<3b1.png, id=134, 828.09375pt x 284.06125pt>
+File: 3b1.png Graphic file (type png)
+<use 3b1.png>
+Package pdftex.def Info: 3b1.png  used on input line 34.
+(pdftex.def)             Requested size: 345.0pt x 118.34698pt.
+)
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
+
+ []
+
+[8] (./latex/3c.tex
+Overfull \hbox (95.89233pt too wide) in paragraph at lines 17--17
+[]    \T1/cmtt/m/n/10 model.cluster_assignments = model.assign_to_clusters(imag
+e, model.cluster_means)[] 
+ []
+
+[9 <./3b1.png>]
+<3c1.png, id=144, 828.09375pt x 284.06125pt>
+File: 3c1.png Graphic file (type png)
+<use 3c1.png>
+Package pdftex.def Info: 3c1.png  used on input line 40.
+(pdftex.def)             Requested size: 345.0pt x 118.34698pt.
+) 
 AED: lastpage setting LastPage
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 18.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--37
+
+ []
+
+[10 <./3c1.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
  (latex.out/master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 18.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 18.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34177 strings out of 492639
- 637114 string characters out of 6135497
- 773673 words of memory out of 5000000
- 37543 multiletter control sequences out of 15000+600000
- 546481 words of font info for 44 fonts, out of 8000000 for 9000
+ 34406 strings out of 492639
+ 640437 string characters out of 6135497
+ 781603 words of memory out of 5000000
+ 37678 multiletter control sequences out of 15000+600000
+ 563817 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,86p,848b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/share/texmf-dist/fon
-ts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public
-/cm-super/sftt1000.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplb8a.p
-fb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on latex.out/master.pdf (3 pages, 55695 bytes).
+ 62i,12n,86p,848b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
+texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/font
+s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type
+1/public/mathpazo/fplmbb.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo
+/fplmr.pfb></usr/share/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/
+share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf-dis
+t/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pa
+latino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on latex.out/master.pdf (10 pages, 575866 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
- 117 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 198 PDF objects out of 1000 (max. 8388607)
+ 149 compressed objects within 2 object streams
+ 23 named destinations out of 1000 (max. 500000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

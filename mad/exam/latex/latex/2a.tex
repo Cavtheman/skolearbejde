@@ -1,0 +1,52 @@
+First, we will find the likelihood, which is the same as the $joint \text{ }pdf$, which is defined as thus:
+$$
+f_{\theta}^{joint}(x_1,...,x_n) = \prod_{i = 1}^n f_\theta(x_n)
+$$
+We can then figure out that the likelihood is:
+$$
+f_{\beta}^{joint}(x_1,...,x_n) = 
+\left\{
+\begin{matrix}
+\prod_{i = 1}^n f_\beta(x_n) & \text{if }0 \leq x \leq \beta \\
+0 & otherwise.
+\end{matrix}
+\right.
+=
+\left\{
+\begin{matrix}
+\prod_{i = 1}^n \frac{2}{\beta^2} \cdot (\beta - x_n) & \text{if }0 \leq x \leq \beta \\
+0 & otherwise.
+\end{matrix}
+\right.
+$$
+We then have to figure out the maximum likelihood estimator. This is done using the following formula:
+$$
+\hat\theta_n^{ML}(x_1,...,x_n) = \underset{\theta}{argmax}\prod_{i=1}^n f_\theta(x_n)
+$$
+We insert the previous formula with the given values for $X$:
+$$
+\hat\beta_n^{ML}(x_1,...,x_n) = \underset{\beta}{argmax}\prod_{i=1}^n f_\beta(x_n) = \underset{\beta}{argmax}\Bigg(\frac{2}{\beta^2} \cdot (\beta - 3) \cdot \frac{2}{\beta^2} \cdot (\beta - 4)\Bigg)
+$$
+First we rewrite it to make our lives easier:
+$$
+\frac{4(\beta-4)(\beta-3)}{\beta^4}
+$$
+Now we have to differentiate it to find the local maxima:
+$$
+\frac{d}{d\beta} \frac{4(\beta-4)(\beta-3)}{\beta^4} = \frac{-4(2\beta^2-21\beta+48)}{\beta^5}
+$$
+Then we have to set this to $0$:
+$$
+\frac{-4(2\beta^2-21\beta+48)}{\beta^5} = 0
+$$
+And find that there are two solutions:
+$$
+\beta_1 = \frac{21}{4}-\frac{\sqrt{57}}{4}
+$$
+$$
+\beta_2 = \frac{21}{4}+\frac{\sqrt{57}}{4}
+$$
+Then, to find whether they are maxima or minima, we compute derive again, and solve with $\beta = \beta_1$ and $\beta = \beta_2$. With this, we find that the $\underset{\beta}{argmax}$ is at:
+$$
+\beta = \frac{21}{4}+\frac{\sqrt{57}}{4}
+$$

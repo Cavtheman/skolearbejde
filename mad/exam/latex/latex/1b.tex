@@ -1,0 +1,38 @@
+First we will find the $pdf$ of $V$. We know that to find the $pdf$, we have to compute the derivative of the $cdf$. To do this on a piecewise function, we compute the derivative of each piece:
+$$
+f(v) = \frac{d}{dv}F(v) =
+\left\{
+\begin{matrix}
+\frac{d}{dv} 0   & if & v < 0 \\[6pt]
+\frac{d}{dv} v^5 & if & 0 \leq v \leq 1 \\[6pt]
+\frac{d}{dv} 1   & if & v > 1
+\end{matrix}
+\right.
+=
+\left\{
+\begin{matrix}
+0   & if & v < 0 \\
+5v^4 & if & 0 \leq v \leq 1 \\
+0   & if & v > 1
+\end{matrix}
+\right.
+$$
+To find the expectation, $\mathbb{E}V$ we have to use the following formula, since $V$ is a continuous random variable. We know that $\int f(v)dv = F(v)$:
+$$
+\mathbb{E}V = \int v f(v) = 
+\left\{
+\begin{matrix}
+\int 0v dv   & if & v < 0 \\
+\int 5v^5 dv & if & 0 \leq v \leq 1 \\
+\int 0v dv  & if & v > 1
+\end{matrix}
+\right.
+=
+\left\{
+\begin{matrix}
+0 & if & v < 0 \\
+\frac{5v^6}{6} & if & 0 \leq v \leq 1 \\[6pt]
+0 & if & v > 1
+\end{matrix}
+\right.
+$$

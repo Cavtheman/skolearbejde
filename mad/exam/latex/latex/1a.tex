@@ -1,0 +1,27 @@
+To solve this, we need to realise that a pdf always has the following property: It's integral over the entire function is equal to 1. Since we know that 
+$$f(x) = 0,\text{ if } 0 > x, 5 < x$$
+We can compute the definite integral between $0$ and$5$, $\int_0^5f(x)dx$ to find the integral. This means that we have to solve the following equation:
+$$
+\int_0^5c(5-x)dx = 1
+$$
+First we will extend it to make it easier to work with
+$$
+\int_0^5 5c - xc dx= 1
+$$
+We know that definite integrals are solved as follows.
+$$
+\int_a^bf(x)dx = F(b) - F(a)
+$$
+First we find $F(x)$:
+$$
+\int 5c - xc dx= 5xc - \frac{x^2c}{2}
+$$
+Now we solve $F(5) - F(0)$:
+$$
+(5*5c - \frac{5^2c}{2}) - (5*0c - \frac{0^2c}{2}) = 1
+$$
+This can be simplified to:
+$$
+12.5c = 1
+$$
+We can then realise that for this to be true, $c = \frac{2}{25}$
