@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.13)  16 JAN 2019 14:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.13)  16 JAN 2019 18:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1342,8 +1342,12 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 20.
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [3])
 (./latex/1c.tex [4]) (./latex/2a.tex [5]) (./latex/2b.tex
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 3.
+Overfull \hbox (2.38605pt too wide) in paragraph at lines 1--4
+\T1/ppl/m/n/10 So, the pa-ram-e-ters we are given in this ex-er-cise ac-tu-ally
+ re-quire us to go through
+ []
 
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 4.
 (/usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 ) [6]) (./latex/3a.tex
@@ -1358,17 +1362,22 @@ LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 13.
 (/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [7]
-<3a1.png, id=139, 835.12pt x 442.65375pt>
+<3a1.png, id=137, 835.12pt x 442.65375pt>
 File: 3a1.png Graphic file (type png)
 <use 3a1.png>
 Package pdftex.def Info: 3a1.png  used on input line 22.
 (pdftex.def)             Requested size: 345.0pt x 182.86708pt.
-<3a2.png, id=141, 835.12pt x 442.65375pt>
+<3a2.png, id=139, 835.12pt x 442.65375pt>
 File: 3a2.png Graphic file (type png)
 <use 3a2.png>
 Package pdftex.def Info: 3a2.png  used on input line 23.
 (pdftex.def)             Requested size: 345.0pt x 182.86708pt.
-) (./latex/3b.tex [8 <./3a1.png> <./3a2.png>]
+)
+Underfull \hbox (badness 10000) in paragraph at lines 20--33
+
+ []
+
+(./latex/3b.tex [8 <./3a1.png> <./3a2.png>]
 <3b1.png, id=148, 828.09375pt x 284.06125pt>
 File: 3b1.png Graphic file (type png)
 <use 3b1.png>
@@ -1408,7 +1417,7 @@ Here is how much of TeX's memory you used:
  37680 multiletter control sequences out of 15000+600000
  564074 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,86p,848b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,86p,942b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
 texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/font
 s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -1420,7 +1429,7 @@ ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type
 share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pa
 latino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on latex.out/master.pdf (11 pages, 579029 bytes).
+Output written on latex.out/master.pdf (11 pages, 580176 bytes).
 PDF statistics:
  213 PDF objects out of 1000 (max. 8388607)
  163 compressed objects within 2 object streams
