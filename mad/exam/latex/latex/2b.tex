@@ -5,9 +5,28 @@ The model is given as $X \sim Bin(n,\theta)$, with $n = 20$
 \item A hypothesis: \\
 A hypothesis is given as well: $H_0: \theta = 0.5, H_1: \theta \neq 0.5$
 \item A test statistic and distribution: \\
+We use a binomial test to find the probability that a $\theta = 0.5$ is correct when $n = 20$ and $X = 13$, given a binomial distribution:
+$$
+T = \sum_{k = X}^{n} \Bigg( \begin{pmatrix} n \\ k \end{pmatrix} \cdot \theta^k (1-\theta)^{n-k}\Bigg)
+$$
 \item A significance level: \\
 The significance level is also given as $\alpha = 0.05$
 \item A rejection region: \\
-A rejection region is given as: $\mathcal{R}=\{0,...,a\}\cup\{20-a,...,20\}$
+A rejection region is given as:
+$$
+\mathcal{R}=\{0,...,\alpha\}\cup\{20-\alpha,...,20\}
+$$
+$$
+\mathcal{R} = \{0,...,0.05\} \cup \{19.95,...,20\}
+$$
 \item Compute test statistic: \\
+We insert the values into the test statistic to see whether the given data is within the rejection region:
+$$
+T = \sum_{k = 13}^{n=20} \Bigg( \begin{pmatrix} 20 \\ k \end{pmatrix} \cdot 0.5^k (1-0.5)^{20-k}\Bigg) = \frac{34495}{262144} \approx 0.1316
+$$
+We can see that this is not within the rejection region:
+$$
+T \approx 0.1316 \not\in \mathcal{R} = \{0,...,0.05\} \cup \{19.95,...,20\}
+$$
+Thus, we can attribute the higher than average number of correct guesses to chance, not the predictions.
 \end{itemize}

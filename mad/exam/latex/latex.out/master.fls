@@ -446,6 +446,9 @@ INPUT latex/2b.tex
 INPUT /usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 INPUT /usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/palatino/pplr8c.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/public/mathpazo/zplmr7y.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/adobe/palatino/pplr8c.vf
 INPUT latex/3a.tex
 INPUT latex/3a.tex
 INPUT /usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -454,7 +457,6 @@ INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
 INPUT /usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
 INPUT /usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/jknappen/ec/tctt1000.tfm
-INPUT /usr/share/texmf-dist/fonts/vf/adobe/palatino/pplr8c.vf
 INPUT 3a1.png
 INPUT ./3a1.png
 INPUT ./3a1.png
@@ -471,6 +473,8 @@ INPUT latex/3c.tex
 INPUT 3c1.png
 INPUT ./3c1.png
 INPUT ./3c1.png
+INPUT latex/4a.tex
+INPUT latex/4a.tex
 INPUT latex.out/master.aux
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc

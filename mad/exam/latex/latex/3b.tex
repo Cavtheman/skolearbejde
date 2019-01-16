@@ -12,22 +12,24 @@ def makeNewImg(image, n_clusters, max_iter, seed):
 
     for i in range(n_clusters):
         for j in range(imgRGB):
-            model.cluster_means[i,j] = model.cluster_means[i,j]/255
+            model.cluster_means[i,j] = 
+                model.cluster_means[i,j]/255
             
     for i in range(retval.shape[0]):
-        retval[i] = model.cluster_means[model.cluster_assignments[i]]
+        retval[i] = 
+            model.cluster_means[model.cluster_assignments[i]]
         
     retval = retval.reshape((imgx,imgy,imgRGB))
     return retval, model.cluster_means
 \end{verbatim}
-The 5 cluster means, calculated using the Jupyter Notebook, look as follows:
+The 5 cluster means, calculated using the Jupyter Notebook, look as follows. It should be noted that they are all RGB values, but Python wants RGB values in one of two forms; floats between $0$ and $1$, or integers between $0$ and $255$. Here they are floats between $0$ and $1$:
 $$
 \begin{matrix}
-(0.41773344, 0.71691352, 0.84028094) \\[3pt]
-(0.13106363, 0.12181295, 0.11628755) \\[3pt]
-(0.47558986, 0.42848816, 0.35511877) \\[3pt]
-(0.76865056, 0.87663444, 0.90978927) \\[3pt]
-(0.75330927, 0.69978601, 0.48412478)
+[0.41773344, 0.71691352, 0.84028094] \\[3pt]
+[0.13106363, 0.12181295, 0.11628755] \\[3pt]
+[0.47558986, 0.42848816, 0.35511877] \\[3pt]
+[0.76865056, 0.87663444, 0.90978927] \\[3pt]
+[0.75330927, 0.69978601, 0.48412478] \\[3pt]
 \end{matrix}
 $$
 The assigned cluster for each pixel has been calculated, and the new image has been plotted:\\

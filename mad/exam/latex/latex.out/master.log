@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.13)  15 JAN 2019 22:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.1.13)  16 JAN 2019 14:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1341,29 +1341,15 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 20.
  (/usr/share/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 ) [3])
-(./latex/1c.tex [4]) (./latex/2a.tex
-Overfull \hbox (9.45882pt too wide) detected at line 21
-\OML/zplm/m/it/10 f[]\OT1/zplm/m/n/10 (\OML/zplm/m/it/10 x[]\OT1/ppl/m/n/10 , .
-.., \OML/zplm/m/it/10 x[]\OT1/zplm/m/n/10 ) = [] = []
- []
-
-[5]) (./latex/2b.tex
+(./latex/1c.tex [4]) (./latex/2a.tex [5]) (./latex/2b.tex
 LaTeX Font Info:    Try loading font information for TS1+ppl on input line 3.
- (/usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
+
+(/usr/share/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
-
- []
-
-) (./latex/3a.tex
+) [6]) (./latex/3a.tex
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 2.
- (/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
+
+(/usr/share/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 13.
@@ -1371,75 +1357,58 @@ LaTeX Font Info:    Try loading font information for TS1+cmtt on input line 13.
 
 (/usr/share/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [6]
-<3a1.png, id=122, 835.12pt x 442.65375pt>
+) [7]
+<3a1.png, id=139, 835.12pt x 442.65375pt>
 File: 3a1.png Graphic file (type png)
 <use 3a1.png>
 Package pdftex.def Info: 3a1.png  used on input line 22.
 (pdftex.def)             Requested size: 345.0pt x 182.86708pt.
-<3a2.png, id=124, 835.12pt x 442.65375pt>
+<3a2.png, id=141, 835.12pt x 442.65375pt>
 File: 3a2.png Graphic file (type png)
 <use 3a2.png>
 Package pdftex.def Info: 3a2.png  used on input line 23.
 (pdftex.def)             Requested size: 345.0pt x 182.86708pt.
-) [7 <./3a1.png> <./3a2.png>] (./latex/3b.tex
-Overfull \hbox (6.66412pt too wide) in paragraph at lines 22--22
-[]            \T1/cmtt/m/n/10 model.cluster_means[i,j] = model.cluster_means[i,
-j]/255[] 
- []
-
-
-Overfull \hbox (17.16156pt too wide) in paragraph at lines 22--22
-[]        \T1/cmtt/m/n/10 retval[i] = model.cluster_means[model.cluster_assignm
-ents[i]][] 
- []
-
-<3b1.png, id=134, 828.09375pt x 284.06125pt>
+) (./latex/3b.tex [8 <./3a1.png> <./3a2.png>]
+<3b1.png, id=148, 828.09375pt x 284.06125pt>
 File: 3b1.png Graphic file (type png)
 <use 3b1.png>
-Package pdftex.def Info: 3b1.png  used on input line 34.
+Package pdftex.def Info: 3b1.png  used on input line 36.
 (pdftex.def)             Requested size: 345.0pt x 118.34698pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 32--35
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
 
-[8] (./latex/3c.tex
-Overfull \hbox (95.89233pt too wide) in paragraph at lines 17--17
-[]    \T1/cmtt/m/n/10 model.cluster_assignments = model.assign_to_clusters(imag
-e, model.cluster_means)[] 
- []
-
-[9 <./3b1.png>]
-<3c1.png, id=144, 828.09375pt x 284.06125pt>
+[9] (./latex/3c.tex [10 <./3b1.png>]
+<3c1.png, id=158, 828.09375pt x 284.06125pt>
 File: 3c1.png Graphic file (type png)
 <use 3c1.png>
-Package pdftex.def Info: 3c1.png  used on input line 40.
+Package pdftex.def Info: 3c1.png  used on input line 39.
 (pdftex.def)             Requested size: 345.0pt x 118.34698pt.
-) 
-AED: lastpage setting LastPage
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--37
+)
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
 
  []
 
-[10 <./3c1.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 37.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 37.
+(./latex/4a.tex) 
+AED: lastpage setting LastPage
+[11 <./3c1.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
  (latex.out/master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 37.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 37.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `master.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
  ) 
 Here is how much of TeX's memory you used:
- 34406 strings out of 492639
- 640437 string characters out of 6135497
+ 34415 strings out of 492639
+ 640528 string characters out of 6135497
  781603 words of memory out of 5000000
- 37678 multiletter control sequences out of 15000+600000
- 563817 words of font info for 90 fonts, out of 8000000 for 9000
+ 37680 multiletter control sequences out of 15000+600000
+ 564074 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,86p,848b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,86p,848b,453s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/
 texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/font
 s/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -1451,10 +1420,10 @@ ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type
 share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/pa
 latino/uplr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on latex.out/master.pdf (10 pages, 575866 bytes).
+Output written on latex.out/master.pdf (11 pages, 579029 bytes).
 PDF statistics:
- 198 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 217 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 163 compressed objects within 2 object streams
+ 26 named destinations out of 1000 (max. 500000)
+ 233 words of extra memory for PDF output out of 10000 (max. 10000000)
 

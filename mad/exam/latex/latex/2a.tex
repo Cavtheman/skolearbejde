@@ -11,7 +11,9 @@ f_{\beta}^{joint}(x_1,...,x_n) =
 0 & otherwise.
 \end{matrix}
 \right.
-=
+$$
+$$
+f_{\beta}^{joint}(x_1,...,x_n) = 
 \left\{
 \begin{matrix}
 \prod_{i = 1}^n \frac{2}{\beta^2} \cdot (\beta - x_n) & \text{if }0 \leq x \leq \beta \\
@@ -29,15 +31,18 @@ $$
 $$
 First we rewrite it to make our lives easier:
 $$
-\frac{4(\beta-4)(\beta-3)}{\beta^4}
+\frac{4(\beta-4)(\beta-3)}{\beta^4} = \frac{4}{\beta^2}-\frac{28}{\beta^3}+\frac{48}{\beta^4}
 $$
-Now we have to differentiate it to find the local maxima:
+Now we have to differentiate it to find the local extrema:
 $$
-\frac{d}{d\beta} \frac{4(\beta-4)(\beta-3)}{\beta^4} = \frac{-4(2\beta^2-21\beta+48)}{\beta^5}
+\frac{d}{d\beta} \frac{4}{\beta^2}-\frac{28}{\beta^3}+\frac{48}{\beta^4} = \frac{-8\beta^2+84\beta-192}{\beta^5}
 $$
-Then we have to set this to $0$:
+Then we have to set this to $0$ and solve:
 $$
-\frac{-4(2\beta^2-21\beta+48)}{\beta^5} = 0
+\frac{-8\beta^2+84\beta-192}{\beta^5} = 0
+$$
+$$
+-8\beta^2+84\beta-192 = 0
 $$
 And find that there are two solutions:
 $$
@@ -46,7 +51,18 @@ $$
 $$
 \beta_2 = \frac{21}{4}+\frac{\sqrt{57}}{4}
 $$
-Then, to find whether they are maxima or minima, we compute derive again, and solve with $\beta = \beta_1$ and $\beta = \beta_2$. With this, we find that the $\underset{\beta}{argmax}$ is at:
+Then, to find whether they are maxima or minima, we compute derive again, and solve with $\beta = \beta_1$ and $\beta = \beta_2$:
+$$
+-16\Bigg(\frac{21}{4}-\frac{\sqrt{57}}{4}\Bigg) + 84 = -16\sqrt{57}
+$$
+$$
+-16\Bigg(\frac{21}{4}+\frac{\sqrt{57}}{4}\Bigg) + 84 = 16\sqrt{57}
+$$
+Since $f''(\beta_1) < 0$, we find that the $\underset{\beta}{argmax}$ is at:
 $$
 \beta = \frac{21}{4}+\frac{\sqrt{57}}{4}
+$$
+We find that the approximate value of this is $\approx 7.137$, and verify that it satisfies $x \leq \beta$
+$$
+x_1 = 3 < x_2 = 4 \leq \beta \approx 7.137
 $$
