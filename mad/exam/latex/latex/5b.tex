@@ -1,0 +1,23 @@
+This exercise has been completed in the attached \textit{PCA and classification.ipynb} Jupyter Notebook. The most relevant bits of source code can be seen here as well, though all comments are left out. It should be noted that the distanceMat function is based on the one from lecture slides, but it has been modified. The full source code is in the notebook, along with comments:
+\begin{verbatim}
+def distanceMat(train, test):
+    distMat = np.zeros((train.shape[0], test.shape[0]))
+    
+    for i in range(train.shape[0]):
+        for j in range(test.shape[0]):
+            distMat[i,j] = np.linalg.norm(train[i,:]-test[j,:])
+            
+    return distMat
+
+def knn(train, test, trainlab, testlab, k):
+    distMat = distanceMat(test,train)
+    sortedInd = np.argsort(distMat, axis=1)
+    sortedPreds = trainlab[sortedInd]
+    
+    predictions = 
+        np.floor(np.sign(np.sum((sortedPreds[:,range(k)]-0.5)*2,1))/2 + 0.5)
+    accuracy = 
+        1 - (np.sum(np.abs(predictions-testlab))/len(testlab))
+    
+    return predictions, accuracy
+\end{verbatim}

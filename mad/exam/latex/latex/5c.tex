@@ -1,0 +1,11 @@
+The results of first testing the training set against itself, then testing against the test set gave the following results:
+\begin{itemize}
+\item Accuracy when testing against the training set with k = 1: 100.0\%
+\item Accuracy when testing against the training set with k = 3: 83.5714\%
+\item Accuracy when testing against the training set with k = 5: 80.7142\%
+\item Accuracy when testing against the test set with k = 1: 69.8744\%
+\item Accuracy when testing against the test set with k = 3: 73.6401\%
+\item Accuracy when testing against the test set with k = 5: 75.1046\%
+\end{itemize}
+We realise that when testing on the same set we trained on, we will always get 100\% when $k=1$, because the nearest neighbour will always be itself. We see that when looking at higher values of $k$ (displayed in the attached Jupyter Notebook), the accuracy decreases slightly as we look at more neighbours.\\
+When testing against the test set, we see that the accuracy starts low, then increases quickly with larger values of $k$ to hover around 75\%.

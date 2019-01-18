@@ -1,0 +1,19 @@
+This exercise has been completed in the attached \textit{PCA and classification.ipynb} Jupyter Notebook. The most relevant bits of source code can be seen here as well, though all comments are left out.
+\begin{verbatim}
+def center(centSet):
+    return centSet-np.mean(centSet, axis=0)
+
+def normalise(normSet):
+    retSet = np.zeros(normSet.shape)
+    for i in range(normSet.shape[1]):
+        retSet[:,i] = (normSet[:,i] - min(normSet[:,i]))/(max(normSet[:,i]) - min(normSet[:,i]))
+    return retSet
+
+def preprocess(procSet):
+    return center(normalise(procSet))
+\end{verbatim}
+We see that for both methods we get the exact same accuracy. This makes sense for the same reason that we got a higher accuracy with the $k$-$NN$ algorithm earlier. It seems that much of the difference between the two classes lie in the "positional" values. When we essentially remove this by preprocessing, they are on more equal footing. However, since the difference is "positional" both algorithms lose accuracy when we normalise.
+\begin{itemize}
+\item Accuracy of knn against test set with k\_best: 0.5815
+\item Accuracy of logistic regression against test set: 0.5815
+\end{itemize}

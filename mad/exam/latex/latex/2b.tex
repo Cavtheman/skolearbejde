@@ -1,4 +1,3 @@
-So, the parameters we are given in this exercise actually require us to go through extra, unnecessary steps, to perform a two-tailed hypothesis test, when a one-tailed test could have been enough. The reasoning for this is that we do not want to look at whether the machine predicts \textit{differently} from $0$, we want to look at whether the machine predicts at a rate \textit{better than} $0.5$. The smarter choice of $H_0$ and $H_1$ would be $H_0: \theta \leq 0.5$ and $H_1: \theta > 0.5$, since we don't care if the machine predicts at a rate worse than $0.5$ (This is arguable, if the machine predicts at $\theta < 0.5$, does it not also predict better if we reverse it? For this test to be good, we assume that this is not the case). With these $H_0$ and $H_1$ values, we would also set a different rejection region: $\mathcal{R} = [0, \alpha]$, where $\alpha$ is the significance level.\\
 To perform this statistical test, we have to go through the six steps:
 \begin{itemize}
 \item A model: \\
@@ -6,10 +5,11 @@ The model is given as $X \sim Bin(n,\theta)$, with $n = 20$
 \item A hypothesis: \\
 A hypothesis is given as well: $H_0: \theta = 0.5, H_1: \theta \neq 0.5$
 \item A test statistic and distribution: \\
-We use a binomial test to find the probability that a $\theta = 0.5$ is correct when $n = 20$ and $X = 13$, given a binomial distribution:
+We use a binomial test to find the probability that a $\theta = 0.5$ is correct when $n = 20$ and $X = 13$. What this means is that we can simply say that our test statistic is:
 $$
-T = \sum_{k = X}^{n} \Bigg( \begin{pmatrix} n \\ k \end{pmatrix} \cdot \theta^k (1-\theta)^{n-k}\Bigg)
+T = X
 $$
+This is because the rejection region we will calculate later only needs to know our $X$ value.
 \item A significance level: \\
 The significance level is also given as $0.05$
 \item A rejection region: \\
@@ -25,11 +25,11 @@ We thus find that $\mathcal{R}=\{0,...,5\}\cup\{15,...,20\}$
 \item Compute test statistic: \\
 We insert the values into the test statistic to see whether the given data is within the rejection region:
 $$
-T = \sum_{k = 13}^{n=20} \Bigg( \begin{pmatrix} 20 \\ k \end{pmatrix} \cdot 0.5^k (1-0.5)^{20-k}\Bigg) = \frac{34495}{262144} \approx 0.1316
+T = X = 13
 $$
 We can see that this is not within the rejection region:
 $$
-T \approx 0.1316 \not\in \mathcal{R} = \{0,...,0.05\} \cup \{19.95,...,20\}
+T = 13 \not\in \mathcal{R} = \{0,...,5\} \cup \{15,...,20\}
 $$
 Thus, we can attribute the higher than average number of correct guesses to chance, not the predictions.
 \end{itemize}

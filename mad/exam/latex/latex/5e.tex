@@ -1,0 +1,77 @@
+This exercise has been completed in the attached \textit{PCA and classification.ipynb} Jupyter Notebook. The most relevant bits of source code can be seen here as well, though all comments are left out. It should be noted that most of the logistic calculation functions have been taken and slightly modified from the lecture slides.
+\begin{verbatim}
+def logistic_insample(X, y, w):
+    N, num_feat = X.shape
+    w = w.reshape(num_feat,1)
+    E = 0
+    for n in range(N):
+        xn = X[n,:].reshape(num_feat,1)
+        E += (1/N)*np.log(1/logistic(y[n]*np.matmul(w.T,xn)))
+    return E[0,0]
+
+def logistic_gradient(X, y, w):
+    N, num_feat = X.shape
+    w = w.reshape(num_feat,1)    
+    g = np.zeros(w.shape)
+    
+    for n in range(N):
+        xn = X[n,:].reshape(num_feat,1)
+        increment = ((-1/N)*y[n]*xn)*logistic(-y[n]*np.matmul(w.T,xn))
+        g += increment
+    return g
+
+def log_reg(Xorig, y, max_iter, grad_thr):       
+    num_pts, num_feat = Xorig.shape
+    onevec = np.ones((num_pts,1))
+    X = np.concatenate((onevec, Xorig), axis = 1)    
+    dplus1 = num_feat + 1
+    learningrate = 0.1    
+    w = 0.1*np.random.randn(num_feat + 1).reshape(num_feat+1,1)
+    value = logistic_insample(X,y,w)
+    num_iter = 0  
+    convergence = 0
+    E_in = []    
+    while convergence == 0:
+        num_iter = num_iter + 1                            
+        g = logistic_gradient(X,y,w)
+        v = -g
+        w_new = w + learningrate*v
+        cur_value = logistic_insample(X,y,w_new)
+        if cur_value < value:
+            w = w_new
+            value = cur_value
+            E_in.append(value)
+            learningrate *=1.1
+        else:
+            learningrate *= 0.9   
+
+        g_norm = np.linalg.norm(g)
+        if g_norm < grad_thr:
+            convergence = 1
+            print('converged')
+        elif num_iter > max_iter:
+            convergence = 1
+            print('reached maximum nr of iterations')
+           
+    return w, E_in 
+
+def log_pred(Xorig, w):
+    num_pts, num_feat = Xorig.shape
+    w = w.reshape(num_feat+1,1)    
+    onevec = np.ones((num_pts,1))
+    X = np.concatenate((onevec, Xorig), axis = 1)
+    P = np.zeros(num_pts)
+    for n in range(num_pts):
+        xn = X[n,:].reshape(num_feat+1,1)   
+        P[n] = logistic(np.matmul(w.T,xn)) # Probability of having label +1
+        
+    Pthresh = np.round(P) #0/1 class labels
+    pred_classes = Pthresh*2-1
+    return P, pred_classes
+\end{verbatim}
+We see that it returns the following accuracies:
+\begin{itemize}
+\item Accuracy on training set: 0.6285
+\item Accuracy on test set: 0.6234
+\end{itemize}
+It seems that $k$-$NN$ works better for this particular dataset. This, as we will also discover in $5f$ is likely because the different features' "position" seem to be important to which label that particular object is the correct one. The likely reason that $k$-$NN$ is better at this is because it is based on Euclidean distances, while logistic regression is based on probability.
