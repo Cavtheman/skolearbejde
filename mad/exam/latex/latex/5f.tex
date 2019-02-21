@@ -12,7 +12,7 @@ def normalise(normSet):
 def preprocess(procSet):
     return center(normalise(procSet))
 \end{verbatim}
-We see that for both methods we get the exact same accuracy. This makes sense for the same reason that we got a higher accuracy with the $k$-$NN$ algorithm earlier. It seems that much of the difference between the two classes lie in the "positional" values. When we essentially remove this by preprocessing, they are on more equal footing. However, since the difference is "positional" both algorithms lose accuracy when we normalise.
+We see that for both methods we get the exact same accuracy. This makes sense for the same reason that we got a higher accuracy with the $k$-$NN$ algorithm earlier. It seems that much of the difference between the two classes lie in the "positional" values. When we essentially remove this by preprocessing, they are on more equal footing. However, since the difference is "positional" both algorithms lose accuracy when we normalise. Losing accuracy like this is something that is very dependent on the data set. Sometimes the noise you remove when centering and normalising actually contains information that can be used to determine its label.
 \begin{itemize}
 \item Accuracy of knn against test set with k\_best: 0.5815
 \item Accuracy of logistic regression against test set: 0.5815

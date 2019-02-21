@@ -14,7 +14,7 @@ if (imgx*imgy > 50000):
     else:
         model.fit(image)
 \end{verbatim}
-The 16 cluster means, calculated using the Jupyter Notebook, look as follows. It should be noted that the cluster means have been calculated by choosing 5000 random pixels in the image, and fitting the model to those instead of the entire image. Doing it this way should only have a minimal effect on the result, if 5000 pixels are enough to find a representative of the image. It should also be noted that they are all RGB values, but Python wants RGB values in one of two forms; floats between $0$ and $1$, or integers between $0$ and $255$. Here they are floats between $0$ and $1$:
+The 16 cluster means, calculated using the Jupyter Notebook, look as follows. It should be noted that the cluster means have been calculated by choosing 5000 random pixels in the image, and fitting the model to those instead of the entire image. Doing it this way should only have a minimal effect on the result, if 5000 pixels are enough to find a representative of the image. It should also be noted that they are all RGB values, but Python wants RGB values in one of two forms; floats between $0$ and $1$, or integers between $0$ and $255$. Here they are floats between $0$ and $1$:\\
 $$
 \begin{matrix}
 [0.49441064, 0.46930358, 0.42724814] \\[3pt]

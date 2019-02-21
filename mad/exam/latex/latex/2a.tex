@@ -1,4 +1,4 @@
-First, we will find the likelihood, which is the same as the $joint \text{ }pdf$, which is defined as thus:
+First, we will find the likelihood, which is the same as the $joint \text{ }pdf$. It is defined as thus:
 $$
 f_{\theta}^{joint}(x_1,...,x_n) = \prod_{i = 1}^n f_\theta(x_n)
 $$
@@ -31,7 +31,7 @@ $$
 $$
 First we rewrite it to make our lives easier:
 $$
-\frac{4(\beta-4)(\beta-3)}{\beta^4} = \frac{4}{\beta^2}-\frac{28}{\beta^3}+\frac{48}{\beta^4}
+\underset{\beta}{argmax}\Bigg(\frac{4(\beta-4)(\beta-3)}{\beta^4}\Bigg) = \underset{\beta}{argmax}\Bigg(\frac{4}{\beta^2}-\frac{28}{\beta^3}+\frac{48}{\beta^4}\Bigg)
 $$
 Now we have to differentiate it to find the local extrema:
 $$
@@ -51,14 +51,18 @@ $$
 $$
 \beta_2 = \frac{21}{4}+\frac{\sqrt{57}}{4}
 $$
-Then, to find whether they are maxima or minima, we compute derive again, and solve with $\beta = \beta_1$ and $\beta = \beta_2$:
+Then, to find whether they are maxima or minima, we compute the derivative of this:
 $$
--16\Bigg(\frac{21}{4}-\frac{\sqrt{57}}{4}\Bigg) + 84 = -16\sqrt{57}
+f''(\beta)=-16\beta+84
+$$
+And solve this with $\beta = \beta_1$ and $\beta = \beta_2$ respectively:
+$$
+-16\Bigg(\frac{21}{4}-\frac{\sqrt{57}}{4}\Bigg) + 84 = 4\sqrt{57}
 $$
 $$
--16\Bigg(\frac{21}{4}+\frac{\sqrt{57}}{4}\Bigg) + 84 = 16\sqrt{57}
+-16\Bigg(\frac{21}{4}+\frac{\sqrt{57}}{4}\Bigg) + 84 = -4\sqrt{57}
 $$
-Since $f''(\beta_1) < 0$, we find that the $\underset{\beta}{argmax}$ is at:
+Since $f''(\beta_2) < 0$, we find that the $\underset{\beta}{argmax}$ is at:
 $$
 \beta = \frac{21}{4}+\frac{\sqrt{57}}{4}
 $$

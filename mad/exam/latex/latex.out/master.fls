@@ -475,6 +475,17 @@ INPUT ./3c1.png
 INPUT ./3c1.png
 INPUT latex/4a.tex
 INPUT latex/4a.tex
+INPUT latex/4b.tex
+INPUT latex/4b.tex
+INPUT 4b1.png
+INPUT ./4b1.png
+INPUT ./4b1.png
+INPUT 4b2.png
+INPUT ./4b2.png
+INPUT ./4b2.png
+INPUT 4b3.png
+INPUT ./4b3.png
+INPUT ./4b3.png
 INPUT latex/5a.tex
 INPUT latex/5a.tex
 INPUT 5a1.png
