@@ -7,3 +7,6 @@
 [submodule "datsci/DATSCI"]
 	path = datsci/DATSCI
 	url = https://github.com/emilliegiraf/DATSCI.git
+[submodule "AD"]
+	path = AD
+	url = https://github.com/emilliegiraf/AD.git
