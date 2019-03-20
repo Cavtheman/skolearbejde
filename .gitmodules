@@ -1,3 +1,6 @@
 [submodule "CompSys/compsys"]
 	path = CompSys/compsys
 	url = https://github.com/Cavtheman/compsys.git
+[submodule "datsci/--force"]
+	path = datsci/--force
+	url = https://github.com/emilliegiraf/DATSCI.git
