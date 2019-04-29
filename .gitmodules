@@ -10,3 +10,6 @@
 [submodule "AD"]
 	path = AD
 	url = https://github.com/emilliegiraf/AD.git
+[submodule "rad"]
+	path = rad
+	url = https://github.com/Cavtheman/rad.git
