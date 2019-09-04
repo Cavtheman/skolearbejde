@@ -13,3 +13,6 @@
 [submodule "rad"]
 	path = rad
 	url = https://github.com/Cavtheman/rad.git
+[submodule "REX"]
+	path = REX
+	url = https://github.com/emilliegiraf/REX.git
