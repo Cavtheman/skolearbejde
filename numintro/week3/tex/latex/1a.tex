@@ -1,0 +1,18 @@
+To find the general solution for the recurrence relation, of the form $p(E)x$, we first rewrite it:
+\begin{align*}
+  x_n &= 2(x_{n-1}+x_{n-2}) \\
+  0 &= -x_n + 2(x_{n-1}+x_{n-2}) \\
+  p(\lambda) &=  -\lambda^2 + 2\lambda  + 2
+\end{align*}
+We then use Wolfram Alpha to solve for $p(\lambda) = 0$:
+$$
+\lambda_1 = 1 - \sqrt{3}
+$$
+$$
+\lambda_2 = 1 + \sqrt{3}
+$$
+Thus, the general solution is:
+$$
+x_n = \alpha(1+\sqrt{3})^n + \beta(1-\sqrt{3})^n
+$$
+We can determine that the difference equation is unstable since all roots do not satisfy the requirement of being $\leq 1$.

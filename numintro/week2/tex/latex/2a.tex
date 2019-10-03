@@ -1,0 +1,11 @@
+\subsection{}
+$10^{40}$ is not a machine number in Marc-32, since the number is larger than what can be represented. The max value is roughly $3.4*10^{38}$.
+
+\subsection{}
+$2^{-1}+2^{-29}$ is not a machine number in Marc-32, due to the fact that numbers with more than 6 decimal digits are approximated, because there are no more than 23 bits in the mantissa part of Marc-32 representation.
+
+\subsection{}
+$\frac{1}{3}$ is not a machine number in Marc-32, because it is impossible for it to represent infinitely repeating numbers ($0.\overline{0101}_2$) accurately.
+
+\subsection{}
+$\frac{1}{5}$ is not a machine number in Marc-32, because it is impossible for it to represent infinitely repeating numbers ($0.\overline{0011}_2$) accurately.

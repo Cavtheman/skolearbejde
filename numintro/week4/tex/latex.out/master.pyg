@@ -1,0 +1,17 @@
+  def bisect(x0: float, x1: float, f, epsilon: float, iter_max: int) -> float:
+    print("\nStarting Bisect algorithm with x0 = {0} and x1 = {1}".format(x0,x1))
+    for i in range(iter_max):
+
+        mid = (x0+x1)/2
+        print(i,mid,f(mid))
+
+        if (f(mid) == 0) or ((x1-x0)/2 < epsilon):
+            return mid
+
+        if f(x0) * f(mid) < 0:
+            x1 = mid
+        else:
+            x0 = mid
+
+    print("Reached max number of iterations")
+    return(mid)

@@ -1,0 +1,22 @@
+We can see that there are two parts to this function, $\alpha(1+\sqrt{3})^n$ and $\beta(1-\sqrt{3})^n$, and start from there. \\
+We can then notice that $(1+\sqrt{3}) > 1$. This means that $\alpha(1+\sqrt{3})^n > 1, n \in \mathbb{R}$, in fact it diverges to infinity as $n$ increases, as long as $\alpha > 0$. \\
+We then look at $(1-\sqrt{3}) < 1$. We know that any number $0 < x^n < 1 \rightarrow 0$ as $n$ approaches infinity. We can see that this holds for this part of the function as well, as we can substitute $x$ with $\beta(1-\sqrt3)$. This means that $\beta(1-\sqrt3)^n \rightarrow 0, \beta \neq 0$. If $\beta = 0$ then the function is trivially $=0$.
+
+We can combine this and realise that for any $\alpha \neq 0$, the series will diverge. Conversely, if $\alpha = 0$, $\beta \in \mathbb{R}$ and $\beta \neq 0$, the general solution will converge on $0$.
+
+For these values we can rewrite $x_n$:
+$$
+x_n = (1-\sqrt3)^{n-1}
+$$
+We then try to find a $c < 1$ to prove the order of convergence:
+\begin{align*}
+  |x_{n+1}-x^*| &\leq c|x_n - x^*| \\
+  \frac{|x_{n+1}|}{|x_n|} &\leq c \\
+  \frac{(1-\sqrt3)^n}{(1-\sqrt3)^{n-1}} &\leq c
+\end{align*}
+We use Wolfram Alpha to find that:
+$$
+\frac{(1-\sqrt3)^n}{(1-\sqrt3)^{n-1}} \rightarrow 1 - \sqrt3
+$$
+This means that we have a solution for all $1 - \sqrt3 \leq c < 1$.
+We have thus proven that the order of convergence is at least linear.

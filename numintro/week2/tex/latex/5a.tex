@@ -1,0 +1,17 @@
+To show this approximation, we first use a truncated Taylor series for $cos(x)$. We can do this because $x \rightarrow 0$:
+$$
+cos(x) \approx 1 - \frac{x^2}{2}+\frac{x^4}{24}-\frac{x^6}{720}
+$$
+Then we can say:
+$$
+1 \approx 1 - \frac{x^2}{2}+\frac{x^4}{24}-\frac{x^6}{720}
+$$
+This means that our error is:
+$$
+\frac{x^2}{2}+\frac{x^4}{24}-\frac{x^6}{720}
+$$
+We can then solve:
+$$
+\frac{1}{2} * 10^{-8} = \frac{x^2}{2}+\frac{x^4}{24}-\frac{x^6}{720}
+$$
+The solution for this approximates to $x \approx 0.0001$. This means that for the approximation $cos(x) \approx 1$, to be accurate, $x$ would have to be less than or equal to roughly $0.0001$.

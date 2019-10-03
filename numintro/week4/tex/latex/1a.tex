@@ -1,0 +1,14 @@
+To formulate this as a root finding problem, we first have to find the formula for $S$, so we can rewrite:
+$$
+S = \pi r l + \pi r^2
+$$
+Where $l$ is the slant height of the cone.
+$$
+l = \sqrt{r^2+h^2}
+$$
+We rewrite this into one expression, and insert the known values:
+\begin{align*}
+  1200 &= \pi r \sqrt{r^2+400} + \pi r^2 \\
+  0 &= \pi r \sqrt{r^2+400} + \pi r^2 - 1200
+\end{align*}
+Now the expression can be solved as a root finding problem.

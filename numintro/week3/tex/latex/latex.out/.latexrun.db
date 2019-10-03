@@ -1,0 +1,139 @@
+{
+  "version": "latexrun-db-v2",
+  "tasks": {
+    "latex::preamble.tex": {
+      "deps": [
+        [
+          "args",
+          [],
+          [
+            "pdflatex",
+            "-shell-escape",
+            "-interaction",
+            "nonstopmode",
+            "-recorder",
+            "-output-directory",
+            "latex.out",
+            "preamble.tex"
+          ]
+        ],
+        [
+          "env",
+          [
+            "TEXMFOUTPUT"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXINPUTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXFORMATS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TEXPOOL"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "TFMFONTS"
+          ],
+          null
+        ],
+        [
+          "env",
+          [
+            "PATH"
+          ],
+          "/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm"
+          ],
+          "11f3331c958b696fd484fe45c28285622617a2593d7a34511a1d6b279e1578a2"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map"
+          ],
+          "fd46dbb21676b9dfd9fb65e242b3cc48fbef1274b8dbb49f64f0c2e0ae79f65e"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm"
+          ],
+          "ae296e8e41b2b0f73e9a17fdc42c743b9ddcc58d23c30acaa3411206f7824780"
+        ],
+        [
+          "file",
+          [
+            "preamble.tex"
+          ],
+          "f4f587e051c9feb1942e8e845ffffe9a950dd12d1ba97ddec400c69326dc2382"
+        ],
+        [
+          "file",
+          [
+            "/var/lib/texmf/web2c/pdftex/pdflatex.fmt"
+          ],
+          "9d912ed73bc2de1c2a3d452ba40ef9234c42de80f2b375fdd36aaeffaeeecd87"
+        ],
+        [
+          "file",
+          [
+            "/usr/share/texmf-dist/web2c/texmf.cnf"
+          ],
+          "52d5bbb2eb34e20a01fb84210de7b1ff029259900976583bedba890e6d5e7873"
+        ],
+        [
+          "unknown_input",
+          [],
+          1518438702.6637864
+        ],
+        [
+          "file",
+          [
+            "latex.out/preamble.log"
+          ],
+          "b8b1c65eb348d79c43fad68240f4d9dcbb5493ed7e1f8096ae21559f16e53de4"
+        ],
+        [
+          "file",
+          [
+            "latex.out/preamble.fls"
+          ],
+          "f9dd4eeb09ebe2583157f8cd472713d77d10c4527debc26fcf7c9e860beafa5a"
+        ]
+      ],
+      "output_files": {
+        "latex.out/preamble.log": "b8b1c65eb348d79c43fad68240f4d9dcbb5493ed7e1f8096ae21559f16e53de4",
+        "latex.out/preamble.fls": "f9dd4eeb09ebe2583157f8cd472713d77d10c4527debc26fcf7c9e860beafa5a"
+      },
+      "extra": {
+        "jobname": "latex.out/preamble",
+        "outname": null,
+        "status": 1
+      }
+    }
+  },
+  "clean": {
+    "latex.out/preamble.log": "b8b1c65eb348d79c43fad68240f4d9dcbb5493ed7e1f8096ae21559f16e53de4",
+    "latex.out/preamble.fls": "f9dd4eeb09ebe2583157f8cd472713d77d10c4527debc26fcf7c9e860beafa5a"
+  }
+}
