@@ -1,1 +1,32 @@
-I haven't been able to solve this exercise, and would appreciate some hints for how to solve it.
+In this exercise we want to prove that $f(q) = 0$. We start by writing down the Secant Method:
+$$
+x_{n+1} = x_n - f(x_n) \left( \frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}\right)
+$$
+We know that $x_n \rightarrow q$ as $n \rightarrow \infty$ and that $f'(q) \neq 0$, as per the assigment. Now we have to rewrite the Secant Method equation to prove it:
+\begin{align*}
+  x_{n+1} &= x_n - f(x_n) \left( \frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}\right) \\
+  x_n - x_{n+1} &= f(x_n) \left( \frac{x_n-x_{n-1}}{f(x_n)-f(x_{n-1})}\right) \\
+  \left(x_n - x_{n+1}\right)\left(f(x_n)-f(x_{n-1})\right) &= f(x_n) \left(x_n-x_{n-1}\right) \\
+  \left(x_n - x_{n+1}\right)\frac{f(x_n)-f(x_{n-1})}{x_n-x_{n-1}} &= f(x_n)
+\end{align*}
+With this rewriting, we can use the Mean Value Theorem, and get it to look as follows:
+\begin{align*}
+  \left(x_n - x_{n+1}\right)f'(c) &= f(x_n) \\
+  \left(x_n - x_{n+1}\right) &= \frac{f(x_n)}{f'(c)}
+\end{align*}
+Now we can use the assumptions we made at the beginning, by taking the\\
+$$
+\underset{n \rightarrow \infty}{limit}
+$$
+It should be noted that as $c$ is always a value between $x_n$ and $x_{n-1}$, the following is true for $c$:
+$$
+x_n, x_{n-1} \rightarrow q \implies c \rightarrow q
+$$
+Thus, we can say the following:
+\begin{align*}
+  \underset{n \rightarrow \infty}{limit} \left(x_n - x_{n+1}\right) &=   \underset{n \rightarrow \infty}{limit} \left(\frac{f(x_n)}{f'(c)}\right) \\
+  q - q &= \frac{f(q)}{f'(q)} \\
+  f'(q) \cdot 0 &= f(q) \\
+  0 &= f(q)
+\end{align*}
+Thus, we have proven that $f(q) = 0$

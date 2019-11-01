@@ -1,0 +1,35 @@
+To find the interval $J$ such that the Neumann series applied to a matrix $B$ converges to $A^{-1}$ when $a \in J$, we will first write down $A$:
+$$
+A =
+\begin{bmatrix}
+  0.9 & -0.2 & -0.2 \\
+  0.1 & 0.7  & -e   \\
+  0.1 & -0.3 & 0.5
+\end{bmatrix}
+$$
+And we will let $B = I - A$:
+$$
+B =
+\begin{bmatrix}
+  1 & 0 & 0 \\
+  0 & 1 & 0 \\
+  0 & 0 & 1
+\end{bmatrix}
+-
+\begin{bmatrix}
+  0.9 & -0.2 & -0.2 \\
+  0.1 & 0.7  & -e   \\
+  0.1 & -0.3 & 0.5
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0.1  & 0.2 & 0.2 \\
+  -0.1 & 0.3 & e   \\
+  -0.1 & 0.3 & 0.5
+\end{bmatrix}
+$$
+We know from Theorem 1 on pg. 198 of the textbook that if $||B||_\infty < 1$ then the Neumann series $\sum_{k=0}^\infty B^k$ will converge to $A^{-1}$. Thus, we have to find an interval for $e$ where this is true.
+$$
+||B||_\infty = max(0.7,|0.2+e|) < 1 \iff e \in J = (-1.2,0.8)
+$$
+That is, for any value of $-1.2 < e < 0.8$, the Neumann series applied to $B$ will converge to $A^{-1}$.

@@ -1,0 +1,39 @@
+\iffalse
+The condition number can be found by dividing $\lambda_{max}(A)$ with $\lambda_{min}(A)$.
+Using the implemented functions, we get the following values:
+\begin{align*}
+  \lambda_{max}(A) &= 2 \\
+  \lambda_{min}(A) &= 2000.5
+\end{align*}
+With this we get a condition number of $0.00099975006$.
+I am not quite sure how to answer the rest of the question, as I don't quite understand what it is asking.
+\fi
+
+To find the condition number, we use the following formula:
+$$
+_\kappa(A) = \frac{|\text{max e.v of }A|}{|\text{min e.v of }A|}
+$$
+We calculate the maximum and minimum eigenvalues of $A$ using the power and inverse power methods implemented in the Q-files. With this we get:
+\begin{align*}
+|\text{max e.v of }A| &= 2.0005 \\
+|\text{min e.v of }A| &= 0.0005 \\
+_\kappa(A) &= \frac{2.0005}{0.0005} \\
+_\kappa(A) &= 4001
+\end{align*}
+Solving $Ax = b$ for $b = \begin{pmatrix} 2 \\ 2 \end{pmatrix}$ we get the vector:
+$$
+x =
+\begin{pmatrix}
+2 \\
+0
+\end{pmatrix}
+$$
+Solving $Ax = b$ for $b = \begin{pmatrix} 2 \\ 2.001 \end{pmatrix}$ we get the vector:
+$$
+x =
+\begin{pmatrix}
+1 \\
+1
+\end{pmatrix}
+$$
+This large change in the output makes sense, even with the extremely small change in the input, given our large condition number of $4001$.
