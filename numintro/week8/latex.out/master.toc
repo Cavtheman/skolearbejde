@@ -1,0 +1,5 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {1.}Exercise}{3}{section.1}% 
+\contentsline {subsection}{\numberline {(a)}}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {(b)}}{3}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {(c)}}{3}{subsection.1.3}% 

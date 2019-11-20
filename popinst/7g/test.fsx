@@ -6,7 +6,7 @@ let question (lst : 'a list) : bool option =
     // the compiler complains about incomplete pattern matches.
     // How can we get to that case though?
     | x :: []              -> Some true
-    | y::xs::ys            -> None
+    | y::x::ys             -> None
 
 
 printfn "%A" <| question [1]         // False
@@ -16,8 +16,4 @@ printfn "%A" <| question [[[]];[[]]] // None
 printfn "%A" <| question [[1];[]]    // None
 printfn "%A" <| question [[1];]      // False
 printfn "%A" <| question ([]::[[]])  // None
-
-
-let alph = ['a'..'z']
-let folder acc x = (List.fold(fun acc2 y -> string x + string y :: acc2) [] alph) :: acc
-//printfn "%A" <| List.fold folder [] alph
+printfn "%A" <| question [1;2]

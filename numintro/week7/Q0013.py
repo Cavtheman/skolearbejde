@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import auto_test_tools as att
 import time
+import math
 '''
 
 First you must implement a function that will compute a vector of
@@ -44,13 +45,15 @@ def f(x: np.ndarray) -> np.ndarray:
     return np.array(ret_val)
 
 
+
 def f1(x: np.ndarray) -> np.ndarray:
     return np.array( np.exp(-x) * np.cos(4*np.pi*x))
-
 
 def g(x: np.ndarray) -> np.ndarray:
     return np.array(x * np.sin(1/x))
 
+def error_fun_f (n : np.ndarray) -> np.ndarray:
+    return np.array(((3**n) * (1 + 4*np.pi)**(n+1))/math.factorial(n+1))
 
 def lagrange_polynomial(t: float, x: np.ndarray, y: np.ndarray) -> float:
     """
@@ -107,9 +110,11 @@ def plot_fun (values, low_interval, high_interval, fun, poly_fun):
 
         x = np.linspace(low_interval,high_interval,values[i])
         y = fun(x)
-        t = np.linspace(np.min(x),np.max(x),100)
+
+        t = np.linspace(np.min(x),np.max(x),(values[i]*10))
         p = np.array([poly_fun(t[j], x, y) for j in range(len(t))])
-        xx = np.linspace(np.min(x),np.max(x),100)
+
+        xx = np.linspace(np.min(x),np.max(x),1000)
         yy = fun(xx)
 
         plt.plot(x, y, 'ro', label='Data points')
@@ -121,6 +126,28 @@ def plot_fun (values, low_interval, high_interval, fun, poly_fun):
     #plt.tight_layout()
     #plt.show()
 
+def find_integral_error(values, low_interval, high_interval, fun, poly_fun):
+    ret_val = []
+    for n in values:
+        x = np.linspace(low_interval,high_interval,n)
+        y = fun(x)
+
+        t = np.linspace(np.min(x),np.max(x),(n*10))
+        p = np.array([poly_fun(t[j], x, y) for j in range(len(t))])
+
+        xx = np.linspace(np.min(x),np.max(x),1000)
+        yy = fun(xx)
+
+        error_list = [abs(e1 - e2) for e1, e2 in zip(p,yy)]
+        #print(error_list)
+        ret_val.append(np.sum(error_list))
+        plt.plot(t, error_list, label="Error function, n = {}".format(n))
+
+    plt.legend(loc='best')
+    plt.show()
+
+    return ret_val
+#n_vals = range(1,21)
 n_vals = [10,20,50,100]
 times = []
 
@@ -140,6 +167,10 @@ def plot_time (n, poly_fun):
 # Used to plot the running time
 # Takes a long time to run
 #plot_time(101)
+
+print(find_integral_error(n_vals, 1, 10, f1, lagrange_polynomial))
+# plt.tight_layout()
+# plt.show()
 
 plot_fun(n_vals, 1, 10, f, lagrange_polynomial)
 plt.tight_layout()

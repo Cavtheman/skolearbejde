@@ -24,8 +24,21 @@ let histogram2 (src : string) : int list =
 
     List.foldBack folder alphabet []
 
-// printfn "%A" (histogram2 "-..Hello There-.,-.,")
-// printfn "%A" (histogram2 " ")
+let histogram3 (src : string) : int list =
+    let alphabet = ['a'..'z']@[' ']
+    let lowerText = (Seq.toList (src.ToLower()))
+
+    let countFun (alphChar : char) : int =
+        let folder (acc : int) (srcChar : char) : int =
+            match alphChar with
+            | x when x = srcChar -> acc + 1
+            | _               -> acc
+        List.fold folder 0 lowerText
+
+    List.map countFun alphabet
+
+printfn "%A" (histogram3 "-..Hello There-.,-.,")
+printfn "%A" (histogram3 " ")
 
 let lipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis risus nec erat maximus, a tincidunt urna tempus. Praesent vulputate massa ut arcu finibus consectetur. Sed maximus justo pharetra enim faucibus, vel bibendum justo pulvinar. Integer ac velit at est egestas volutpat at vel enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse sit amet magna quis elit porta laoreet quis at mi. Etiam ac ante in purus faucibus iaculis nec a nibh. Donec mauris augue, volutpat id libero eu, malesuada pretium libero. Fusce congue consectetur eros id maximus. Mauris vel tellus aliquam erat facilisis ornare sed nec sem. Pellentesque quis ante sed odio ultricies hendrerit eget eu urna.
 
@@ -127,4 +140,4 @@ Aenean dapibus ante eget sodales convallis. Nunc turpis elit, scelerisque ut nul
 
 Integer imperdiet mi nibh, commodo semper ante ultricies non. Aliquam blandit mauris a ex consequat ultricies. Sed blandit vestibulum gravida. Nulla fermentum enim vitae lorem tristique, ac faucibus justo fermentum. Duis fermentum, ante ut ultricies auctor, leo augue aliquam tortor, id tincidunt erat mi sit amet risus. Mauris eleifend enim quis nunc porttitor vulputate. Phasellus eu elit lacus. Donec facilisis facilisis ante, a viverra sem ultricies at."
 
-printfn "%A" (histogram2 lipsum)
+printfn "%A" (histogram3 lipsum)
