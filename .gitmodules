@@ -16,3 +16,6 @@
 [submodule "REX"]
 	path = REX
 	url = https://github.com/emilliegiraf/REX.git
+[submodule "nanoneedles"]
+	path = nanoneedles
+	url = https://github.com/Cavtheman/nanoneedles.git

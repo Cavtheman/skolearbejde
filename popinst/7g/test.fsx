@@ -1,3 +1,4 @@
+(*
 let question (lst : 'a list) : bool option =
     match lst with
     | []                   -> None
@@ -7,13 +8,14 @@ let question (lst : 'a list) : bool option =
     // How can we get to that case though?
     | x :: []              -> Some true
     | y::x::ys             -> None
+*)
+open testModule
 
-
-printfn "%A" <| question [1]         // False
-printfn "%A" <| question [[];[]]     // None
-printfn "%A" <| question []          // None
-printfn "%A" <| question [[[]];[[]]] // None
-printfn "%A" <| question [[1];[]]    // None
-printfn "%A" <| question [[1];]      // False
-printfn "%A" <| question ([]::[[]])  // None
-printfn "%A" <| question [1;2]
+printfn "%A" <| testModule.question [1]         // False
+printfn "%A" <| testModule.question [[];[]]     // None
+printfn "%A" <| testModule.question []          // None
+printfn "%A" <| testModule.question [[[]];[[]]] // None
+printfn "%A" <| testModule.question [[1];[]]    // None
+printfn "%A" <| testModule.question [[1];]      // False
+printfn "%A" <| testModule.question ([]::[[]])  // None
+printfn "%A" <| testModule.question [1;2]
