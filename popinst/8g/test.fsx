@@ -11,6 +11,8 @@ let test3 : figure = Mix (Circle ((1,1), 2, (128,128,128)), Rectangle ((1,1), (2
 
 let rec print_test (input : figure) =
     match input with
+    | Circle _          ->
+        printfn "Gottem"
     | Circle (a,b,c)    ->
         printfn "Circle:"
         printfn "Center: %A \nRadius: %A \nColour: %A\n" a b c
