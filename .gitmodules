@@ -19,3 +19,6 @@
 [submodule "nanoneedles"]
 	path = nanoneedles
 	url = https://github.com/Cavtheman/nanoneedles.git
+[submodule "rebs"]
+	path = rebs
+	url = https://github.com/Cavtheman/rebs.git
