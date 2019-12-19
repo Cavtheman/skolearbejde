@@ -1,9 +1,8 @@
 open System
 
 
-match test.tac ["test.fsx"] with
+match test.tac ["tst.fsx"] with
 | Some a ->
     printfn "%A" a
 | None   ->
-    printfn "Failure"
-    Operators.exit(1)
+    failwith "Failure"

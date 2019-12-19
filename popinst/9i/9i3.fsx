@@ -12,8 +12,7 @@ let readUrl url =
     let reader = new System.IO.StreamReader(stream)
     reader.ReadToEnd ()
 
-let url = "http://fsharp.org"
-printfn "%A" <| (readUrl url).[0..200]
+// printfn "%A" <| (readUrl url).[0..200]
 
 let countLinks (url : string) : int =
     let htmlText =
@@ -22,11 +21,16 @@ let countLinks (url : string) : int =
     let textList = Seq.toList htmlText
     let rec counter (input : char list) : int =
         match input with
-        | '<' :: 'a' :: tail -> 1 + (counter tail)
+        | '<' :: 'a' :: ' ' :: tail -> 1 + (counter tail)
         | head :: tail       -> counter tail
         | []                 -> 0
 
     counter textList
 
-printfn "%i" <| countLinks url
+let fsh = "http://fsharp.org"
+let google = "http://google.com"
+let question = "www.doesnotexist.com"
+printfn "%i" <| countLinks fsh
+printfn "%i" <| countLinks google
+printfn "%i" <| countLinks question
 printfn "%i" <| countLinks "test"
