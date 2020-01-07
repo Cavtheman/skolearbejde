@@ -1,7 +1,7 @@
 (setq-default indent-tabs-mode nil)
 (setq make-backup-files nil) ; stop creating backup~ files
 (setq auto-save-default nil) ; stop creating #autosave# files
-(add-to-list 'default-frame-alist '(font . "Monospace Bold-10"))
+;(add-to-list 'default-frame-alist '(font . "Monospace Bold-14"))
 
 ;; Deletes all trailing whitespace
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -30,9 +30,9 @@
 ;; Multiline editing
 ;;(require 'multiple-cursors)
 (global-set-key (kbd "C-s-c") 'mc/edit-lines)
-(global-set-key (kbd "C-<") 'mc/mark-next-like-this)
-(global-set-key (kbd "C->") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-s-n") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-s-p") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-s-a") 'mc/mark-all-like-this)
 
 ;;(global-auto-revert-mode t)
 
@@ -40,12 +40,18 @@
 
 ;;; package archives
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+;(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (unless package-archive-contents (package-refresh-contents))
 (package-initialize)
 
+(unless (package-installed-p 'multiple-cursors)
+  (package-install 'multiple-cursors))
+
+(require 'fsharp-mode)
+
+
 ;;Default Directory
-(setq default-directory "/home/casper/skolearbejde/" )
+(setq default-directory "~/skolearbejde/" )
 
 ;;; column numbers
 (column-number-mode 1)
@@ -119,4 +125,4 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight bold :height 90 :width normal)))))
+ '(default ((t (:family "Dejavu Sans Mono" :foundry "PfEd" :slant normal :weight bold :height 130 :width normal)))))
