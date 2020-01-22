@@ -1,0 +1,41 @@
+// Recursive Levensthein function. This is slow, since for longer strings
+// it has to calculate the same thing several times.
+let leven1 (a : string) (b : string) =
+    let (i,j) = (a.Length-1,b.Length-1)
+    
+    let rec leven ((i : int) , (j : int)) =
+        match (i , j) with
+        | (i , j) when min i j = 0 -> max i j
+        | _ -> min (min (leven (i-1,j)+1) (leven (i,j-1)+1)) (leven (i-1,j-1) + (if a.[i] = b.[j] then 0 else 1))
+        
+    leven (i,j) |> printfn "%i"
+
+// Another recursive Levensthein function, this time with caching, to
+// reduce runtime significantly.
+let levencache (a : string) (b : string) =
+    let (i,j) = (a.Length-1,b.Length-1)
+    let cache = Array2D.init (i+1) (j+1) (fun k l -> -1)
+    
+    let rec ccache = function
+        | (i , j) when min i j = 0 -> max i j
+        | (i , j) ->
+            if cache.[i,j] >= 0 then
+                cache.[i,j]
+            else
+                cache.[i,j] <- leven (i,j)
+                cache.[i,j]
+                
+    and leven = function
+        | (i , j) when min i j = 0 -> max i j
+        | (i , j) -> min (min (ccache (i-1,j)+1) (ccache (i,j-1)+1)) (ccache (i-1,j-1) + (if a.[i] = b.[j] then 0 else 1))
+
+    leven (i,j) |> printfn "%i"
+
+// These run the function with two normal-sized string and two much longer strings.
+// The long strings are commented due to the long runtime
+leven1 "dangerous horse" "danger horse"
+// leven1 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut molestie libero. Cras nec laoreet elit." "Nam sed laoreet arcu, in dapibus risus. Cras lacinia metus ac sollicitudin blandit."
+
+// These do the same as above, but the long strings now has a short runtime as well
+levencache "dangerous horse" "danger horse"
+levencache "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut molestie libero. Cras nec laoreet elit." "Nam sed laoreet arcu, in dapibus risus. Cras lacinia metus ac sollicitudin blandit."

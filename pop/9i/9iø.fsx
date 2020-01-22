@@ -1,0 +1,33 @@
+
+open System
+
+
+let printFile =
+    printfn "What file do you want to read?"
+    let path = Console.ReadLine()
+    let file = IO.File.OpenText(path)
+    
+    while not file.EndOfStream do
+        printfn "%s" (file.ReadLine())
+
+printFile
+
+let printWebPage url len =
+    let urlStream =
+        let uri = Uri url
+        let request = Net.WebRequest.Create uri
+        let response = request.GetResponse ()
+        response.GetResponseStream ()
+    let readUrl =
+        let stream = urlStream
+        let reader = new IO.StreamReader(stream)
+        reader.ReadToEnd ()
+    printfn "%s" readUrl.[0..len]
+
+
+//let simpleCalc (op:string) =
+//    let num = op.Split ('+','-','*','/')
+//    match num with
+        
+
+printWebPage "https://en.wikipedia.org/wiki/Oliver_Wright" 1000

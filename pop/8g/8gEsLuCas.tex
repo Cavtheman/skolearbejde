@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[danish, english]{babel}
+\usepackage{amsmath,amscd}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{graphicx} 
+\usepackage{float}                   
+\usepackage[utf8x]{inputenc}
+\usepackage{listings} 
+\usepackage[margin=1.0in]{geometry}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+	\algnewcommand{\return}{\State \textbf{Return }}
+	\algnewcommand{\algorithmicand}{\textbf{\&\& }}
+	\algnewcommand{\AND} {\algorithmicand}
+	\algnewcommand{\algorithmicor}{$\|$ }
+	\algnewcommand{\OR} {\algorithmicor}
+\lstset{literate = 
+	{æ}{{\ae}}1 {ø}{{\oe}}1 {å}{{\aa}}1,
+    tabsize=4
+}
+\usepackage{amsfonts}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+%\addto\captionsdanish{\renewcommand{\figurename}{Figur}}
+
+\title{PoP Ugeopgave 8g}
+\author{Esben, Lucas, Casper}
+
+\begin{document}
+
+\maketitle
+
+\section*{8g.0}
+Til denne opgave har vi valgt at bruge \textit{enumerate}, hvor vi giver hver enkelte dag en værdi, hardcoded i typen \textit{weekday}. Derefter har vi lavet en funktion der modtager et tal, og returnerer den korresponderende ugedag.
+\section*{8g.1}
+Til denne opgave har vi benyttet funktionerne fra senere opgaver. Vi har lavet en definition af fighouse, som er en kombination af vores \textit{Triangle, Circle} og \textit{Rectangle}-dele af typen \textit{Figure.} Vi har derefter genereret billedet ud fra den definition, med \textit{makePicture}.
+\begin{figure}[H]
+\centering
+\includegraphics{figHouse.png}
+\caption{figHouse.png}
+\end{figure}
+
+\section*{8g.2}
+Til denne opgave har vi valgt at bruge arealformlen fra opgavebeskrivelsen, uden division med 2. Dette er så der ikke opstår uhensigtsmæssige afrundingsfejl. Dette kan gøres fordi den kun bliver sammenlignet med sig selv.
+\section*{8g.3}
+Til \textit{Triangle}-udvidelsen bruger vi \textit{triarea2} til at finde ud af om en pixel ligger inde i trekanten der skal genereres. Hvis den gør, bliver den pixel farvelagt med den definerede farve.
+\section*{8g.4}
+Til dette bruger vi den definerede \textit{fighouse} som input til \textit{makePicture}, for at beholde noget klarhed i koden. Vi har brugt matching rekursivt til at generere billedet. Dog kan det også gøres med mindre hukommelsesforbrug ved at bruge \textit{for} loops.
+\section{8g.5}
+
+
+
+
+
+\end{document}

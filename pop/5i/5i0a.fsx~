@@ -1,0 +1,26 @@
+//Lists for testing
+let tlsls = [[1;2;3;];[4;5;6;]]
+let flsls = [[1;2;3;];[4;5;]]
+
+let f ((acc , prvl) : (bool * int)) (elem : 'a list) =
+    if List.isEmpty(elem) then
+        (acc = false , prvl)
+    elif prvl = elem.Length then
+        (acc = true , prvl)
+    else
+        (acc = false , prvl - 1)
+    
+//Checks if two given lists are the same length and non-empty
+let isTable (lslist : 'a list list) =
+    List.fold (fun ((acc, prvl) : (bool * int)) (elem : 'a list) -> f (acc , prvl) elem) (false , lslist.[0].Length) lslist
+    
+
+//let isTable1 (lslist : int list list) =
+//    if lslist.[0].Length = lslist.[1].Length && lslist.[0].IsEmpty = false then
+//        true
+//    else false
+
+//Tests isTable with different lists
+//First should return true, second should return false
+isTable tlsls |> printfn "%A"
+isTable flsls |> printfn "%A"

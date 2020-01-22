@@ -1,0 +1,3 @@
+let rec leven (i : string) (j : string) : int =
+    match (i , j) with
+    | (i , j) when min i j = 0 ->  

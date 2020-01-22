@@ -1,0 +1,57 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Opgave 2i}
+\author{Casper Lisager Frandsen}
+
+\begin{document}
+
+\maketitle
+
+\section*{Opgave 2i.0}
+
+\paragraph{Udfyld følgende tabel, således at hver række repræsenterer den samme værdi men opskrevet på 4 forskellige former, og angiv mellemregningerne du brugte, for at udregne konverteringerne.\\}
+
+Det er lettest at udregne disse tal ved at først konvertere til binær, da jeg ved at 1 ciffer i hexadecimal = 4 cifre i binær, fordi $1111_2 = 15_{10} = f_{16}$, mens i oktal er 1 ciffer = 3 cifre i binær, da $111_2 = 7_{10} = 7_8$.\\\\
+I første række startede jeg med binær. $10 = 1*2^3 + 1*2^1$. Hexadecimal: $a=10$. Til oktal benyttede jeg at det binære tal kan deles op. $10_8+1*2^2= 12_8$.\\\\
+Anden række: Decimal: $1*2^4+1*2^2+1*2^0 = 21$ Hexadecimal: delt i to: $10000_2$ og $0101_2$. $1_2 = 1_{16} $ og $ 0101_2 = 1*2^2+1*2^0 = 4_{16}$ altså giver det $14_{16}$. Oktal: del i to: $10_2$ og $101_2$. $10_2 = 1*2^1 = 2_8$. $101_2 = 1*2^2+1*2^0= 5_8$, altså giver det $25_8$\\\\
+Tredje og fjerde række da de er ens:\\
+Hexadecimal: $3f$ Binær: del i to: 3 og f. $3 = 1*2^1+1*2^0 = 0011_2$. $f = 1*2^3+1*2^2+1*2^1+1*2^0 = 1111$. Altså giver det $11 1111_{16}$ Oktal: del i to igen, $111_2$ og $111_2$. $1*2^2+1*2^1+1*2^0 = 7_8$, da de begge er det samme må det give $77_8$.
+
+\begin{center}
+
+\begin{tabular}{|c|c|c|c|}
+\hline Decimal & Binær & Hexadecimal & Oktal \\
+
+\hline 10 & 1010 & a & 12\\
+
+\hline 21 & 10101 & 14 & 25\\
+
+\hline 63 & 11 1111 & 3f & 77\\
+
+\hline 63 & 11 1111 & 3f & 77\\
+
+\hline
+\end{tabular}
+
+\end{center}
+
+\section*{Opgave 2i.1}
+
+\paragraph*{Opskriv 2 F\# udtryk, som ved brug af indeceringssyntaksen udtrækker første og andet ord i strengen "hello world"\\}
+Dette er blevet gjort vha kode, der er vedhæftet, i henholdsvis opgave2i16 og opgave2i16(1)
+
+\end{document}

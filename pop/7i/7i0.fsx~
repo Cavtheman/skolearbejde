@@ -1,0 +1,12 @@
+
+let tingting = [4;275;24275;457;2346;2754;27;247;5432]
+let botting = [5234;37;234;2345;62346;42;1325;1235;21]
+
+let rec merge = function
+    | ([] , ys)                      -> ys
+    | (xs , [])                      -> xs
+    | ([] , [])                      -> []
+    | (hx::xt , hy::yt) when hx < hy -> hx::merge (xt , hy::yt)
+    | (hx::xt , hy::yt)              -> hy::merge (hx::xt , yt)
+
+merge (tingting , botting) |> printfn"%A" 

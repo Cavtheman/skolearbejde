@@ -1,0 +1,17 @@
+//recursive function that takes a list of integers, seen as a continuous fraction
+//and returns a float that is equal to it 
+let rec cfrac2float (lst : int list) : float =
+    if lst.Length = 1 then
+        float(lst.Head)
+    elif lst.IsEmpty then
+        0.0
+    else
+        float(lst.Head) + (1.0 / (cfrac2float lst.Tail))
+
+
+    
+
+//lists to be tested
+let frcls = []
+
+cfrac2float frcls

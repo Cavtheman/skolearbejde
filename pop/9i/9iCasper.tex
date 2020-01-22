@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[danish, english]{babel}
+\usepackage{amsmath,amscd}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{graphicx} 
+\usepackage{float}
+\usepackage{centernot}
+\usepackage{marvosym}                 
+\usepackage[utf8x]{inputenc}
+\usepackage{listings} 
+\usepackage[margin=1.0in]{geometry}
+\usepackage{algorithm}
+\usepackage{dsfont}
+\usepackage[noend]{algpseudocode}
+	\algnewcommand{\return}{\State \textbf{Return }}
+	\algnewcommand{\algorithmicand}{\textbf{\&\& }}
+	\algnewcommand{\AND} {\algorithmicand}
+	\algnewcommand{\algorithmicor}{$\|$ }
+	\algnewcommand{\OR} {\algorithmicor}
+\lstset{literate = 
+	{æ}{{\ae}}1 {ø}{{\oe}}1 {å}{{\aa}}1,
+    tabsize=4
+}
+\usepackage{amsfonts}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+%\addto\captionsdanish{\renewcommand{\figurename}{Figur}}
+
+\title{Opgave 9i}
+\author{Casper}
+
+\begin{document}
+
+\maketitle
+
+\section*{9i.0}
+Til safeIndexIf bliver der brugt "Unchecked.defaultof" som det funktionen fejler med. Denne funktion kan bruges til at returnere nogle forskellige default værdier, defineret i F\# sproget. Til en \textit{int} er denne default-værdi $0$. Lige i dette tilfælde kan det gøre det være svært at tyde, da elementet i indexet godt kan have den værdi.\\\\
+Til safeIndexTry bliver der brugt "failwithf" i stedet for "failwith", da det også giver mulighed for at skrive inputtet tilbage i fejlmeddelelsen. Til forskel fra safeIndexIf behøver man ikke vide hvilke parametre inputtet skal have til denne mulighed, hvilket kan gøre det lettere at bruge i nogle sammenhænge.\\\\
+SafeIndexOption kan i hvisse tilfælde lettere gøres brug af, af andre funktioner, på grund af dens option type. Dog er den mere besværlig til en opgave som den her. De andre funktioner returnerer automatisk værdien i det index der blev givet, hvor man i denne er nødt til at lave en ekstra funktion til at printe dem ud.
+
+\section*{9i.1}
+Til denne opgave er der blevet brugt en mutable værdi \textit{a}, som det hele bliver gemt i. Dette er blevet gjort så det er lettere at erstatte alle \textit{needles} på en gang. Funktionen opretter en ny fil med samme navn som den gamle, så den skriver i en tom fil. \\\\
+Der er blevet inkluderet to ekstra funktioner i bunden, den første, \textit{simpleFileReplace} er en kortere, lettere og mere effektiv måde at gøre det samme som fileReplace, bare uden WriteLine og ReadLine. Den anden bliver brugt til testing, og opretter bare en ny testfil.
+
+\section*{9i.2}
+I denne opgave bliver der brugt nogle hjælpefunktioner der bruger webaddressen fra inputtet til at generere hele hjemmesiden som en enkelt streng. Dette bliver gjort så der kan tælles hvor mange links der er simpelt.
+
+
+
+
+\end{document}

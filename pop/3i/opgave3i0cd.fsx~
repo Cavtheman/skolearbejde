@@ -1,0 +1,14 @@
+let sum n = //This function can return correct values for values less than  2^31 = 1+2+..+(n-1)+n
+    let mutable s = 0 //the value to be returned
+    let mutable i = 1 //the counting value, since we can't use a for loop
+    while i <= n do //while loop that works like a for loop, since we can only use a while. Used to count s up by i every iteration, up to n
+        s <- s + i //counts s up by i
+        i <- i + 1 //counts i up by 1, so s is counted up by more next time, and the loop can terminate
+    s
+    
+let simpleSum n = //a simpler version of the above function. Does the same with a single calculation. Can return the correct value for values less than n*(n+1)=2^31, rounded down
+    n*(n+1)/2
+
+printfn "n \t sum \t simpleSum" //prints the titles of each row 
+for i=1 to 10 do //a for loop that prints a specific amount of lines of n, sum, and simplesum, to compare them.
+    printfn "%d \t %d \t %d" i (sum i) (simpleSum i)

@@ -1,0 +1,4 @@
+let hw = "Hello World"
+let hel = hw.[0..4]
+let wor = hw.[6..10]
+printfn "%A\n%A\n%A\n" hw hel wor

@@ -1,0 +1,3 @@
+let simplesum n =
+    n*(n+1)/2
+printfn "%d" (sum 4)

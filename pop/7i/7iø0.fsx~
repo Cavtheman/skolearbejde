@@ -1,0 +1,14 @@
+let rec insert xs y =
+    if List.isEmpty xs then
+        [y]
+    else
+        let x = List.head xs
+        in
+        if y < x then
+            y :: xs
+        else
+            x :: insert (List.tail xs) y
+
+let isort xs = List.fold (fun acc x -> insert acc x) [] xs
+let xs = [7;55;34;23;5;42;32;34;8]
+do printf "%A\n" (isort xs)

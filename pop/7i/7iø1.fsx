@@ -1,0 +1,11 @@
+let rec bubble = function
+    | [] -> []
+    | [head] -> [head]
+    | head::headtail::tail when head < headtail -> head::bubble (headtail::tail)
+    | head::headtail::tail -> headtail::bubble (head::tail)
+
+let bsort xs = List.fold (fun acc _ -> bubble acc) xs xs
+
+let tingting = [5;1;7;7;62;123;73;1345;248;13;4;4]
+
+bsort tingting |> printfn "%A"

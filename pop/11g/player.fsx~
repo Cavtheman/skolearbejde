@@ -1,0 +1,10 @@
+module Player
+
+type player (b:bool) =
+    member this.human = b
+
+type human (s:string) =
+    inherit player (true)
+
+type computer (s:string) =
+    inherit player (false)
