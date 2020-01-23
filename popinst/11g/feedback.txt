@@ -1,0 +1,1 @@
+Husk at når man laver et program der tager input fra brugeren kan man ikke altid være sikker på at de inputter noget rigtigt. Så man skal fx tage højde for hvis der ikke bliver inputtet noget, ved fx at have default værdier, eller bare lave nogle error messages der siger hvis man har gjort noget forkert.
