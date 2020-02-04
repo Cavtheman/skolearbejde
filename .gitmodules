@@ -25,3 +25,6 @@
 [submodule "datsciinst"]
 	path = datsciinst
 	url = https://github.com/Cavtheman/datsciinst.git
+[submodule "datsci/datsci"]
+	path = datsci/datsci
+	url = https://github.com/emilliegiraf/datsci.git
