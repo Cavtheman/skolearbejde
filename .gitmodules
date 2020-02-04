@@ -22,3 +22,6 @@
 [submodule "rebs"]
 	path = rebs
 	url = https://github.com/Cavtheman/rebs.git
+[submodule "datsciinst"]
+	path = datsciinst
+	url = https://github.com/Cavtheman/datsciinst.git
