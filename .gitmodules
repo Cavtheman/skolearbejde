@@ -31,3 +31,6 @@
 [submodule "proteinbachelor"]
 	path = proteinbachelor
 	url = https://github.com/Cavtheman/proteinbachelor.git
+[submodule "eml"]
+	path = eml
+	url = https://github.com/Cavtheman/eml.git
