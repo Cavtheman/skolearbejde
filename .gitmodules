@@ -28,3 +28,6 @@
 [submodule "datsci/datsci"]
 	path = datsci/datsci
 	url = https://github.com/emilliegiraf/datsci.git
+[submodule "proteinbachelor"]
+	path = proteinbachelor
+	url = https://github.com/Cavtheman/proteinbachelor.git
