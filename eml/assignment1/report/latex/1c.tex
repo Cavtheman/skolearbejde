@@ -1,0 +1,24 @@
+For part 1, we can intuitively see that it is true, using d-separation. To check whether two nodes are independent, all paths between them have to be blocked. There is a single path from $a$ to $b$, through $c$. However, we can see that the path is blocked at the $c$ node, because the arrows meet head to head, on a node that is obviously not $\in \emptyset$. We can also show by writing the probabilities of the graph out:
+\begin{align*}
+  p(a,b,c,d)= p(d|c)p(c|a,b)p(a)p(b)
+\end{align*}
+We can marginalise the components of $c$ and $d$:
+\begin{align*}
+  p(a,b,c,d) &= p(d|c)p(c|a,b)p(a)p(b) \\
+  p(a,b) &= \sum_d\sum_c p(d|c)p(c|a,b)p(a)p(b) \\
+  &= \sum_d p(d|c) \sum_c p(c|a,b)p(a)p(b) \\
+  &= \underbrace{\sum_d p(d|c)}_{=1} \underbrace{\sum_c p(c|a,b)}_{=1}p(a)p(b) \\
+  p(a,b) &= p(a)p(b) \implies a \perp \!\!\! \perp b | \emptyset
+\end{align*}
+Thus, we have proven that $a$ and $b$ are independent without any observed values. For the second part we have to prove the opposite, but with the node $d$ observed. That is, we have to prove that $a \not \perp \!\!\! \perp b | d$. Intuitively we can see that this is true, using d-separation again. The only node that connects the two is stil $c$. However, because $c$ has a descendant $d$, that is in the given set, $c$ blocks the path, and thus $a \not \perp \!\!\! \perp b | d$. Using the probabilities, we can write it out the following way:
+\begin{align*}
+  p(a,b,c|d) = \frac{p(d|c)p(c|a,b)p(a)p(b)}{p(d)}
+\end{align*}
+We can marginalise the components of $c$:
+\begin{align*}
+  p(a,b,c|d) &= \frac{p(d|c)p(c|a,b)p(a)p(b)}{p(d)} \\
+  p(a,b|d) &= \frac{\sum_c p(d|c)p(c|a,b)p(a)p(b)}{p(d)} \\
+  &= \frac{p(d|c)p(a)p(b)\overbrace{\sum_c p(c|a,b)}^{=1}}{p(d)} \\
+  &= \frac{p(d|c)p(a)p(b)}{p(d)} \\
+  &= \frac{p(d|c)p(a)p(b)}{p(d)} \neq p(a)p(b) \implies a \not \perp \!\!\! \perp b | d
+\end{align*}

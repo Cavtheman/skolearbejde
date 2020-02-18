@@ -1,0 +1,46 @@
+First we will show that $p(a)$ and $p(b)$ are marginally dependent by showing that $p(a)p(b) \neq p(a,b)$. We calculate each of these as the sum of the probability of all rows where the corresponding random variable $=1$. With this we get the following:
+\begin{align*}
+  p(a) &= 0.400 \\
+  p(b) &= 0.408 \\
+  p(c) &= 0.520
+\end{align*}
+We can also easily calculate combined probabilities, by summing the probability of all rows where all the random variables are $=1$:
+\begin{align*}
+  p(a,b) &= 0.144 \\
+  p(a,c) &= 0.160 \\
+  p(b,c) &= 0.312
+\end{align*}
+Now we can evaluate $p(a,b) \neq p(a)p(b)$:
+\begin{align*}
+p(a,b) &= 0.144 \\
+p(a)p(b) &= 0.400 \cdot 0.408 = 0.1632 \\
+0.144 &\neq 0.1632 \implies p(a,b) \neq p(a)p(b)
+\end{align*}
+Thus, we have shown that they are marginally dependent. Now, to show that they become independent when conditioned on $c$, we have to show that $p(a,b|c) = p(a|c)p(b|c)$. We know that $p(a|b) = \frac{p(a,b)}{p(b)}$, so we calculate the following:
+\begin{align*}
+  p(a,b|c) = \frac{p(a,b,c)}{p(c)} = \frac{0.096}{0.52} &= 0.1\overline{846153} \\
+  p(a|c) = \frac{p(a,c)}{p(c)} = \frac{0.16}{0.52} &= 0.\overline{307692} \\
+  p(b|c) = \frac{p(b,c)}{p(c)} = \frac{0.312}{0.52} &= 0.6
+\end{align*}
+Now we simply calculate and compare:
+\begin{align*}
+  p(a,b|c) &= 0.1\overline{846153} \\
+  p(a|c)p(b|c) = 0.\overline{307692} \cdot 0.6 &= 0.1\overline{846153}
+\end{align*}
+These are obviously equal, so we have shown that $p(a,b|c) = p(a|c)p(b|c)$ for $c=1$. To show the same for $c=0$, we follow pretty much the same procedure. If a probability is not named below, it is the same as for the calculations above:
+$$
+p(c) = 0.48
+$$
+\begin{align*}
+  p(a,c) &= 0.240 \\
+  p(b,c) &= 0.096 \\
+  p(a,b,c) &= 0.048 \\
+  p(a|c) &= \frac{0.240}{0.48} = 0.5 \\
+  p(b|c) &= \frac{0.096}{0.48} = 0.2
+\end{align*}
+Now we can again calculate and compare:
+\begin{align*}
+  p(a|c)p(b|c) &= 0.5\cdot0.2 = 0.1 \\
+  p(a,b|c) &= \frac{0.048}{0.48} = 0.1 \\
+\end{align*}
+These are also obviously equal, and we have thus also shown that $p(a|c)p(b|c) = p(a,b|c)$ is true for $c=0$.
