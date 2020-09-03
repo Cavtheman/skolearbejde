@@ -34,3 +34,6 @@
 [submodule "eml"]
 	path = eml
 	url = https://github.com/Cavtheman/eml.git
+[submodule "ap"]
+	path = ap
+	url = https://github.com/Cavtheman/ap.git
