@@ -37,3 +37,6 @@
 [submodule "ap"]
 	path = ap
 	url = https://github.com/Cavtheman/ap.git
+[submodule "aads"]
+	path = aads
+	url = https://github.com/madsobitsoe/AADS2020.git
