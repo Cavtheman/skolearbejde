@@ -43,3 +43,6 @@
 [submodule "popinst20"]
 	path = popinst20
 	url = https://github.com/Cavtheman/popinst20.git
+[submodule "ml"]
+	path = ml
+	url = https://github.com/Cavtheman/ml.git
