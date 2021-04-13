@@ -46,3 +46,6 @@
 [submodule "ml"]
 	path = ml
 	url = https://github.com/Cavtheman/ml.git
+[submodule "degridifier"]
+	path = degridifier
+	url = https://github.com/Cavtheman/degridifier.git
