@@ -15,7 +15,7 @@ type drone (pos : float * float, dest : float * float, spd : float) = class
     member this.sestination = dest
     member this.speed = spd
 
-    member this.isFinished =
+    member this.isFinished() =
         pos = dest
 
 
