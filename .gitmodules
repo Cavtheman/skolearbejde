@@ -49,3 +49,6 @@
 [submodule "degridifier"]
 	path = degridifier
 	url = https://github.com/Cavtheman/degridifier.git
+[submodule "datvid"]
+	path = datvid
+	url = git@github.com:Cavtheman/datvid.git
