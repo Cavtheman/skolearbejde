@@ -52,3 +52,6 @@
 [submodule "datvid"]
 	path = datvid
 	url = git@github.com:Cavtheman/datvid.git
+[submodule "vtdat"]
+	path = vtdat
+	url = git@github.com:Cavtheman/vtdat.git
