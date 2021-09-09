@@ -58,3 +58,6 @@
 [submodule "popinst21"]
 	path = popinst21
 	url = git@github.com:Cavtheman/popinst21.git
+[submodule "ap21"]
+	path = ap21
+	url = git@github.com:Cavtheman/ap21.git
