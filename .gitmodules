@@ -55,3 +55,6 @@
 [submodule "vtdat"]
 	path = vtdat
 	url = git@github.com:Cavtheman/vtdat.git
+[submodule "popinst21"]
+	path = popinst21
+	url = git@github.com:Cavtheman/popinst21.git
