@@ -61,3 +61,6 @@
 [submodule "ap21"]
 	path = ap21
 	url = git@github.com:Cavtheman/ap21.git
+[submodule "ap2021-ass6"]
+	path = ap2021-ass6
+	url = git@github.com:madsobitsoe/ap2021-ass6.git
