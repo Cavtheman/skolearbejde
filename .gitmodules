@@ -67,3 +67,6 @@
 [submodule "acs"]
 	path = acs
 	url = git@github.com:Cavtheman/acs.git
+[submodule "aoc21"]
+	path = aoc21
+	url = git@github.com:Cavtheman/aoc21.git
