@@ -13,13 +13,45 @@ esac
 ##############################################################################################################
 # My Stuff
 
-cdd() { cd "$@" && ls; }
+py() { python3.6 "$@"; }
+
+cdd() { cd "$@" && ls --color=auto; }
+
+# Staffeli download submissions for PoP
+retd () {
+    python3 ~/staffeli_nt/staffeli_nt/download.py 51737 "$1"template.yml "$1" --select-section
+}
+
+resub () {
+    python3 ~/staffeli_nt/staffeli_nt/download.py 51737 "$1"template.yml "$1"resub --resub --select-ta "$1"_ta_list.yml
+}
+
+retdta () {
+    python3 ~/staffeli_nt/staffeli_nt/download.py 51737 "$1"template.yml "$1" --select-ta "$1"_ta_list.yml
+}
+
+# Staffeli upload grades for PoP
+retu () {
+    python3 ~/staffeli_nt/staffeli_nt/upload.py "$1"template.yml "$1" "${@:2}"
+}
+
+retur () {
+    python3 ~/staffeli_nt/staffeli_nt/upload.py "$1"template.yml "$1"resub "${@:2}"
+}
+
 # For grading PoP assignments
 ret () {
-    unzip "$1" -d ~/Downloads/pop/
-    cat ~/Downloads/pop/README.txt
+    zipf="$1"
+    unzip "$1"
+    len=${#zip}-4
+    cd ${1:0:len}
+    cat README.txt
     echo ""
-    cdd ~/Downloads/pop/
+    ls --color=auto
+    #unzip "$1" -d ~/Downloads/pop/
+    #cat ~/Downloads/pop/README.txt
+    #echo ""
+    #cdd ~/Downloads/pop/
 }
 
 fin () {
@@ -32,19 +64,26 @@ fin () {
 mappe() {
     mv "$1"/* ./
     rmdir "$1"
-    ls
+    ls --color=auto
 }
 
 rider() {
     ~/Programs/rider/bin/./rider.sh &
 }
 fsh() {
-    fsharpc "$1".fsx
-    mono "$1".exe "${@:2}"
+    fsx="$1"
+    len=${#fsx}-4
+    fsharpc ${1:0:len}.fsx
+    mono ${1:0:len}.exe "${@:2}"
+}
+fdll() {
+    fsharpc -a "$@"
 }
 dfsh() {
-    fsharpc -r "$1" "$2".fsx
-    mono "$2".exe "${@:3}"
+    fsx="$2"
+    len=${#fsx}-4
+    fsharpc -r "$1" ${2:0:len}.fsx
+    mono ${2:0:len}.exe "${@:3}"
 }
 
 get() {
@@ -62,10 +101,37 @@ latex() {
 }
 
 lpdf() {
+    bibtex master.aux
     pdflatex --shell-escape master.tex
+    pdflatex --shell-escape master.tex > /dev/null 2>&1
     evince master.pdf &
 }
 
+ghci(){
+    stack exec ghci -- -W "$1"
+}
+
+discord(){
+    /snap/bin/./discord > /dev/null &
+}
+
+onlineTA(){
+    #cp -r "$1" code
+    stack onlineta.hs "$1" code > testresults.txt
+    #rm -r code
+}
+
+popta(){
+    curl -F handin=@code.zip https://pop.incorrectness.dk/grade/assignment"$1"
+}
+
+imgfsh(){
+    fsx="$1"
+    len=${#fsx}-4
+    #fsharpc ${1:0:len}.fsx
+    fsharpc --nologo -I /usr/lib/cli/gtk-sharp-2.0 -I /usr/lib/cli/gdk-sharp-2.0 -I /usr/lib/cli/glib-sharp-2.0 -I /usr/lib/cli/gtk-dotnet-2.0 -I /usr/lib/cli/atk-sharp-2.0 -r gdk-sharp.dll -r gtk-sharp.dll -r img_util.dll ${1:0:len}.fsx
+    mono ${1:0:len}.exe "${@:2}"
+}
 ##############################################################################################################
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
