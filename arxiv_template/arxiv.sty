@@ -17,6 +17,8 @@
 \usepackage{graphicx}
 \usepackage{natbib}
 \usepackage{doi}
+\usepackage{float}
+\usepackage{verbatim}
 
 % set page geometry
 \usepackage[verbose=true,letterpaper]{geometry}
@@ -40,8 +42,9 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 
-\newcommand{\headeright}{A Preprint}
-\newcommand{\undertitle}{A Preprint}
+\newcommand{\headeright}{} % Change this for text in the top right corner
+\newcommand{\headerleft}{\today}
+\newcommand{\undertitle}{}
 \newcommand{\shorttitle}{\@title}
 
 \usepackage{fancyhdr}
@@ -49,6 +52,7 @@
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancyheadoffset{0pt}
+\lhead{\scshape \footnotesize \headerleft}
 \rhead{\scshape \footnotesize \headeright}
 \chead{\shorttitle}
 \cfoot{\thepage}
