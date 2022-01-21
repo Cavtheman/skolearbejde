@@ -1,16 +1,22 @@
 import numpy as np
 import os
-from nltk.corpus import words # A larger one likely exists
+from nltk.corpus import words, brown # A larger one likely exists
 import string
 
 n = 5
 
-filtered_set = [ elem.lower() for elem in words.words() if len (elem) == n ]
+#common_dict = set ([ elem.lower() for elem in brown.words() if len (elem) == n and all ([c in string.ascii_lowercase for c in elem.lower()]) ])
+common_dict = set ([ elem.lower() for elem in words.words() if len (elem) == n ])
 
-print ("Size of corpus:", len(filtered_set))
+print (len (common_dict))
+#print (len (full_dict))
+
+print ("Size of corpus:", len(common_dict))
 
 def letter_pos_prob (letter : chr, corpus : list) :
     counts = [0] * n
+    if len (corpus) == 0:
+        return []
     for word in corpus:
         for i, c in enumerate (word):
             if letter == c:
@@ -24,19 +30,17 @@ def all_letter_probs (corpus) :
     probs = dict ([ (letter, letter_pos_prob (letter, corpus)) for letter in alphabet ])
     return probs
 
-#print (all_letter_probs (filtered_set))
+#print (all_letter_probs (common_dict))
 
 def get_all_word_probs (corpus):
     letter_probs = all_letter_probs (corpus)
     probs = [ (word, sum ([ letter_probs[letter][i] for i, letter in enumerate (word) ])) for word in corpus ]
-    #probs = []
-    #for word in corpus:
-    #    score = sum ([ letter_probs[letter][i] for i, letter in enumerate (word) ])
-    #    probs.append ((word,score))
     return probs
 
 def get_yellow_prob (letter, corpus):
     count = 0
+    if len (corpus) == 0:
+        return 0
     for word in corpus:
         if letter in word:
             count += 1
@@ -48,7 +52,7 @@ def get_all_yellow_probs (corpus):
 def yellow_sum (word, yellow_letter_probs):
     return (sum ([ yellow_letter_probs[letter] for i, letter in enumerate (word) if letter not in word[(i+1):] ]))
 
-print (yellow_sum ("aaaaa", get_all_yellow_probs (filtered_set)))
+#print (yellow_sum ("aaaaa", get_all_yellow_probs (common_dict)))
 
 def get_best_yellows (corpus):
     yellow_letter_probs = get_all_yellow_probs (corpus)
@@ -56,7 +60,7 @@ def get_best_yellows (corpus):
     results.sort (key=lambda tup: tup[1], reverse=True)
     return results
 
-#print (get_best_yellows (filtered_set)[:10])
+#print (get_best_yellows (common_dict)[:10])
 
 # By green score
 def get_best_greens (corpus):
@@ -65,11 +69,13 @@ def get_best_greens (corpus):
     return all_word_probs
     #return ([ elem for (elem, score) in all_word_probs[:n] ])
 
-#print (get_best_greens (100, filtered_set))
+#print (get_best_greens (100, common_dict))
 
 def get_wordle_scores (word, corpus):
     green_score = 0
     yellow_score = 0
+    if len (corpus) == 0:
+        return (0,0)
     for checkWord in corpus:
         for c1, c2 in zip (word, checkWord):
             if c1 == c2:
@@ -80,7 +86,43 @@ def get_wordle_scores (word, corpus):
     yellow_score /= len (corpus)
     return (green_score, yellow_score)
 
-print (get_wordle_scores ("soree", filtered_set))
+#print (get_wordle_scores ("soree", common_dict))
+
+def update_info (info, word, colours):
+    word_colours = zip (word, colours)
+    for i, (letter, col) in enumerate (word_colours):
+        if col == 'f':
+            info[letter] = False
+        elif col == 'y':
+            info[letter] = True
+        elif col == 'g':
+            info[letter] = i
+    return info
+
+def filter_corpus_fully_by_info (info, corpus):
+    newCorpus = []
+    for word in corpus:
+        add = True
+        for i, letter in enumerate (word):
+            if info[letter] is not None:
+                add = False
+        if add: newCorpus.append(word)
+    return newCorpus
+
+def filter_corpus_partially_by_info (info, corpus):
+    newCorpus = []
+    for word in corpus:
+        add = True
+        for i, letter in enumerate (word):
+            if (info[letter] is not None) and (type (info[letter]) is int or not info[letter]):
+            #if (info[letter] is not None):
+                add = False
+            #if type(info[letter]) is not int and info[letter]:
+            #    add = True
+        if add: newCorpus.append(word)
+    return newCorpus
+
+#print (len (filter_corpus_fully_by_info (info, common_dict)))
 
 def filter_corpus_by_guess (guess, colours, corpus):
     newCorpus = []
@@ -117,14 +159,48 @@ def sort_yellow_guesses_by_green (yellows, greens):
     return flatten (sorted_yellows)
 
 
+info = dict ([ (letter, None) for letter in string.ascii_lowercase ])
+newCorpus = filter_corpus_by_guess ("point", "ffggf", common_dict)
+print (newCorpus)
+#print (len (filter_corpus_fully_by_info (info, common_dict)))
+#print ("corpus", len (common_dict))
+#
+#corpus = filter_corpus_by_guess ("raise", "yfffy", common_dict)
+#info = update_info (info, "raise", "yfffy")
+#print (len (filter_corpus_fully_by_info (info, corpus)))
+#print ("corpus", len (corpus))
+#
+#corpus = filter_corpus_by_guess ("toyer", "fyfgg", corpus)
+#info = update_info (info, "toyer", "fyfgg") # older
+#print (len (filter_corpus_fully_by_info (info, corpus)))
+#print ("corpus", len (corpus))
 
-def play_game (corpus):
+def play_game (info, corpus):
     os.system("clear -x")
     print ("Play Wordle:")
+    print (info)
     print ("There are {0} possible words".format (len(corpus)))
     best_green_guesses = get_best_greens (corpus)
     best_yellow_guesses = get_best_yellows (corpus)
     sorted_yellows = sort_yellow_guesses_by_green (best_yellow_guesses, best_green_guesses)
+
+    most_info_corpus = filter_corpus_fully_by_info (info, common_dict)
+    print (len (most_info_corpus))
+    grey_best_green_guesses = get_best_greens (most_info_corpus)
+    grey_best_yellow_guesses = get_best_yellows (most_info_corpus)
+    grey_sorted_yellows = sort_yellow_guesses_by_green (grey_best_yellow_guesses, grey_best_green_guesses)
+    print ("Most info guesses:")
+    for elem in grey_sorted_yellows[:10]:
+        print(elem)
+
+    yellow_most_info_corpus = filter_corpus_partially_by_info (info, common_dict)
+    print (len (yellow_most_info_corpus))
+    yellow_grey_best_green_guesses = get_best_greens (yellow_most_info_corpus)
+    yellow_grey_best_yellow_guesses = get_best_yellows (yellow_most_info_corpus)
+    yellow_grey_sorted_yellows = sort_yellow_guesses_by_green (yellow_grey_best_yellow_guesses, yellow_grey_best_green_guesses)
+    print ("Most info guesses with yellow:")
+    for elem in yellow_grey_sorted_yellows[:10]:
+        print(elem)
 
     print ("Here are my ten best guesses from best to worst, by green priority:")
     for elem in best_green_guesses[:10]:
@@ -138,14 +214,8 @@ def play_game (corpus):
         print ("Now tell me how well the word did. Write something like \"gyfff\", where an f indicates grey, y yellow and g green:")
         colours = list (input ())
         newCorpus = filter_corpus_by_guess (guess, colours, corpus)
-        play_game (newCorpus)
+        new_info = update_info (info, guess, colours)
+        play_game (new_info, newCorpus)
 
-print("hairs" in filtered_set)
-play_game (filtered_set)
 
-#print (len (words.words()))
-
-# Waaaay too slow
-def get_all_wordle_scores (corpus):
-    return dict ([ (word, get_wordle_scores (word, corpus)) for word in corpus ])
-#print (get_all_wordle_scores (filtered_set)["soree"])
+play_game (info, common_dict)
