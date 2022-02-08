@@ -73,3 +73,9 @@
 [submodule "emlta"]
 	path = emlta
 	url = git@github.com:Cavtheman/emlta.git
+[submodule "sip"]
+	path = sip
+	url = git@github.com:Cavtheman/sip.git
+[submodule "numop"]
+	path = numop
+	url = git@github.com:Cavtheman/numop.git
