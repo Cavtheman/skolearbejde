@@ -2,6 +2,8 @@
 ## Core latex/pdflatex auxiliary files:
 *.run
 *.png
+*.jpg
+*.tif
 *.netmodule
 *.aux
 *.lof

@@ -6,7 +6,7 @@ import string
 n = 5
 
 #common_dict = set ([ elem.lower() for elem in brown.words() if len (elem) == n and all ([c in string.ascii_lowercase for c in elem.lower()]) ])
-common_dict = set ([ elem.lower() for elem in words.words() if len (elem) == n ])
+common_dict = set ([ elem.lower() for elem in words.words() if len (elem) == n and '-' not in elem])
 
 print (len (common_dict))
 #print (len (full_dict))
@@ -54,18 +54,18 @@ def yellow_sum (word, yellow_letter_probs):
 
 #print (yellow_sum ("aaaaa", get_all_yellow_probs (common_dict)))
 
-def get_best_yellows (corpus):
+def get_best_yellows (corpus, reverse=True):
     yellow_letter_probs = get_all_yellow_probs (corpus)
     results = [ (word, yellow_sum (word, yellow_letter_probs)) for word in corpus ]
-    results.sort (key=lambda tup: tup[1], reverse=True)
+    results.sort (key=lambda tup: tup[1], reverse=reverse)
     return results
 
 #print (get_best_yellows (common_dict)[:10])
 
 # By green score
-def get_best_greens (corpus):
+def get_best_greens (corpus, reverse=True):
     all_word_probs = get_all_word_probs (corpus)
-    all_word_probs.sort (key=lambda tup: tup[1], reverse=True)
+    all_word_probs.sort (key=lambda tup: tup[1], reverse=reverse)
     return all_word_probs
     #return ([ elem for (elem, score) in all_word_probs[:n] ])
 
@@ -175,19 +175,19 @@ print (newCorpus)
 #print (len (filter_corpus_fully_by_info (info, corpus)))
 #print ("corpus", len (corpus))
 
-def play_game (info, corpus):
+def play_game (info, corpus, reverse=True):
     os.system("clear -x")
     print ("Play Wordle:")
     print (info)
     print ("There are {0} possible words".format (len(corpus)))
-    best_green_guesses = get_best_greens (corpus)
-    best_yellow_guesses = get_best_yellows (corpus)
+    best_green_guesses = get_best_greens (corpus, reverse)
+    best_yellow_guesses = get_best_yellows (corpus, reverse)
     sorted_yellows = sort_yellow_guesses_by_green (best_yellow_guesses, best_green_guesses)
 
     most_info_corpus = filter_corpus_fully_by_info (info, common_dict)
     print (len (most_info_corpus))
-    grey_best_green_guesses = get_best_greens (most_info_corpus)
-    grey_best_yellow_guesses = get_best_yellows (most_info_corpus)
+    grey_best_green_guesses = get_best_greens (most_info_corpus, reverse)
+    grey_best_yellow_guesses = get_best_yellows (most_info_corpus, reverse)
     grey_sorted_yellows = sort_yellow_guesses_by_green (grey_best_yellow_guesses, grey_best_green_guesses)
     print ("Most info guesses:")
     for elem in grey_sorted_yellows[:10]:
@@ -195,8 +195,8 @@ def play_game (info, corpus):
 
     yellow_most_info_corpus = filter_corpus_partially_by_info (info, common_dict)
     print (len (yellow_most_info_corpus))
-    yellow_grey_best_green_guesses = get_best_greens (yellow_most_info_corpus)
-    yellow_grey_best_yellow_guesses = get_best_yellows (yellow_most_info_corpus)
+    yellow_grey_best_green_guesses = get_best_greens (yellow_most_info_corpus, reverse)
+    yellow_grey_best_yellow_guesses = get_best_yellows (yellow_most_info_corpus, reverse)
     yellow_grey_sorted_yellows = sort_yellow_guesses_by_green (yellow_grey_best_yellow_guesses, yellow_grey_best_green_guesses)
     print ("Most info guesses with yellow:")
     for elem in yellow_grey_sorted_yellows[:10]:
@@ -210,12 +210,14 @@ def play_game (info, corpus):
         print(elem)
     print ("Enter one of them into wordle then write the word here. Or \"quit\" to quit.")
     guess = input()
-    if guess != "quit":
+    if guess == "reverse":
+        play_game (info, corpus, not reverse)
+    elif guess != "quit":
         print ("Now tell me how well the word did. Write something like \"gyfff\", where an f indicates grey, y yellow and g green:")
         colours = list (input ())
         newCorpus = filter_corpus_by_guess (guess, colours, corpus)
         new_info = update_info (info, guess, colours)
-        play_game (new_info, newCorpus)
+        play_game (new_info, newCorpus, reverse)
 
 
 play_game (info, common_dict)
