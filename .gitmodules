@@ -79,3 +79,6 @@
 [submodule "numop"]
 	path = numop
 	url = git@github.com:Cavtheman/numop.git
+[submodule "nir"]
+	path = nir
+	url = git@github.com:Cavtheman/nir.git
