@@ -82,3 +82,6 @@
 [submodule "nir"]
 	path = nir
 	url = git@github.com:Cavtheman/nir.git
+[submodule "orel"]
+	path = orel
+	url = git@github.com:Cavtheman/orel.git
