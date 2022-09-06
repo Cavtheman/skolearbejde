@@ -85,3 +85,9 @@
 [submodule "orel"]
 	path = orel
 	url = git@github.com:Cavtheman/orel.git
+[submodule "mia"]
+	path = mia
+	url = git@github.com:Cavtheman/mia.git
+[submodule "nlp"]
+	path = nlp
+	url = git@github.com:Cavtheman/nlp.git
