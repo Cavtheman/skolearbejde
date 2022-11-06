@@ -1,5 +1,6 @@
 1mio-raw.csv
 ## Core latex/pdflatex auxiliary files:
+*/__pycache__/
 *.run
 *.png
 *.jpg
