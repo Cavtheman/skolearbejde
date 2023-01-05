@@ -91,3 +91,9 @@
 [submodule "nlp"]
 	path = nlp
 	url = git@github.com:Cavtheman/nlp.git
+[submodule "aoc22"]
+	path = aoc22
+	url = git@github.com:Cavtheman/aoc22.git
+[submodule "vip"]
+	path = vip
+	url = git@github.com:Cavtheman/vip.git
