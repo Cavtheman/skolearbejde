@@ -97,3 +97,9 @@
 [submodule "vip"]
 	path = vip
 	url = git@github.com:Cavtheman/vip.git
+[submodule "orel23"]
+	path = orel23
+	url = git@github.com:Cavtheman/orel23.git
+[submodule "pml"]
+	path = pml
+	url = git@github.com:Cavtheman/pml.git
