@@ -103,3 +103,6 @@
 [submodule "pml"]
 	path = pml
 	url = git@github.com:Cavtheman/pml.git
+[submodule "ad"]
+	path = ad
+	url = git@github.com:milikko/ad.git
