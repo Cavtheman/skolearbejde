@@ -106,3 +106,9 @@
 [submodule "ad"]
 	path = ad
 	url = git@github.com:milikko/ad.git
+[submodule "nir23"]
+	path = nir23
+	url = git@github.com:Cavtheman/nir23.git
+[submodule "adl"]
+	path = adl
+	url = git@github.com:Cavtheman/adl.git
