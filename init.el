@@ -42,7 +42,7 @@
      ("melpa" . "https://melpa.org/packages/"))))
  '(package-selected-packages
    (quote
-    (rainbow-delimiters minimap erlang elpy intero haskell-emacs haskell-mode move-text drag-stuff auto-complete multiple-cursors fsharp-mode)))
+    (## ein rainbow-delimiters minimap erlang elpy intero haskell-emacs haskell-mode move-text drag-stuff auto-complete multiple-cursors fsharp-mode)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (package-initialize)
@@ -151,6 +151,9 @@
 (setq inferior-fsharp-program "/usr/bin/fsharpi --readline-")
 (setq fsharp-compiler "/usr/bin/fsharpc")
 
+(add-to-list 'load-path "path/to/futhark-mode")
+(require 'futhark-mode)
+
 ;;; Flycheck --- syntax highlighting for several languages
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
@@ -193,6 +196,7 @@
 ;;; but included because they are very useful.
 ;; (menu-bar-mode 1)
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 ;; (blink-cursor-mode -1)
 (ido-mode 1) ;; press Alt-X to see the difference ;)
 
