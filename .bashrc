@@ -13,9 +13,20 @@ esac
 ##############################################################################################################
 # My Stuff
 
-py() { python3.6 "$@"; }
+
+please() { sudo "$@"; }
+
+py() { python3.8 "$@"; }
 
 cdd() { cd "$@" && ls --color=auto; }
+
+disteml () {
+    python3 ~/staffeli_nt/staffeli_nt/distribute.py 56253 ./
+}
+
+reteml () {
+    python3 ~/staffeli_nt/staffeli_nt/download.py 56253 "$1"template.yml "$1" --select-ta "$1"_ta_list.yml "${@:2}"
+}
 
 # Staffeli download submissions for PoP
 retd () {
@@ -23,7 +34,7 @@ retd () {
 }
 
 resub () {
-    python3 ~/staffeli_nt/staffeli_nt/download.py 51737 "$1"template.yml "$1"resub --resub --select-ta "$1"_ta_list.yml
+    python3 ~/staffeli_nt/staffeli_nt/download.py 51737 "$1"template.yml "$1"resub --resub --select-section
 }
 
 retdta () {
@@ -37,28 +48,6 @@ retu () {
 
 retur () {
     python3 ~/staffeli_nt/staffeli_nt/upload.py "$1"template.yml "$1"resub "${@:2}"
-}
-
-# For grading PoP assignments
-ret () {
-    zipf="$1"
-    unzip "$1"
-    len=${#zip}-4
-    cd ${1:0:len}
-    cat README.txt
-    echo ""
-    ls --color=auto
-    #unzip "$1" -d ~/Downloads/pop/
-    #cat ~/Downloads/pop/README.txt
-    #echo ""
-    #cdd ~/Downloads/pop/
-}
-
-fin () {
-    rm -r ~/Downloads/pop/"$1"
-    rm -f ~/Downloads/pop/*.exe ~/Downloads/pop/*.dll ~/Downloads/pop/README.txt
-    rm -rf ~/Downloads/pop/__MACOSX
-    cd ~/Downloads
 }
 
 mappe() {
@@ -91,9 +80,9 @@ get() {
 }
 
 upd() {
-    sudo apt-get -qq update
-    sudo apt-get dist-upgrade
-    sudo apt-get autoremove
+    sudo apt update
+    sudo apt dist-upgrade
+    sudo apt autoremove
 }
 
 latex() {
@@ -240,3 +229,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+[ -f "/home/cavtheman/.ghcup/env" ] && source "/home/cavtheman/.ghcup/env" # ghcup-env
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$HOME/.dotnet:$HOME/.dotnet/tools
