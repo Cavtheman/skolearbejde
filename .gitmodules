@@ -112,3 +112,6 @@
 [submodule "adl"]
 	path = adl
 	url = git@github.com:Cavtheman/adl.git
+[submodule "ct_mri_reg"]
+	path = ct_mri_reg
+	url = git@github.com:Cavtheman/ct_mri_reg.git
