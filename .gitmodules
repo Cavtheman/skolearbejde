@@ -118,3 +118,6 @@
 [submodule "popinst23"]
 	path = popinst23
 	url = git@github.com:Cavtheman/popinst23.git
+[submodule "aoc23"]
+	path = aoc23
+	url = git@github.com:Cavtheman/aoc23.git
